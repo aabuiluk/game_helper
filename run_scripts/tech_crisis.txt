@@ -1,0 +1,6 @@
+effect { random_playable_country = { limit = { is_ai = no } set_country_flag = advanced_identity_creation set_country_flag = synth_queen_knowledge } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_extradimensional_weapon_1 message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_scourge_missile_1 message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_swarm_strike_craft_1 message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_synth_queen_knowledge message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_nanite_repair_system_synth_queen message = no } } }

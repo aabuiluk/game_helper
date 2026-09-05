@@ -1,0 +1,7 @@
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_secrets_cybrex message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_secrets_league message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_secrets_irassian message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_secrets_vultaum message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_secrets_yuht message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_secrets_baol message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_secrets_zroni message = no } } }

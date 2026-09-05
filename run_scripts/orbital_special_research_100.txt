@@ -1,0 +1,8 @@
+effect while = { count = 10 add_deposit = d_dark_matter_deposit_10 }
+effect while = { count = 20 add_deposit = d_zro_deposit_5 }
+effect while = { count = 33 add_deposit = d_astral_threads_deposit_3 }
+effect add_deposit = d_astral_threads_deposit_1
+effect while = { count = 33 add_deposit = d_artifacts_research_3 }
+effect add_deposit = d_artifacts_research_1
+effect while = { count = 100 add_deposit = d_nanites_deposit }
+effect while = { count = 100 add_deposit = d_vast_unity_deposit }

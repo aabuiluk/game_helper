@@ -1,0 +1,39 @@
+planet_class pc_gaia
+planet_size 78
+effect { clear_blockers = yes while = { count = 120 remove_district = district_city } while = { count = 120 remove_district = district_farming } while = { count = 120 remove_district = district_generator } while = { count = 120 remove_district = district_mining } while = { count = 120 remove_district = district_industrial } while = { count = 120 remove_district = district_arcology_urban_1 } while = { count = 120 remove_district = district_arcology_urban_2 } while = { count = 120 remove_district = district_arcology_urban_3 } while = { count = 120 remove_district = district_arcology_housing } while = { count = 120 remove_district = district_arcology_leisure } while = { count = 120 remove_district = district_arcology_arms_industry } while = { count = 120 remove_district = district_arcology_civilian_industry } while = { count = 120 remove_district = district_arcology_research } while = { count = 120 remove_district = district_arcology_research_physics } while = { count = 120 remove_district = district_arcology_research_society } while = { count = 120 remove_district = district_arcology_research_engineering } while = { count = 120 remove_district = district_arcology_administrative } while = { count = 120 remove_district = district_arcology_trade } while = { count = 120 remove_district = district_arcology_fortress } add_modifier = { modifier = gaia_world } }
+effect { add_modifier = { modifier = lush_planet } add_modifier = { modifier = ultra_rich } add_modifier = { modifier = mineral_rich } add_modifier = { modifier = natural_beauty } add_modifier = { modifier = titanic_life } add_modifier = { modifier = abundant_geothermal_activity } add_modifier = { modifier = subterranean_wildlife } add_modifier = { modifier = rich_mircoflora } add_modifier = { modifier = atmospheric_hallucinogen_good } add_modifier = { modifier = atmospheric_aphrodisiac } add_modifier = { modifier = strong_magnetic_field } add_modifier = { modifier = high_gravity } add_modifier = { modifier = asteroid_belt } add_modifier = { modifier = hazardous_weather } add_modifier = { modifier = wild_storms } add_modifier = { modifier = subterranean_civilization } add_modifier = { modifier = subterranean_expansion } add_modifier = { modifier = friendly_trees } add_modifier = { modifier = eat_the_titans } add_modifier = { modifier = mastery_of_nature } add_modifier = { modifier = cultivated_worldscaping_modifier } add_modifier = { modifier = wooden_planet } add_modifier = { modifier = volcanic_oasis } add_modifier = { modifier = infernal_library } add_modifier = { modifier = volcanic_ultra_rich } add_modifier = { modifier = volcanic_subterranean } add_modifier = { modifier = remnants_of_court_of_blossoms } add_modifier = { modifier = happy_anathari } }
+effect { while = { count = 3 add_deposit = d_hot_springs } }
+effect { while = { count = 3 add_deposit = d_arid_highlands } }
+effect { while = { count = 3 add_deposit = d_buzzing_plains } }
+effect { while = { count = 3 add_deposit = d_rushing_waterfalls } }
+effect { while = { count = 3 add_deposit = d_searing_desert } }
+effect { while = { count = 3 add_deposit = d_frozen_gas_lake } }
+effect { while = { count = 3 add_deposit = d_geothermal_vent } }
+effect { while = { count = 3 add_deposit = d_underwater_vent } }
+effect { while = { count = 3 add_deposit = d_tempestous_mountain } }
+effect { while = { count = 3 add_deposit = d_veiny_cliffs } }
+effect { while = { count = 3 add_deposit = d_mineral_fields } }
+effect { while = { count = 3 add_deposit = d_prosperous_mesa } }
+effect { while = { count = 3 add_deposit = d_ore_rich_caverns } }
+effect { while = { count = 3 add_deposit = d_rich_mountain } }
+effect { while = { count = 3 add_deposit = d_submerged_ore_veins } }
+effect { while = { count = 3 add_deposit = d_ancient_mining_site } }
+effect { while = { count = 3 add_deposit = d_lichen_fields } }
+effect { while = { count = 3 add_deposit = d_bountiful_plains } }
+effect { while = { count = 3 add_deposit = d_rugged_woods } }
+effect { while = { count = 3 add_deposit = d_green_hills } }
+effect { while = { count = 3 add_deposit = d_forgiving_tundra } }
+effect { while = { count = 3 add_deposit = d_boggy_fens } }
+effect { while = { count = 3 add_deposit = d_nutritious_mudland } }
+effect { while = { count = 3 add_deposit = d_natural_farmland } }
+effect { while = { count = 3 add_deposit = d_fungal_caves } }
+effect { while = { count = 3 add_deposit = d_lush_jungle } }
+effect { while = { count = 3 add_deposit = d_fertile_lands } }
+effect { while = { count = 3 add_deposit = d_great_river } }
+effect { while = { count = 3 add_deposit = d_black_soil } }
+effect { while = { count = 3 add_deposit = d_teeming_reef } }
+effect { while = { count = 3 add_deposit = d_marvelous_oasis } }
+effect { while = { count = 3 add_deposit = d_tropical_island } }
+effect { while = { count = 3 add_deposit = d_fungal_forest } }
+effect { while = { count = 3 add_deposit = d_hyperfertile_valley } }
+effect { while = { count = 3 add_deposit = d_harvester_fields } }

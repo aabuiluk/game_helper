@@ -1,0 +1,5 @@
+effect every_owned_pop_group = { limit = { id = 353 } add_trait = { trait = trait_psionic } }
+effect every_owned_pop_group = { limit = { id = 353 } add_trait = { trait = trait_erudite } }
+effect every_owned_pop_group = { limit = { id = 353 } add_trait = { trait = trait_robust } }
+effect every_owned_pop_group = { limit = { id = 353 } add_trait = { trait = trait_fertile } }
+effect every_owned_pop_group = { limit = { id = 353 } add_trait = { trait = trait_cybernetic } }

@@ -1,0 +1,4 @@
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_mine_living_metal message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_mine_zro message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_mine_dark_matter message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_astral_harvesting message = no } } }

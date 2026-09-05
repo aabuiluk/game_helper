@@ -1,0 +1,17 @@
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_archaeostudies message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_arcane_deciphering message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_archeology_lab_ancrel message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_archaeoshield message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_archaeoarmor message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_archaeo_detection_scrambler message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_archaeo_titan_beam message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_archaeo_pk_devolving_beam message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_archaeo_mass_drivers message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_archaeo_lasers message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_archaeo_point_defence message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_archaeo_missiles message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_archaeo_mass_accelerator message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_archaeo_strike_crafts message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_archaeo_rampart message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_archaeo_overcharger message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_archaeo_refinery message = no } } }

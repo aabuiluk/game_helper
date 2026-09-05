@@ -1,0 +1,70 @@
+effect while = { count = 20 add_deposit = d_exotic_gases_5 }
+effect while = { count = 20 add_deposit = d_rare_crystals_5 }
+effect while = { count = 20 add_deposit = d_volatile_motes_5 }
+effect while = { count = 10 add_deposit = d_trade_value_10 }
+effect while = { count = 33 add_deposit = d_artifacts_mining_3 }
+effect add_deposit = d_artifacts_mining_1
+effect while = { count = 100 add_deposit = d_living_metal_deposit }
+effect while = { count = 20 add_deposit = d_exotic_gases_5 }
+effect while = { count = 20 add_deposit = d_rare_crystals_5 }
+effect while = { count = 20 add_deposit = d_volatile_motes_5 }
+effect while = { count = 10 add_deposit = d_trade_value_10 }
+effect while = { count = 33 add_deposit = d_artifacts_mining_3 }
+effect add_deposit = d_artifacts_mining_1
+effect while = { count = 100 add_deposit = d_living_metal_deposit }
+effect while = { count = 20 add_deposit = d_exotic_gases_5 }
+effect while = { count = 20 add_deposit = d_rare_crystals_5 }
+effect while = { count = 20 add_deposit = d_volatile_motes_5 }
+effect while = { count = 10 add_deposit = d_trade_value_10 }
+effect while = { count = 33 add_deposit = d_artifacts_mining_3 }
+effect add_deposit = d_artifacts_mining_1
+effect while = { count = 100 add_deposit = d_living_metal_deposit }
+effect while = { count = 20 add_deposit = d_exotic_gases_5 }
+effect while = { count = 20 add_deposit = d_rare_crystals_5 }
+effect while = { count = 20 add_deposit = d_volatile_motes_5 }
+effect while = { count = 10 add_deposit = d_trade_value_10 }
+effect while = { count = 33 add_deposit = d_artifacts_mining_3 }
+effect add_deposit = d_artifacts_mining_1
+effect while = { count = 100 add_deposit = d_living_metal_deposit }
+effect while = { count = 20 add_deposit = d_exotic_gases_5 }
+effect while = { count = 20 add_deposit = d_rare_crystals_5 }
+effect while = { count = 20 add_deposit = d_volatile_motes_5 }
+effect while = { count = 10 add_deposit = d_trade_value_10 }
+effect while = { count = 33 add_deposit = d_artifacts_mining_3 }
+effect add_deposit = d_artifacts_mining_1
+effect while = { count = 100 add_deposit = d_living_metal_deposit }
+effect while = { count = 20 add_deposit = d_exotic_gases_5 }
+effect while = { count = 20 add_deposit = d_rare_crystals_5 }
+effect while = { count = 20 add_deposit = d_volatile_motes_5 }
+effect while = { count = 10 add_deposit = d_trade_value_10 }
+effect while = { count = 33 add_deposit = d_artifacts_mining_3 }
+effect add_deposit = d_artifacts_mining_1
+effect while = { count = 100 add_deposit = d_living_metal_deposit }
+effect while = { count = 20 add_deposit = d_exotic_gases_5 }
+effect while = { count = 20 add_deposit = d_rare_crystals_5 }
+effect while = { count = 20 add_deposit = d_volatile_motes_5 }
+effect while = { count = 10 add_deposit = d_trade_value_10 }
+effect while = { count = 33 add_deposit = d_artifacts_mining_3 }
+effect add_deposit = d_artifacts_mining_1
+effect while = { count = 100 add_deposit = d_living_metal_deposit }
+effect while = { count = 20 add_deposit = d_exotic_gases_5 }
+effect while = { count = 20 add_deposit = d_rare_crystals_5 }
+effect while = { count = 20 add_deposit = d_volatile_motes_5 }
+effect while = { count = 10 add_deposit = d_trade_value_10 }
+effect while = { count = 33 add_deposit = d_artifacts_mining_3 }
+effect add_deposit = d_artifacts_mining_1
+effect while = { count = 100 add_deposit = d_living_metal_deposit }
+effect while = { count = 20 add_deposit = d_exotic_gases_5 }
+effect while = { count = 20 add_deposit = d_rare_crystals_5 }
+effect while = { count = 20 add_deposit = d_volatile_motes_5 }
+effect while = { count = 10 add_deposit = d_trade_value_10 }
+effect while = { count = 33 add_deposit = d_artifacts_mining_3 }
+effect add_deposit = d_artifacts_mining_1
+effect while = { count = 100 add_deposit = d_living_metal_deposit }
+effect while = { count = 20 add_deposit = d_exotic_gases_5 }
+effect while = { count = 20 add_deposit = d_rare_crystals_5 }
+effect while = { count = 20 add_deposit = d_volatile_motes_5 }
+effect while = { count = 10 add_deposit = d_trade_value_10 }
+effect while = { count = 33 add_deposit = d_artifacts_mining_3 }
+effect add_deposit = d_artifacts_mining_1
+effect while = { count = 100 add_deposit = d_living_metal_deposit }

@@ -1,0 +1,4 @@
+effect while = { count = 50 add_deposit = d_physics_10 }
+effect while = { count = 33 add_deposit = d_society_15 }
+effect add_deposit = d_society_5
+effect while = { count = 50 add_deposit = d_engineering_10 }

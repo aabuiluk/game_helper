@@ -1,0 +1,1 @@
+effect solar_system = { every_system_planet = { limit = { is_star = no is_colony = no } add_deposit = d_minerals_10 add_deposit = d_minerals_10 add_deposit = d_minerals_10 add_deposit = d_energy_10 add_deposit = d_energy_10 add_deposit = d_energy_10 } }

@@ -1,0 +1,19 @@
+effect { random_playable_country = { limit = { is_ai = no } set_country_flag = advanced_identity_creation set_country_flag = synth_queen_knowledge } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_curator_lab message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_archeology_lab message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_orbital_trash_dispersal message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_strike_craft_skrand message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_starfire_cannon message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = null_void_beam message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_boarding_cables message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_enhanced_cryosleep_sedatives message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_universal_marcophage message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_pyroclastic_resonation message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_alloy_fossilization message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_orbital_maneuvers message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_cryovault message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_living_test_subjects message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_georadiation_terraforming message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_identity_copy message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_identity_fusion message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_identity_initialization message = no } } }

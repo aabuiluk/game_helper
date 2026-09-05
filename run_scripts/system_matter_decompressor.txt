@@ -1,0 +1,1 @@
+effect solar_system = { set_star_class = sc_black_hole spawn_megastructure = { type = matter_decompressor_0 planet = prev owner = space_owner } }

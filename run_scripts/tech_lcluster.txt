@@ -1,0 +1,2 @@
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_nanite_transmutation message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_neuroregeneration message = no } } }

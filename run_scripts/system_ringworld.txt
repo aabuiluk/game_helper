@@ -1,0 +1,1 @@
+effect solar_system = { set_star_class = sc_g spawn_megastructure = { type = ring_world_1 planet = prev owner = space_owner orbit_distance = 45 orbit_angle = 0 } }

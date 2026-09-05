@@ -1,0 +1,10 @@
+effect while = { count = 100 add_deposit = d_energy_10 }
+effect while = { count = 100 add_deposit = d_energy_10 }
+effect while = { count = 100 add_deposit = d_energy_10 }
+effect while = { count = 100 add_deposit = d_energy_10 }
+effect while = { count = 100 add_deposit = d_energy_10 }
+effect while = { count = 100 add_deposit = d_energy_10 }
+effect while = { count = 100 add_deposit = d_energy_10 }
+effect while = { count = 100 add_deposit = d_energy_10 }
+effect while = { count = 100 add_deposit = d_energy_10 }
+effect while = { count = 100 add_deposit = d_energy_10 }

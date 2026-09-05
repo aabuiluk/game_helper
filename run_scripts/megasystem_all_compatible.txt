@@ -1,0 +1,7 @@
+effect solar_system = { spawn_megastructure = { type = think_tank_0 planet = prev owner = space_owner orbit_distance = 32 orbit_angle = 0 } }
+effect solar_system = { spawn_megastructure = { type = spy_orb_0 planet = prev owner = space_owner orbit_distance = 40 orbit_angle = 40 } }
+effect solar_system = { spawn_megastructure = { type = strategic_coordination_center_0 planet = prev owner = space_owner orbit_distance = 48 orbit_angle = 80 } }
+effect solar_system = { spawn_megastructure = { type = mega_art_installation_0 planet = prev owner = space_owner orbit_distance = 56 orbit_angle = 120 } }
+effect solar_system = { spawn_megastructure = { type = interstellar_assembly_0 planet = prev owner = space_owner orbit_distance = 64 orbit_angle = 160 } }
+effect solar_system = { spawn_megastructure = { type = mega_shipyard_0 planet = prev owner = space_owner orbit_distance = 72 orbit_angle = 200 } }
+effect solar_system = { spawn_megastructure = { type = gateway_0 planet = prev owner = space_owner orbit_distance = 84 orbit_angle = 250 } }

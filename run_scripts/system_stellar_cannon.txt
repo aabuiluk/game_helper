@@ -1,0 +1,1 @@
+effect solar_system = { spawn_megastructure = { type = dyson_gun_0 planet = prev owner = space_owner } }

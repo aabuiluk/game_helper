@@ -1,0 +1,10 @@
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_psionic_barrier message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_psionic_shield message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_psionic_bombers message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_psionic_lightning message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_psionic_disruptor message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_zro_launcher message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_materiality_engine message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_aura_resonation message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_cloaking_psi message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_psi_jump_drive_1 message = no } } }

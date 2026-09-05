@@ -1,0 +1,8 @@
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_dragon_armor message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_enigmatic_encoder message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_enigmatic_decoder message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_nanite_repair_system message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_nanite_autocannon message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_nanite_flak_batteries message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_leviathan_techgenesis message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_gargantuan_evolution message = no } } }

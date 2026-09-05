@@ -1,0 +1,1 @@
+effect solar_system = { set_star_class = sc_pulsar spawn_megastructure = { type = quantum_catapult_0 planet = prev owner = space_owner } }

@@ -1,0 +1,1 @@
+effect solar_system = { spawn_megastructure = { type = habitat_central_complex planet = prev owner = space_owner } }

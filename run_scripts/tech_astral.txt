@@ -1,0 +1,1 @@
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_rift_sphere message = no } } }

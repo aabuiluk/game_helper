@@ -1,0 +1,7 @@
+effect set_starbase_module = { slot = 1 module = orbital_ring_habitation }
+effect set_starbase_module = { slot = 2 module = orbital_ring_gun_battery }
+effect set_starbase_module = { slot = 3 module = orbital_ring_hangar_bay }
+effect set_starbase_module = { slot = 4 module = orbital_ring_anchorage }
+effect set_starbase_building = { slot = 1 building = orbitalring_energy_hub }
+effect set_starbase_building = { slot = 2 building = orbitalring_shield_generator }
+effect set_starbase_building = { slot = 3 building = orbitalring_maintenance_hub }

@@ -1,0 +1,2193 @@
+UNIQUE TECH REPORT — Stellaris 4.x vanilla (local install August 2026)
+IDs taken from common/technology/*.txt. Names from localisation/english.
+research_all_technologies is never used.
+Normal weapons/armor/shields/reactors/destroyers/cruisers/battleships/economy tree are excluded.
+Console command: research_technology <id>  (present in stellaris binary; applies to player, no selection needed).
+do NOT use multi-line effect blocks in these files.
+
+Insightful trigger (verbatim):
+  achievement_insightful = { possible = { has_first_contact_dlc = yes } happened = { num_insight_techs >= 12 } }
+There are 13 is_insight=yes techs in 00_first_contact_tech.txt.
+
+Cosmic Storms precursors Inetian Traders and AdAkkaria: no tech_secrets_* IDs.
+Their vanilla rewards are modifiers/relics and (Inetian) tech_storm_manipulation, which is a normal storm tech — not granted here.
+
+Archaeotech extra requirements:
+  Ship components: has_technology = the specific archaeo tech. Minor Artifacts are a BUILD cost, not a flag.
+  Faculty of Archaeostudies: needs tech_archaeostudies.
+  ap_archaeoengineers: buffs, does not gate an already researched tech.
+  Colossus/Titan weapons still need those ship sizes to mount.
+
+================================================================
+
+Technology ID: tech_unusual_senses
+Name: Unusual Senses
+Category: Insight / First Contact
+What it gives: envoys +0.25; Listening Posts +1 detection/sensor per 3 Detection Arrays
+Natural source: Observation Insights situation vs Pre-FTL (is_insight=yes, weight=0)
+DLC: First Contact
+Prerequisites: none
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES — only 12 of 13 needed; not all spawn in one galaxy
+Event/flag dependency: is_insight=yes; no extra empire flag
+Achievement risk: Insightful: num_insight_techs >= 12 (count only). Console usually disables Steam achievements. Do not run before natural Insightful if you want observation credit.
+Included in master file: NO — kept out of master because of Insightful
+
+Technology ID: tech_new_numbers
+Name: New Numbers
+Category: Insight / First Contact
+What it gives: envoys +0.25; +5% all research speed
+Natural source: Observation Insights situation vs Pre-FTL (is_insight=yes, weight=0)
+DLC: First Contact
+Prerequisites: none
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES — only 12 of 13 needed; not all spawn in one galaxy
+Event/flag dependency: is_insight=yes; no extra empire flag
+Achievement risk: Insightful: num_insight_techs >= 12 (count only). Console usually disables Steam achievements. Do not run before natural Insightful if you want observation credit.
+Included in master file: NO — kept out of master because of Insightful
+
+Technology ID: tech_trinary_computing
+Name: Trinary Computing
+Category: Insight / First Contact
+What it gives: envoys +0.25; +10% espionage operation speed; -1 operation difficulty
+Natural source: Observation Insights situation vs Pre-FTL (is_insight=yes, weight=0)
+DLC: First Contact
+Prerequisites: none
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES — only 12 of 13 needed; not all spawn in one galaxy
+Event/flag dependency: is_insight=yes; no extra empire flag
+Achievement risk: Insightful: num_insight_techs >= 12 (count only). Console usually disables Steam achievements. Do not run before natural Insightful if you want observation credit.
+Included in master file: NO — kept out of master because of Insightful
+
+Technology ID: tech_atmospheric_orbital_mechanics
+Name: Atmospheric Orbital Mechanics
+Category: Insight / First Contact
+What it gives: envoys +0.25; +5% mining/research stations; -50% station upkeep (nomad swap: waystation upkeep / stockpile)
+Natural source: Observation Insights situation vs Pre-FTL (is_insight=yes, weight=0)
+DLC: First Contact
+Prerequisites: none
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES — only 12 of 13 needed; not all spawn in one galaxy
+Event/flag dependency: is_insight=yes; no extra empire flag
+Achievement risk: Insightful: num_insight_techs >= 12 (count only). Console usually disables Steam achievements. Do not run before natural Insightful if you want observation credit.
+Included in master file: NO — kept out of master because of Insightful
+
+Technology ID: tech_predatory_tactics
+Name: Predatory Tactics
+Category: Insight / First Contact
+What it gives: envoys +0.5; -50% sublight speed loss from cloaking
+Natural source: Observation Insights situation vs Pre-FTL (is_insight=yes, weight=0)
+DLC: First Contact
+Prerequisites: none
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES — only 12 of 13 needed; not all spawn in one galaxy
+Event/flag dependency: is_insight=yes; no extra empire flag
+Achievement risk: Insightful: num_insight_techs >= 12 (count only). Console usually disables Steam achievements. Do not run before natural Insightful if you want observation credit.
+Included in master file: NO — kept out of master because of Insightful
+
+Technology ID: tech_satisfying_insults
+Name: Satisfying Insults
+Category: Insight / First Contact
+What it gives: envoys +0.5; +50% insult efficiency
+Natural source: Observation Insights situation vs Pre-FTL (is_insight=yes, weight=0)
+DLC: First Contact
+Prerequisites: none
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES — only 12 of 13 needed; not all spawn in one galaxy
+Event/flag dependency: is_insight=yes; no extra empire flag
+Achievement risk: Insightful: num_insight_techs >= 12 (count only). Console usually disables Steam achievements. Do not run before natural Insightful if you want observation credit.
+Included in master file: NO — kept out of master because of Insightful
+
+Technology ID: tech_compact_living
+Name: Compact Living
+Category: Insight / First Contact
+What it gives: envoys +0.5; -5% empire size penalty
+Natural source: Observation Insights situation vs Pre-FTL (is_insight=yes, weight=0)
+DLC: First Contact
+Prerequisites: none
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES — only 12 of 13 needed; not all spawn in one galaxy
+Event/flag dependency: is_insight=yes; no extra empire flag
+Achievement risk: Insightful: num_insight_techs >= 12 (count only). Console usually disables Steam achievements. Do not run before natural Insightful if you want observation credit.
+Included in master file: NO — kept out of master because of Insightful
+
+Technology ID: tech_alien_topography
+Name: Alien Topography
+Category: Insight / First Contact
+What it gives: envoys +0.5; +1 max districts on non-artificial worlds (void dweller/nomad: +1 artificial districts)
+Natural source: Observation Insights situation vs Pre-FTL (is_insight=yes, weight=0)
+DLC: First Contact
+Prerequisites: none
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES — only 12 of 13 needed; not all spawn in one galaxy
+Event/flag dependency: is_insight=yes; no extra empire flag
+Achievement risk: Insightful: num_insight_techs >= 12 (count only). Console usually disables Steam achievements. Do not run before natural Insightful if you want observation credit.
+Included in master file: NO — kept out of master because of Insightful
+
+Technology ID: tech_xeno_aesthetics
+Name: Xeno-Aesthetics
+Category: Insight / First Contact
+What it gives: envoys +0.5; +10% damage vs rivals
+Natural source: Observation Insights situation vs Pre-FTL (is_insight=yes, weight=0)
+DLC: First Contact
+Prerequisites: none
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES — only 12 of 13 needed; not all spawn in one galaxy
+Event/flag dependency: is_insight=yes; no extra empire flag
+Achievement risk: Insightful: num_insight_techs >= 12 (count only). Console usually disables Steam achievements. Do not run before natural Insightful if you want observation credit.
+Included in master file: NO — kept out of master because of Insightful
+
+Technology ID: tech_lost_building_methods
+Name: Lost Building Methods
+Category: Insight / First Contact
+What it gives: envoys +0.25; -30% empire size from districts; -30% district cost
+Natural source: Observation Insights situation vs Pre-FTL (is_insight=yes, weight=0)
+DLC: First Contact
+Prerequisites: none
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES — only 12 of 13 needed; not all spawn in one galaxy
+Event/flag dependency: is_insight=yes; no extra empire flag
+Achievement risk: Insightful: num_insight_techs >= 12 (count only). Console usually disables Steam achievements. Do not run before natural Insightful if you want observation credit.
+Included in master file: NO — kept out of master because of Insightful
+
+Technology ID: tech_supreme_alloy
+Name: Supreme Alloy
+Category: Insight / First Contact
+What it gives: envoys +0.25; +0.25 alloys from metallurgists
+Natural source: Observation Insights situation vs Pre-FTL (is_insight=yes, weight=0)
+DLC: First Contact
+Prerequisites: none
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES — only 12 of 13 needed; not all spawn in one galaxy
+Event/flag dependency: is_insight=yes; no extra empire flag
+Achievement risk: Insightful: num_insight_techs >= 12 (count only). Console usually disables Steam achievements. Do not run before natural Insightful if you want observation credit.
+Included in master file: NO — kept out of master because of Insightful
+
+Technology ID: tech_ordered_retreat
+Name: Ordered Retreat
+Category: Insight / First Contact
+What it gives: envoys +0.25; -15% MIA time
+Natural source: Observation Insights situation vs Pre-FTL (is_insight=yes, weight=0)
+DLC: First Contact
+Prerequisites: none
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES — only 12 of 13 needed; not all spawn in one galaxy
+Event/flag dependency: is_insight=yes; no extra empire flag
+Achievement risk: Insightful: num_insight_techs >= 12 (count only). Console usually disables Steam achievements. Do not run before natural Insightful if you want observation credit.
+Included in master file: NO — kept out of master because of Insightful
+
+Technology ID: tech_temple_of_transportation
+Name: Temple of Transportation
+Category: Insight / First Contact
+What it gives: envoys +0.25; Hyper Relays produce +1 unity
+Natural source: Observation Insights situation vs Pre-FTL (is_insight=yes, weight=0)
+DLC: First Contact
+Prerequisites: none
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES — only 12 of 13 needed; not all spawn in one galaxy
+Event/flag dependency: is_insight=yes; no extra empire flag
+Achievement risk: Insightful: num_insight_techs >= 12 (count only). Console usually disables Steam achievements. Do not run before natural Insightful if you want observation credit.
+Included in master file: NO — kept out of master because of Insightful
+
+Technology ID: tech_secrets_cybrex
+Name: Cybrex Mining Hub
+Category: Precursor archaeotech secret
+What it gives: Secrets of the Cybrex archaeotech unlock (weight=0)
+Natural source: Ancient Relics precursor chain / Minor Artifact 'Secrets of' action — mutually exclusive per campaign
+DLC: Ancient Relics
+Prerequisites: none (weight=0 event grant)
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES — only one precursor story per empire
+Event/flag dependency: No chain flags set by this script. Relics not granted. Inetian/AdAkkaria have no tech_secrets_* IDs (they grant modifiers/relics + normal storm tech).
+Achievement risk: Humility Before the Fall / other precursor achievements use country flags, not these techs
+Included in master file: YES
+
+Technology ID: tech_secrets_league
+Name: First League Filing Offices
+Category: Precursor archaeotech secret
+What it gives: Secrets of the First League; building uses this tech
+Natural source: Ancient Relics precursor chain / Minor Artifact 'Secrets of' action — mutually exclusive per campaign
+DLC: Ancient Relics
+Prerequisites: none (weight=0 event grant)
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES — only one precursor story per empire
+Event/flag dependency: No chain flags set by this script. Relics not granted. Inetian/AdAkkaria have no tech_secrets_* IDs (they grant modifiers/relics + normal storm tech).
+Achievement risk: Humility Before the Fall / other precursor achievements use country flags, not these techs
+Included in master file: YES
+
+Technology ID: tech_secrets_irassian
+Name: Irassian Naval Yards
+Category: Precursor archaeotech secret
+What it gives: Secrets of the Irassians archaeotech unlock
+Natural source: Ancient Relics precursor chain / Minor Artifact 'Secrets of' action — mutually exclusive per campaign
+DLC: Ancient Relics
+Prerequisites: none (weight=0 event grant)
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES — only one precursor story per empire
+Event/flag dependency: No chain flags set by this script. Relics not granted. Inetian/AdAkkaria have no tech_secrets_* IDs (they grant modifiers/relics + normal storm tech).
+Achievement risk: Humility Before the Fall / other precursor achievements use country flags, not these techs
+Included in master file: YES
+
+Technology ID: tech_secrets_vultaum
+Name: Vultaum Reality Computer
+Category: Precursor archaeotech secret
+What it gives: Secrets of the Vultaum; building uses this tech
+Natural source: Ancient Relics precursor chain / Minor Artifact 'Secrets of' action — mutually exclusive per campaign
+DLC: Ancient Relics
+Prerequisites: none (weight=0 event grant)
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES — only one precursor story per empire
+Event/flag dependency: No chain flags set by this script. Relics not granted. Inetian/AdAkkaria have no tech_secrets_* IDs (they grant modifiers/relics + normal storm tech).
+Achievement risk: Humility Before the Fall / other precursor achievements use country flags, not these techs
+Included in master file: YES
+
+Technology ID: tech_secrets_yuht
+Name: Yuht Astronomical Interferometer
+Category: Precursor archaeotech secret
+What it gives: Secrets of the Yuht archaeotech unlock
+Natural source: Ancient Relics precursor chain / Minor Artifact 'Secrets of' action — mutually exclusive per campaign
+DLC: Ancient Relics
+Prerequisites: none (weight=0 event grant)
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES — only one precursor story per empire
+Event/flag dependency: No chain flags set by this script. Relics not granted. Inetian/AdAkkaria have no tech_secrets_* IDs (they grant modifiers/relics + normal storm tech).
+Achievement risk: Humility Before the Fall / other precursor achievements use country flags, not these techs
+Included in master file: YES
+
+Technology ID: tech_secrets_baol
+Name: Baol Organic Plant
+Category: Precursor archaeotech secret
+What it gives: Secrets of the Baol; building uses this tech
+Natural source: Ancient Relics precursor chain / Minor Artifact 'Secrets of' action — mutually exclusive per campaign
+DLC: Ancient Relics
+Prerequisites: none (weight=0 event grant)
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES — only one precursor story per empire
+Event/flag dependency: No chain flags set by this script. Relics not granted. Inetian/AdAkkaria have no tech_secrets_* IDs (they grant modifiers/relics + normal storm tech).
+Achievement risk: Humility Before the Fall / other precursor achievements use country flags, not these techs
+Included in master file: YES
+
+Technology ID: tech_secrets_zroni
+Name: Zroni Storm Caster
+Category: Precursor archaeotech secret
+What it gives: Secrets of the Zroni archaeotech unlock
+Natural source: Ancient Relics precursor chain / Minor Artifact 'Secrets of' action — mutually exclusive per campaign
+DLC: Ancient Relics
+Prerequisites: none (weight=0 event grant)
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES — only one precursor story per empire
+Event/flag dependency: No chain flags set by this script. Relics not granted. Inetian/AdAkkaria have no tech_secrets_* IDs (they grant modifiers/relics + normal storm tech).
+Achievement risk: Humility Before the Fall / other precursor achievements use country flags, not these techs
+Included in master file: YES
+
+Technology ID: tech_archaeostudies
+Name: Archaeostudies
+Category: Archaeotechnology
+What it gives: Gateway: Faculty of Archaeostudies. CAN appear after sites. Ship archaeocomponents check their own tech, not this one — Faculty needs this.
+Natural source: Ancient Relics archaeology / Faculty / precursor secrets. Weights exist after archaeostudies but are easy to miss.
+DLC: Ancient Relics
+Prerequisites: tech_archaeostudies listed as prereq on most; components check the specific archaeo tech
+Can normally appear in tech deck: YES (rare, after archaeology)
+Can be missed in one campaign: YES
+Event/flag dependency: No empire flag required to USE ship components. Construction spends Minor Artifacts. ap_archaeoengineers only improves odds/stats, does not gate researched techs.
+Achievement risk: Archaeologist achievement uses country flag from sites, not these techs
+Included in master file: YES
+
+Technology ID: tech_arcane_deciphering
+Name: Arcane Deciphering
+Category: Archaeotechnology
+What it gives: Unlocks Arcane Deciphering edict/decision. Needs Minor Artifacts in stock to appear naturally.
+Natural source: Ancient Relics archaeology / Faculty / precursor secrets. Weights exist after archaeostudies but are easy to miss.
+DLC: Ancient Relics
+Prerequisites: tech_archaeostudies listed as prereq on most; components check the specific archaeo tech
+Can normally appear in tech deck: YES (rare, after archaeology)
+Can be missed in one campaign: YES
+Event/flag dependency: No empire flag required to USE ship components. Construction spends Minor Artifacts. ap_archaeoengineers only improves odds/stats, does not gate researched techs.
+Achievement risk: Archaeologist achievement uses country flag from sites, not these techs
+Included in master file: YES
+
+Technology ID: tech_archeology_lab_ancrel
+Name: $tech_archeology_lab$
+Category: Archaeotechnology
+What it gives: Curator Archaeology Lab (Ancient Relics version). Naturally curator-gated.
+Natural source: Ancient Relics archaeology / Faculty / precursor secrets. Weights exist after archaeostudies but are easy to miss.
+DLC: Ancient Relics
+Prerequisites: tech_archaeostudies listed as prereq on most; components check the specific archaeo tech
+Can normally appear in tech deck: YES (rare, after archaeology)
+Can be missed in one campaign: YES
+Event/flag dependency: No empire flag required to USE ship components. Construction spends Minor Artifacts. ap_archaeoengineers only improves odds/stats, does not gate researched techs.
+Achievement risk: Archaeologist achievement uses country flag from sites, not these techs
+Included in master file: YES
+
+Technology ID: tech_archaeoshield
+Name: Ancient Suspension Field
+Category: Archaeotechnology
+What it gives: Ancient shields. Component prereq = this tech. Build cost uses Minor Artifacts.
+Natural source: Ancient Relics archaeology / Faculty / precursor secrets. Weights exist after archaeostudies but are easy to miss.
+DLC: Ancient Relics
+Prerequisites: tech_archaeostudies listed as prereq on most; components check the specific archaeo tech
+Can normally appear in tech deck: YES (rare, after archaeostudies; often missed)
+Can be missed in one campaign: YES
+Event/flag dependency: No empire flag required to USE ship components. Construction spends Minor Artifacts. ap_archaeoengineers only improves odds/stats, does not gate researched techs.
+Achievement risk: Archaeologist achievement uses country flag from sites, not these techs
+Included in master file: YES
+
+Technology ID: tech_archaeoarmor
+Name: Ancient Pulse Armor
+Category: Archaeotechnology
+What it gives: Ancient armor. Component prereq = this tech. Minor Artifacts to build.
+Natural source: Ancient Relics archaeology / Faculty / precursor secrets. Weights exist after archaeostudies but are easy to miss.
+DLC: Ancient Relics
+Prerequisites: tech_archaeostudies listed as prereq on most; components check the specific archaeo tech
+Can normally appear in tech deck: YES (rare, after archaeostudies; often missed)
+Can be missed in one campaign: YES
+Event/flag dependency: No empire flag required to USE ship components. Construction spends Minor Artifacts. ap_archaeoengineers only improves odds/stats, does not gate researched techs.
+Achievement risk: Archaeologist achievement uses country flag from sites, not these techs
+Included in master file: YES
+
+Technology ID: tech_archaeo_detection_scrambler
+Name: Ancient Target Scrambler
+Category: Archaeotechnology
+What it gives: Ancient utility / scrambler component.
+Natural source: Ancient Relics archaeology / Faculty / precursor secrets. Weights exist after archaeostudies but are easy to miss.
+DLC: Ancient Relics
+Prerequisites: tech_archaeostudies listed as prereq on most; components check the specific archaeo tech
+Can normally appear in tech deck: YES (rare, after archaeostudies; often missed)
+Can be missed in one campaign: YES
+Event/flag dependency: No empire flag required to USE ship components. Construction spends Minor Artifacts. ap_archaeoengineers only improves odds/stats, does not gate researched techs.
+Achievement risk: Archaeologist achievement uses country flag from sites, not these techs
+Included in master file: YES
+
+Technology ID: tech_archaeo_titan_beam
+Name: Ancient Ruination Glare
+Category: Archaeotechnology
+What it gives: Ancient titan weapon. Needs a titan hull to mount, not a flag.
+Natural source: Ancient Relics archaeology / Faculty / precursor secrets. Weights exist after archaeostudies but are easy to miss.
+DLC: Ancient Relics
+Prerequisites: tech_archaeostudies listed as prereq on most; components check the specific archaeo tech
+Can normally appear in tech deck: YES (rare, after archaeostudies; often missed)
+Can be missed in one campaign: YES
+Event/flag dependency: No empire flag required to USE ship components. Construction spends Minor Artifacts. ap_archaeoengineers only improves odds/stats, does not gate researched techs.
+Achievement risk: Archaeologist achievement uses country flag from sites, not these techs
+Included in master file: YES
+
+Technology ID: tech_archaeo_pk_devolving_beam
+Name: Devolving Beam
+Category: Archaeotechnology
+What it gives: Ancient colossus weapon. Needs a Colossus to fire. No extra flag. AP Archaeoengineers only buffs, does not gate.
+Natural source: Ancient Relics archaeology / Faculty / precursor secrets. Weights exist after archaeostudies but are easy to miss.
+DLC: Ancient Relics
+Prerequisites: tech_archaeostudies listed as prereq on most; components check the specific archaeo tech
+Can normally appear in tech deck: YES (rare, after archaeostudies; often missed)
+Can be missed in one campaign: YES
+Event/flag dependency: No empire flag required to USE ship components. Construction spends Minor Artifacts. ap_archaeoengineers only improves odds/stats, does not gate researched techs.
+Achievement risk: Archaeologist achievement uses country flag from sites, not these techs
+Included in master file: YES
+
+Technology ID: tech_archaeo_mass_drivers
+Name: Ancient Macro Batteries
+Category: Archaeotechnology
+What it gives: Ancient kinetics. Minor Artifacts to construct.
+Natural source: Ancient Relics archaeology / Faculty / precursor secrets. Weights exist after archaeostudies but are easy to miss.
+DLC: Ancient Relics
+Prerequisites: tech_archaeostudies listed as prereq on most; components check the specific archaeo tech
+Can normally appear in tech deck: YES (rare, after archaeostudies; often missed)
+Can be missed in one campaign: YES
+Event/flag dependency: No empire flag required to USE ship components. Construction spends Minor Artifacts. ap_archaeoengineers only improves odds/stats, does not gate researched techs.
+Achievement risk: Archaeologist achievement uses country flag from sites, not these techs
+Included in master file: YES
+
+Technology ID: tech_archaeo_lasers
+Name: Ancient Cavitation Collapser
+Category: Archaeotechnology
+What it gives: Ancient lasers. Minor Artifacts to construct.
+Natural source: Ancient Relics archaeology / Faculty / precursor secrets. Weights exist after archaeostudies but are easy to miss.
+DLC: Ancient Relics
+Prerequisites: tech_archaeostudies listed as prereq on most; components check the specific archaeo tech
+Can normally appear in tech deck: YES (rare, after archaeostudies; often missed)
+Can be missed in one campaign: YES
+Event/flag dependency: No empire flag required to USE ship components. Construction spends Minor Artifacts. ap_archaeoengineers only improves odds/stats, does not gate researched techs.
+Achievement risk: Archaeologist achievement uses country flag from sites, not these techs
+Included in master file: YES
+
+Technology ID: tech_archaeo_point_defence
+Name: Ancient Defensive Web Slinger
+Category: Archaeotechnology
+What it gives: Ancient PD.
+Natural source: Ancient Relics archaeology / Faculty / precursor secrets. Weights exist after archaeostudies but are easy to miss.
+DLC: Ancient Relics
+Prerequisites: tech_archaeostudies listed as prereq on most; components check the specific archaeo tech
+Can normally appear in tech deck: YES (rare, after archaeostudies; often missed)
+Can be missed in one campaign: YES
+Event/flag dependency: No empire flag required to USE ship components. Construction spends Minor Artifacts. ap_archaeoengineers only improves odds/stats, does not gate researched techs.
+Achievement risk: Archaeologist achievement uses country flag from sites, not these techs
+Included in master file: YES
+
+Technology ID: tech_archaeo_missiles
+Name: Ancient Nano-Missile Cloud Launcher
+Category: Archaeotechnology
+What it gives: Ancient missiles.
+Natural source: Ancient Relics archaeology / Faculty / precursor secrets. Weights exist after archaeostudies but are easy to miss.
+DLC: Ancient Relics
+Prerequisites: tech_archaeostudies listed as prereq on most; components check the specific archaeo tech
+Can normally appear in tech deck: YES (rare, after archaeostudies; often missed)
+Can be missed in one campaign: YES
+Event/flag dependency: No empire flag required to USE ship components. Construction spends Minor Artifacts. ap_archaeoengineers only improves odds/stats, does not gate researched techs.
+Achievement risk: Archaeologist achievement uses country flag from sites, not these techs
+Included in master file: YES
+
+Technology ID: tech_archaeo_mass_accelerator
+Name: Ancient Saturator Artillery
+Category: Archaeotechnology
+What it gives: Ancient XL kinetic.
+Natural source: Ancient Relics archaeology / Faculty / precursor secrets. Weights exist after archaeostudies but are easy to miss.
+DLC: Ancient Relics
+Prerequisites: tech_archaeostudies listed as prereq on most; components check the specific archaeo tech
+Can normally appear in tech deck: YES (rare, after archaeostudies; often missed)
+Can be missed in one campaign: YES
+Event/flag dependency: No empire flag required to USE ship components. Construction spends Minor Artifacts. ap_archaeoengineers only improves odds/stats, does not gate researched techs.
+Achievement risk: Archaeologist achievement uses country flag from sites, not these techs
+Included in master file: YES
+
+Technology ID: tech_archaeo_strike_crafts
+Name: Ancient Driller Drones
+Category: Archaeotechnology
+What it gives: Ancient strike craft.
+Natural source: Ancient Relics archaeology / Faculty / precursor secrets. Weights exist after archaeostudies but are easy to miss.
+DLC: Ancient Relics
+Prerequisites: tech_archaeostudies listed as prereq on most; components check the specific archaeo tech
+Can normally appear in tech deck: YES (rare, after archaeostudies; often missed)
+Can be missed in one campaign: YES
+Event/flag dependency: No empire flag required to USE ship components. Construction spends Minor Artifacts. ap_archaeoengineers only improves odds/stats, does not gate researched techs.
+Achievement risk: Archaeologist achievement uses country flag from sites, not these techs
+Included in master file: YES
+
+Technology ID: tech_archaeo_rampart
+Name: Ancient Rampart
+Category: Archaeotechnology
+What it gives: Ancient planetary/starbase defense building. No AP required to build.
+Natural source: Ancient Relics archaeology / Faculty / precursor secrets. Weights exist after archaeostudies but are easy to miss.
+DLC: Ancient Relics
+Prerequisites: tech_archaeostudies listed as prereq on most; components check the specific archaeo tech
+Can normally appear in tech deck: YES (rare, after archaeostudies; often missed)
+Can be missed in one campaign: YES
+Event/flag dependency: No empire flag required to USE ship components. Construction spends Minor Artifacts. ap_archaeoengineers only improves odds/stats, does not gate researched techs.
+Achievement risk: Archaeologist achievement uses country flag from sites, not these techs
+Included in master file: YES
+
+Technology ID: tech_archaeo_overcharger
+Name: Ancient Shield Overcharger
+Category: Archaeotechnology
+What it gives: Ancient starbase module.
+Natural source: Ancient Relics archaeology / Faculty / precursor secrets. Weights exist after archaeostudies but are easy to miss.
+DLC: Ancient Relics
+Prerequisites: tech_archaeostudies listed as prereq on most; components check the specific archaeo tech
+Can normally appear in tech deck: YES (rare, after archaeostudies; often missed)
+Can be missed in one campaign: YES
+Event/flag dependency: No empire flag required to USE ship components. Construction spends Minor Artifacts. ap_archaeoengineers only improves odds/stats, does not gate researched techs.
+Achievement risk: Archaeologist achievement uses country flag from sites, not these techs
+Included in master file: YES
+
+Technology ID: tech_archaeo_refinery
+Name: Ancient Refinery
+Category: Archaeotechnology
+What it gives: Ancient economic building.
+Natural source: Ancient Relics archaeology / Faculty / precursor secrets. Weights exist after archaeostudies but are easy to miss.
+DLC: Ancient Relics
+Prerequisites: tech_archaeostudies listed as prereq on most; components check the specific archaeo tech
+Can normally appear in tech deck: YES (rare, after archaeostudies; often missed)
+Can be missed in one campaign: YES
+Event/flag dependency: No empire flag required to USE ship components. Construction spends Minor Artifacts. ap_archaeoengineers only improves odds/stats, does not gate researched techs.
+Achievement risk: Archaeologist achievement uses country flag from sites, not these techs
+Included in master file: YES
+
+Technology ID: tech_dragon_armor
+Name: Artificial Dragonscales
+Category: Guardian / Leviathan
+What it gives: Dragonscale Armor component (prereq = this tech only)
+Natural source: Ether Drake / Shard / Sky Dragon outcomes or debris — weight=0
+DLC: Leviathans / Distant Stars
+Prerequisites: none
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES
+Event/flag dependency: No guardian_killed / restored_dreadnought flags
+Achievement risk: Ether Drake achievements use kill flags (horror_killed etc.), not this tech
+Included in master file: YES
+
+Technology ID: tech_enigmatic_encoder
+Name: Enigmatic Encoder
+Category: Guardian / Leviathan
+What it gives: Enigmatic Encoder aux
+Natural source: Enigmatic Fortress analysis/debris (events add_research_option) — weight=0
+DLC: Leviathans
+Prerequisites: none
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES
+Event/flag dependency: No guardian_killed / restored_dreadnought flags
+Achievement risk: Fortress events/achievements use their own flags; script does not set guardian_killed
+Included in master file: YES
+
+Technology ID: tech_enigmatic_decoder
+Name: Enigmatic Decoder
+Category: Guardian / Leviathan
+What it gives: Enigmatic Decoder aux
+Natural source: Enigmatic Fortress — weight=0
+DLC: Leviathans
+Prerequisites: none
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES
+Event/flag dependency: No guardian_killed / restored_dreadnought flags
+Achievement risk: Same as encoder
+Included in master file: YES
+
+Technology ID: tech_nanite_repair_system
+Name: Nanite Repair System
+Category: Guardian / Leviathan
+What it gives: Nanite Repair System aux
+Natural source: Scavenger Bot debris only (weight_modifier factor=0)
+DLC: Distant Stars
+Prerequisites: none
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES
+Event/flag dependency: No guardian_killed / restored_dreadnought flags
+Achievement risk: Kill/debris achievements use flags, not this tech
+Included in master file: YES
+
+Technology ID: tech_nanite_autocannon
+Name: Nanite Autocannon
+Category: Guardian / Leviathan
+What it gives: Nanite Autocannon
+Natural source: Scavenger Bot reverse engineering
+DLC: Distant Stars
+Prerequisites: none
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES
+Event/flag dependency: No guardian_killed / restored_dreadnought flags
+Achievement risk: Kill flags not set
+Included in master file: YES
+
+Technology ID: tech_nanite_flak_batteries
+Name: Nanite Flak Battery
+Category: Guardian / Leviathan
+What it gives: Nanite Flak Battery
+Natural source: Scavenger Bot reverse engineering
+DLC: Distant Stars
+Prerequisites: none
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES
+Event/flag dependency: No guardian_killed / restored_dreadnought flags
+Achievement risk: Kill flags not set
+Included in master file: YES
+
+Technology ID: tech_leviathan_techgenesis
+Name: Leviathan Tech Genesis
+Category: Guardian / Leviathan
+What it gives: Leviathan-derived machine component unlock (Machine Age event grant, weight factor=0)
+Natural source: Leviathan events while Machine Age DLC is active
+DLC: The Machine Age + Leviathans
+Prerequisites: none
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES
+Event/flag dependency: No guardian_killed / restored_dreadnought flags
+Achievement risk: Event-granted; this script does not complete leviathan events
+Included in master file: YES
+
+Technology ID: tech_gargantuan_evolution
+Name: Gargantuan Evolution
+Category: Guardian / Leviathan
+What it gives: +5% job energy (Voidspawn-related Distant Stars grant, weight=0)
+Natural source: distant_stars_events_3 add_research_option
+DLC: Distant Stars
+Prerequisites: none
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES
+Event/flag dependency: No guardian_killed / restored_dreadnought flags
+Achievement risk: Voidspawn content uses its own flags
+Included in master file: YES
+
+Technology ID: tech_dark_matter_deflector
+Name: Dark Matter Deflectors
+Category: Fallen / Awakened Empire
+What it gives: FE-exclusive component or building
+Natural source: FE/AE debris, Enigmatic Engineering draw, or Cosmogenesis — player weight is effectively 0 without those
+DLC: Utopia / First Contact (DM cloak) / base FE
+Prerequisites: Vanilla lists shields_5 / zero_point / thrusters_4 / cloaking_3 for some; not granted. Components check the unique tech.
+Can normally appear in tech deck: NO for player without EE/Cosmogenesis
+Can be missed in one campaign: YES
+Event/flag dependency: Each researched FE tech stacks FE opinion penalty in vanilla. No crisis/AP flags set.
+Achievement risk: Outside Context uses country flag outsidecontext, not these techs
+Included in master file: YES
+
+Technology ID: tech_dark_matter_power_core
+Name: Dark Matter Power
+Category: Fallen / Awakened Empire
+What it gives: FE-exclusive component or building
+Natural source: FE/AE debris, Enigmatic Engineering draw, or Cosmogenesis — player weight is effectively 0 without those
+DLC: Utopia / First Contact (DM cloak) / base FE
+Prerequisites: Vanilla lists shields_5 / zero_point / thrusters_4 / cloaking_3 for some; not granted. Components check the unique tech.
+Can normally appear in tech deck: NO for player without EE/Cosmogenesis
+Can be missed in one campaign: YES
+Event/flag dependency: Each researched FE tech stacks FE opinion penalty in vanilla. No crisis/AP flags set.
+Achievement risk: Outside Context uses country flag outsidecontext, not these techs
+Included in master file: YES
+
+Technology ID: tech_dark_matter_propulsion
+Name: Dark Matter Propulsion
+Category: Fallen / Awakened Empire
+What it gives: FE-exclusive component or building
+Natural source: FE/AE debris, Enigmatic Engineering draw, or Cosmogenesis — player weight is effectively 0 without those
+DLC: Utopia / First Contact (DM cloak) / base FE
+Prerequisites: Vanilla lists shields_5 / zero_point / thrusters_4 / cloaking_3 for some; not granted. Components check the unique tech.
+Can normally appear in tech deck: NO for player without EE/Cosmogenesis
+Can be missed in one campaign: YES
+Event/flag dependency: Each researched FE tech stacks FE opinion penalty in vanilla. No crisis/AP flags set.
+Achievement risk: Outside Context uses country flag outsidecontext, not these techs
+Included in master file: YES
+
+Technology ID: tech_cloaking_dark_matter
+Name: Dark Matter Cloaking Fields
+Category: Fallen / Awakened Empire
+What it gives: FE-exclusive component or building Component prereq is this tech. Natural draw wants cloaking_3 + DM deflectors; those are NOT granted. Cloak module still checks this ID.
+Natural source: FE/AE debris, Enigmatic Engineering draw, or Cosmogenesis — player weight is effectively 0 without those
+DLC: Utopia / First Contact (DM cloak) / base FE
+Prerequisites: Vanilla lists shields_5 / zero_point / thrusters_4 / cloaking_3 for some; not granted. Components check the unique tech.
+Can normally appear in tech deck: NO for player without EE/Cosmogenesis
+Can be missed in one campaign: YES
+Event/flag dependency: Each researched FE tech stacks FE opinion penalty in vanilla. No crisis/AP flags set.
+Achievement risk: Outside Context uses country flag outsidecontext, not these techs
+Included in master file: YES
+
+Technology ID: tech_fe_affluence_1
+Name: $building_affluence_emporium$
+Category: Fallen / Awakened Empire
+What it gives: FE-exclusive component or building Building unlock. Gestalt/individual restrictions still apply to some buildings (assembly/clinic/market/entertainment). Enigmatic Engineering is only for drawing, not using.
+Natural source: FE/AE debris, Enigmatic Engineering draw, or Cosmogenesis — player weight is effectively 0 without those
+DLC: Utopia / First Contact (DM cloak) / base FE
+Prerequisites: Vanilla lists shields_5 / zero_point / thrusters_4 / cloaking_3 for some; not granted. Components check the unique tech.
+Can normally appear in tech deck: NO for player without EE/Cosmogenesis
+Can be missed in one campaign: YES
+Event/flag dependency: Each researched FE tech stacks FE opinion penalty in vanilla. No crisis/AP flags set.
+Achievement risk: Outside Context uses country flag outsidecontext, not these techs
+Included in master file: YES
+
+Technology ID: tech_fe_affluence_2
+Name: $building_affluence_center$
+Category: Fallen / Awakened Empire
+What it gives: FE-exclusive component or building Building unlock. Gestalt/individual restrictions still apply to some buildings (assembly/clinic/market/entertainment). Enigmatic Engineering is only for drawing, not using.
+Natural source: FE/AE debris, Enigmatic Engineering draw, or Cosmogenesis — player weight is effectively 0 without those
+DLC: Utopia / First Contact (DM cloak) / base FE
+Prerequisites: Vanilla lists shields_5 / zero_point / thrusters_4 / cloaking_3 for some; not granted. Components check the unique tech.
+Can normally appear in tech deck: NO for player without EE/Cosmogenesis
+Can be missed in one campaign: YES
+Event/flag dependency: Each researched FE tech stacks FE opinion penalty in vanilla. No crisis/AP flags set.
+Achievement risk: Outside Context uses country flag outsidecontext, not these techs
+Included in master file: YES
+
+Technology ID: tech_fe_nourishment_1
+Name: $building_nourishment_complex$
+Category: Fallen / Awakened Empire
+What it gives: FE-exclusive component or building Building unlock. Gestalt/individual restrictions still apply to some buildings (assembly/clinic/market/entertainment). Enigmatic Engineering is only for drawing, not using.
+Natural source: FE/AE debris, Enigmatic Engineering draw, or Cosmogenesis — player weight is effectively 0 without those
+DLC: Utopia / First Contact (DM cloak) / base FE
+Prerequisites: Vanilla lists shields_5 / zero_point / thrusters_4 / cloaking_3 for some; not granted. Components check the unique tech.
+Can normally appear in tech deck: NO for player without EE/Cosmogenesis
+Can be missed in one campaign: YES
+Event/flag dependency: Each researched FE tech stacks FE opinion penalty in vanilla. No crisis/AP flags set.
+Achievement risk: Outside Context uses country flag outsidecontext, not these techs
+Included in master file: YES
+
+Technology ID: tech_fe_nourishment_2
+Name: $building_nourishment_center$
+Category: Fallen / Awakened Empire
+What it gives: FE-exclusive component or building Building unlock. Gestalt/individual restrictions still apply to some buildings (assembly/clinic/market/entertainment). Enigmatic Engineering is only for drawing, not using.
+Natural source: FE/AE debris, Enigmatic Engineering draw, or Cosmogenesis — player weight is effectively 0 without those
+DLC: Utopia / First Contact (DM cloak) / base FE
+Prerequisites: Vanilla lists shields_5 / zero_point / thrusters_4 / cloaking_3 for some; not granted. Components check the unique tech.
+Can normally appear in tech deck: NO for player without EE/Cosmogenesis
+Can be missed in one campaign: YES
+Event/flag dependency: Each researched FE tech stacks FE opinion penalty in vanilla. No crisis/AP flags set.
+Achievement risk: Outside Context uses country flag outsidecontext, not these techs
+Included in master file: YES
+
+Technology ID: tech_fe_fabricator_1
+Name: $building_dimensional_replicator$
+Category: Fallen / Awakened Empire
+What it gives: FE-exclusive component or building Building unlock. Gestalt/individual restrictions still apply to some buildings (assembly/clinic/market/entertainment). Enigmatic Engineering is only for drawing, not using.
+Natural source: FE/AE debris, Enigmatic Engineering draw, or Cosmogenesis — player weight is effectively 0 without those
+DLC: Utopia / First Contact (DM cloak) / base FE
+Prerequisites: Vanilla lists shields_5 / zero_point / thrusters_4 / cloaking_3 for some; not granted. Components check the unique tech.
+Can normally appear in tech deck: NO for player without EE/Cosmogenesis
+Can be missed in one campaign: YES
+Event/flag dependency: Each researched FE tech stacks FE opinion penalty in vanilla. No crisis/AP flags set.
+Achievement risk: Outside Context uses country flag outsidecontext, not these techs
+Included in master file: YES
+
+Technology ID: tech_fe_fabricator_2
+Name: $building_dimensional_fabricator$
+Category: Fallen / Awakened Empire
+What it gives: FE-exclusive component or building Building unlock. Gestalt/individual restrictions still apply to some buildings (assembly/clinic/market/entertainment). Enigmatic Engineering is only for drawing, not using.
+Natural source: FE/AE debris, Enigmatic Engineering draw, or Cosmogenesis — player weight is effectively 0 without those
+DLC: Utopia / First Contact (DM cloak) / base FE
+Prerequisites: Vanilla lists shields_5 / zero_point / thrusters_4 / cloaking_3 for some; not granted. Components check the unique tech.
+Can normally appear in tech deck: NO for player without EE/Cosmogenesis
+Can be missed in one campaign: YES
+Event/flag dependency: Each researched FE tech stacks FE opinion penalty in vanilla. No crisis/AP flags set.
+Achievement risk: Outside Context uses country flag outsidecontext, not these techs
+Included in master file: YES
+
+Technology ID: tech_fe_singularity_1
+Name: $building_class_3_singularity$
+Category: Fallen / Awakened Empire
+What it gives: FE-exclusive component or building Building unlock. Gestalt/individual restrictions still apply to some buildings (assembly/clinic/market/entertainment). Enigmatic Engineering is only for drawing, not using.
+Natural source: FE/AE debris, Enigmatic Engineering draw, or Cosmogenesis — player weight is effectively 0 without those
+DLC: Utopia / First Contact (DM cloak) / base FE
+Prerequisites: Vanilla lists shields_5 / zero_point / thrusters_4 / cloaking_3 for some; not granted. Components check the unique tech.
+Can normally appear in tech deck: NO for player without EE/Cosmogenesis
+Can be missed in one campaign: YES
+Event/flag dependency: Each researched FE tech stacks FE opinion penalty in vanilla. No crisis/AP flags set.
+Achievement risk: Outside Context uses country flag outsidecontext, not these techs
+Included in master file: YES
+
+Technology ID: tech_fe_singularity_2
+Name: $building_class_4_singularity$
+Category: Fallen / Awakened Empire
+What it gives: FE-exclusive component or building Building unlock. Gestalt/individual restrictions still apply to some buildings (assembly/clinic/market/entertainment). Enigmatic Engineering is only for drawing, not using.
+Natural source: FE/AE debris, Enigmatic Engineering draw, or Cosmogenesis — player weight is effectively 0 without those
+DLC: Utopia / First Contact (DM cloak) / base FE
+Prerequisites: Vanilla lists shields_5 / zero_point / thrusters_4 / cloaking_3 for some; not granted. Components check the unique tech.
+Can normally appear in tech deck: NO for player without EE/Cosmogenesis
+Can be missed in one campaign: YES
+Event/flag dependency: Each researched FE tech stacks FE opinion penalty in vanilla. No crisis/AP flags set.
+Achievement risk: Outside Context uses country flag outsidecontext, not these techs
+Included in master file: YES
+
+Technology ID: tech_fe_forge_1
+Name: $building_micro_forge$
+Category: Fallen / Awakened Empire
+What it gives: FE-exclusive component or building Building unlock. Gestalt/individual restrictions still apply to some buildings (assembly/clinic/market/entertainment). Enigmatic Engineering is only for drawing, not using.
+Natural source: FE/AE debris, Enigmatic Engineering draw, or Cosmogenesis — player weight is effectively 0 without those
+DLC: Utopia / First Contact (DM cloak) / base FE
+Prerequisites: Vanilla lists shields_5 / zero_point / thrusters_4 / cloaking_3 for some; not granted. Components check the unique tech.
+Can normally appear in tech deck: NO for player without EE/Cosmogenesis
+Can be missed in one campaign: YES
+Event/flag dependency: Each researched FE tech stacks FE opinion penalty in vanilla. No crisis/AP flags set.
+Achievement risk: Outside Context uses country flag outsidecontext, not these techs
+Included in master file: YES
+
+Technology ID: tech_fe_forge_2
+Name: $building_nano_forge$
+Category: Fallen / Awakened Empire
+What it gives: FE-exclusive component or building Building unlock. Gestalt/individual restrictions still apply to some buildings (assembly/clinic/market/entertainment). Enigmatic Engineering is only for drawing, not using.
+Natural source: FE/AE debris, Enigmatic Engineering draw, or Cosmogenesis — player weight is effectively 0 without those
+DLC: Utopia / First Contact (DM cloak) / base FE
+Prerequisites: Vanilla lists shields_5 / zero_point / thrusters_4 / cloaking_3 for some; not granted. Components check the unique tech.
+Can normally appear in tech deck: NO for player without EE/Cosmogenesis
+Can be missed in one campaign: YES
+Event/flag dependency: Each researched FE tech stacks FE opinion penalty in vanilla. No crisis/AP flags set.
+Achievement risk: Outside Context uses country flag outsidecontext, not these techs
+Included in master file: YES
+
+Technology ID: tech_fe_dome_1
+Name: $building_fe_sky_dome$
+Category: Fallen / Awakened Empire
+What it gives: FE-exclusive component or building Building unlock. Gestalt/individual restrictions still apply to some buildings (assembly/clinic/market/entertainment). Enigmatic Engineering is only for drawing, not using.
+Natural source: FE/AE debris, Enigmatic Engineering draw, or Cosmogenesis — player weight is effectively 0 without those
+DLC: Utopia / First Contact (DM cloak) / base FE
+Prerequisites: Vanilla lists shields_5 / zero_point / thrusters_4 / cloaking_3 for some; not granted. Components check the unique tech.
+Can normally appear in tech deck: NO for player without EE/Cosmogenesis
+Can be missed in one campaign: YES
+Event/flag dependency: Each researched FE tech stacks FE opinion penalty in vanilla. No crisis/AP flags set.
+Achievement risk: Outside Context uses country flag outsidecontext, not these techs
+Included in master file: YES
+
+Technology ID: tech_fe_dome_2
+Name: $building_fe_dome$
+Category: Fallen / Awakened Empire
+What it gives: FE-exclusive component or building Building unlock. Gestalt/individual restrictions still apply to some buildings (assembly/clinic/market/entertainment). Enigmatic Engineering is only for drawing, not using.
+Natural source: FE/AE debris, Enigmatic Engineering draw, or Cosmogenesis — player weight is effectively 0 without those
+DLC: Utopia / First Contact (DM cloak) / base FE
+Prerequisites: Vanilla lists shields_5 / zero_point / thrusters_4 / cloaking_3 for some; not granted. Components check the unique tech.
+Can normally appear in tech deck: NO for player without EE/Cosmogenesis
+Can be missed in one campaign: YES
+Event/flag dependency: Each researched FE tech stacks FE opinion penalty in vanilla. No crisis/AP flags set.
+Achievement risk: Outside Context uses country flag outsidecontext, not these techs
+Included in master file: YES
+
+Technology ID: tech_fe_fortress_1
+Name: $building_fe_fortress$
+Category: Fallen / Awakened Empire
+What it gives: FE-exclusive component or building Building unlock. Gestalt/individual restrictions still apply to some buildings (assembly/clinic/market/entertainment). Enigmatic Engineering is only for drawing, not using.
+Natural source: FE/AE debris, Enigmatic Engineering draw, or Cosmogenesis — player weight is effectively 0 without those
+DLC: Utopia / First Contact (DM cloak) / base FE
+Prerequisites: Vanilla lists shields_5 / zero_point / thrusters_4 / cloaking_3 for some; not granted. Components check the unique tech.
+Can normally appear in tech deck: NO for player without EE/Cosmogenesis
+Can be missed in one campaign: YES
+Event/flag dependency: Each researched FE tech stacks FE opinion penalty in vanilla. No crisis/AP flags set.
+Achievement risk: Outside Context uses country flag outsidecontext, not these techs
+Included in master file: YES
+
+Technology ID: tech_fe_fortress_2
+Name: $building_fe_stronghold$
+Category: Fallen / Awakened Empire
+What it gives: FE-exclusive component or building Building unlock. Gestalt/individual restrictions still apply to some buildings (assembly/clinic/market/entertainment). Enigmatic Engineering is only for drawing, not using.
+Natural source: FE/AE debris, Enigmatic Engineering draw, or Cosmogenesis — player weight is effectively 0 without those
+DLC: Utopia / First Contact (DM cloak) / base FE
+Prerequisites: Vanilla lists shields_5 / zero_point / thrusters_4 / cloaking_3 for some; not granted. Components check the unique tech.
+Can normally appear in tech deck: NO for player without EE/Cosmogenesis
+Can be missed in one campaign: YES
+Event/flag dependency: Each researched FE tech stacks FE opinion penalty in vanilla. No crisis/AP flags set.
+Achievement risk: Outside Context uses country flag outsidecontext, not these techs
+Included in master file: YES
+
+Technology ID: tech_fe_administration_1
+Name: Fractal Administration Processes
+Category: Fallen / Awakened Empire
+What it gives: FE-exclusive component or building Building unlock. Gestalt/individual restrictions still apply to some buildings (assembly/clinic/market/entertainment). Enigmatic Engineering is only for drawing, not using.
+Natural source: FE/AE debris, Enigmatic Engineering draw, or Cosmogenesis — player weight is effectively 0 without those
+DLC: Utopia / First Contact (DM cloak) / base FE
+Prerequisites: Vanilla lists shields_5 / zero_point / thrusters_4 / cloaking_3 for some; not granted. Components check the unique tech.
+Can normally appear in tech deck: NO for player without EE/Cosmogenesis
+Can be missed in one campaign: YES
+Event/flag dependency: Each researched FE tech stacks FE opinion penalty in vanilla. No crisis/AP flags set.
+Achievement risk: Outside Context uses country flag outsidecontext, not these techs
+Included in master file: YES
+
+Technology ID: tech_fe_administration_2
+Name: Quantic Administration Processes
+Category: Fallen / Awakened Empire
+What it gives: FE-exclusive component or building Building unlock. Gestalt/individual restrictions still apply to some buildings (assembly/clinic/market/entertainment). Enigmatic Engineering is only for drawing, not using.
+Natural source: FE/AE debris, Enigmatic Engineering draw, or Cosmogenesis — player weight is effectively 0 without those
+DLC: Utopia / First Contact (DM cloak) / base FE
+Prerequisites: Vanilla lists shields_5 / zero_point / thrusters_4 / cloaking_3 for some; not granted. Components check the unique tech.
+Can normally appear in tech deck: NO for player without EE/Cosmogenesis
+Can be missed in one campaign: YES
+Event/flag dependency: Each researched FE tech stacks FE opinion penalty in vanilla. No crisis/AP flags set.
+Achievement risk: Outside Context uses country flag outsidecontext, not these techs
+Included in master file: YES
+
+Technology ID: tech_fe_assembly_1
+Name: $building_fe_assembly_1$
+Category: Fallen / Awakened Empire
+What it gives: FE-exclusive component or building Building unlock. Gestalt/individual restrictions still apply to some buildings (assembly/clinic/market/entertainment). Enigmatic Engineering is only for drawing, not using.
+Natural source: FE/AE debris, Enigmatic Engineering draw, or Cosmogenesis — player weight is effectively 0 without those
+DLC: Utopia / First Contact (DM cloak) / base FE
+Prerequisites: Vanilla lists shields_5 / zero_point / thrusters_4 / cloaking_3 for some; not granted. Components check the unique tech.
+Can normally appear in tech deck: NO for player without EE/Cosmogenesis
+Can be missed in one campaign: YES
+Event/flag dependency: Each researched FE tech stacks FE opinion penalty in vanilla. No crisis/AP flags set.
+Achievement risk: Outside Context uses country flag outsidecontext, not these techs
+Included in master file: YES
+
+Technology ID: tech_fe_assembly_2
+Name: $building_fe_assembly_2$
+Category: Fallen / Awakened Empire
+What it gives: FE-exclusive component or building Building unlock. Gestalt/individual restrictions still apply to some buildings (assembly/clinic/market/entertainment). Enigmatic Engineering is only for drawing, not using.
+Natural source: FE/AE debris, Enigmatic Engineering draw, or Cosmogenesis — player weight is effectively 0 without those
+DLC: Utopia / First Contact (DM cloak) / base FE
+Prerequisites: Vanilla lists shields_5 / zero_point / thrusters_4 / cloaking_3 for some; not granted. Components check the unique tech.
+Can normally appear in tech deck: NO for player without EE/Cosmogenesis
+Can be missed in one campaign: YES
+Event/flag dependency: Each researched FE tech stacks FE opinion penalty in vanilla. No crisis/AP flags set.
+Achievement risk: Outside Context uses country flag outsidecontext, not these techs
+Included in master file: YES
+
+Technology ID: tech_fe_clinic_1
+Name: $building_fe_clinic_1$
+Category: Fallen / Awakened Empire
+What it gives: FE-exclusive component or building Building unlock. Gestalt/individual restrictions still apply to some buildings (assembly/clinic/market/entertainment). Enigmatic Engineering is only for drawing, not using.
+Natural source: FE/AE debris, Enigmatic Engineering draw, or Cosmogenesis — player weight is effectively 0 without those
+DLC: Utopia / First Contact (DM cloak) / base FE
+Prerequisites: Vanilla lists shields_5 / zero_point / thrusters_4 / cloaking_3 for some; not granted. Components check the unique tech.
+Can normally appear in tech deck: NO for player without EE/Cosmogenesis
+Can be missed in one campaign: YES
+Event/flag dependency: Each researched FE tech stacks FE opinion penalty in vanilla. No crisis/AP flags set.
+Achievement risk: Outside Context uses country flag outsidecontext, not these techs
+Included in master file: YES
+
+Technology ID: tech_fe_clinic_2
+Name: $building_fe_clinic_2$
+Category: Fallen / Awakened Empire
+What it gives: FE-exclusive component or building Building unlock. Gestalt/individual restrictions still apply to some buildings (assembly/clinic/market/entertainment). Enigmatic Engineering is only for drawing, not using.
+Natural source: FE/AE debris, Enigmatic Engineering draw, or Cosmogenesis — player weight is effectively 0 without those
+DLC: Utopia / First Contact (DM cloak) / base FE
+Prerequisites: Vanilla lists shields_5 / zero_point / thrusters_4 / cloaking_3 for some; not granted. Components check the unique tech.
+Can normally appear in tech deck: NO for player without EE/Cosmogenesis
+Can be missed in one campaign: YES
+Event/flag dependency: Each researched FE tech stacks FE opinion penalty in vanilla. No crisis/AP flags set.
+Achievement risk: Outside Context uses country flag outsidecontext, not these techs
+Included in master file: YES
+
+Technology ID: tech_fe_security_1
+Name: $building_fe_security_1$
+Category: Fallen / Awakened Empire
+What it gives: FE-exclusive component or building Building unlock. Gestalt/individual restrictions still apply to some buildings (assembly/clinic/market/entertainment). Enigmatic Engineering is only for drawing, not using.
+Natural source: FE/AE debris, Enigmatic Engineering draw, or Cosmogenesis — player weight is effectively 0 without those
+DLC: Utopia / First Contact (DM cloak) / base FE
+Prerequisites: Vanilla lists shields_5 / zero_point / thrusters_4 / cloaking_3 for some; not granted. Components check the unique tech.
+Can normally appear in tech deck: NO for player without EE/Cosmogenesis
+Can be missed in one campaign: YES
+Event/flag dependency: Each researched FE tech stacks FE opinion penalty in vanilla. No crisis/AP flags set.
+Achievement risk: Outside Context uses country flag outsidecontext, not these techs
+Included in master file: YES
+
+Technology ID: tech_fe_security_2
+Name: $building_fe_security_2$
+Category: Fallen / Awakened Empire
+What it gives: FE-exclusive component or building Building unlock. Gestalt/individual restrictions still apply to some buildings (assembly/clinic/market/entertainment). Enigmatic Engineering is only for drawing, not using.
+Natural source: FE/AE debris, Enigmatic Engineering draw, or Cosmogenesis — player weight is effectively 0 without those
+DLC: Utopia / First Contact (DM cloak) / base FE
+Prerequisites: Vanilla lists shields_5 / zero_point / thrusters_4 / cloaking_3 for some; not granted. Components check the unique tech.
+Can normally appear in tech deck: NO for player without EE/Cosmogenesis
+Can be missed in one campaign: YES
+Event/flag dependency: Each researched FE tech stacks FE opinion penalty in vanilla. No crisis/AP flags set.
+Achievement risk: Outside Context uses country flag outsidecontext, not these techs
+Included in master file: YES
+
+Technology ID: tech_fe_market_1
+Name: $building_fe_market_1$
+Category: Fallen / Awakened Empire
+What it gives: FE-exclusive component or building Building unlock. Gestalt/individual restrictions still apply to some buildings (assembly/clinic/market/entertainment). Enigmatic Engineering is only for drawing, not using.
+Natural source: FE/AE debris, Enigmatic Engineering draw, or Cosmogenesis — player weight is effectively 0 without those
+DLC: Utopia / First Contact (DM cloak) / base FE
+Prerequisites: Vanilla lists shields_5 / zero_point / thrusters_4 / cloaking_3 for some; not granted. Components check the unique tech.
+Can normally appear in tech deck: NO for player without EE/Cosmogenesis
+Can be missed in one campaign: YES
+Event/flag dependency: Each researched FE tech stacks FE opinion penalty in vanilla. No crisis/AP flags set.
+Achievement risk: Outside Context uses country flag outsidecontext, not these techs
+Included in master file: YES
+
+Technology ID: tech_fe_market_2
+Name: $building_fe_market_2$
+Category: Fallen / Awakened Empire
+What it gives: FE-exclusive component or building Building unlock. Gestalt/individual restrictions still apply to some buildings (assembly/clinic/market/entertainment). Enigmatic Engineering is only for drawing, not using.
+Natural source: FE/AE debris, Enigmatic Engineering draw, or Cosmogenesis — player weight is effectively 0 without those
+DLC: Utopia / First Contact (DM cloak) / base FE
+Prerequisites: Vanilla lists shields_5 / zero_point / thrusters_4 / cloaking_3 for some; not granted. Components check the unique tech.
+Can normally appear in tech deck: NO for player without EE/Cosmogenesis
+Can be missed in one campaign: YES
+Event/flag dependency: Each researched FE tech stacks FE opinion penalty in vanilla. No crisis/AP flags set.
+Achievement risk: Outside Context uses country flag outsidecontext, not these techs
+Included in master file: YES
+
+Technology ID: tech_fe_silo_1
+Name: $building_fe_silo_1$
+Category: Fallen / Awakened Empire
+What it gives: FE-exclusive component or building Building unlock. Gestalt/individual restrictions still apply to some buildings (assembly/clinic/market/entertainment). Enigmatic Engineering is only for drawing, not using.
+Natural source: FE/AE debris, Enigmatic Engineering draw, or Cosmogenesis — player weight is effectively 0 without those
+DLC: Utopia / First Contact (DM cloak) / base FE
+Prerequisites: Vanilla lists shields_5 / zero_point / thrusters_4 / cloaking_3 for some; not granted. Components check the unique tech.
+Can normally appear in tech deck: NO for player without EE/Cosmogenesis
+Can be missed in one campaign: YES
+Event/flag dependency: Each researched FE tech stacks FE opinion penalty in vanilla. No crisis/AP flags set.
+Achievement risk: Outside Context uses country flag outsidecontext, not these techs
+Included in master file: YES
+
+Technology ID: tech_fe_silo_2
+Name: $building_fe_silo_2$
+Category: Fallen / Awakened Empire
+What it gives: FE-exclusive component or building Building unlock. Gestalt/individual restrictions still apply to some buildings (assembly/clinic/market/entertainment). Enigmatic Engineering is only for drawing, not using.
+Natural source: FE/AE debris, Enigmatic Engineering draw, or Cosmogenesis — player weight is effectively 0 without those
+DLC: Utopia / First Contact (DM cloak) / base FE
+Prerequisites: Vanilla lists shields_5 / zero_point / thrusters_4 / cloaking_3 for some; not granted. Components check the unique tech.
+Can normally appear in tech deck: NO for player without EE/Cosmogenesis
+Can be missed in one campaign: YES
+Event/flag dependency: Each researched FE tech stacks FE opinion penalty in vanilla. No crisis/AP flags set.
+Achievement risk: Outside Context uses country flag outsidecontext, not these techs
+Included in master file: YES
+
+Technology ID: tech_fe_entertainment_1
+Name: $building_fe_entertainment_1$
+Category: Fallen / Awakened Empire
+What it gives: FE-exclusive component or building Building unlock. Gestalt/individual restrictions still apply to some buildings (assembly/clinic/market/entertainment). Enigmatic Engineering is only for drawing, not using.
+Natural source: FE/AE debris, Enigmatic Engineering draw, or Cosmogenesis — player weight is effectively 0 without those
+DLC: Utopia / First Contact (DM cloak) / base FE
+Prerequisites: Vanilla lists shields_5 / zero_point / thrusters_4 / cloaking_3 for some; not granted. Components check the unique tech.
+Can normally appear in tech deck: NO for player without EE/Cosmogenesis
+Can be missed in one campaign: YES
+Event/flag dependency: Each researched FE tech stacks FE opinion penalty in vanilla. No crisis/AP flags set.
+Achievement risk: Outside Context uses country flag outsidecontext, not these techs
+Included in master file: YES
+
+Technology ID: tech_fe_entertainment_2
+Name: $building_fe_entertainment_2$
+Category: Fallen / Awakened Empire
+What it gives: FE-exclusive component or building Building unlock. Gestalt/individual restrictions still apply to some buildings (assembly/clinic/market/entertainment). Enigmatic Engineering is only for drawing, not using.
+Natural source: FE/AE debris, Enigmatic Engineering draw, or Cosmogenesis — player weight is effectively 0 without those
+DLC: Utopia / First Contact (DM cloak) / base FE
+Prerequisites: Vanilla lists shields_5 / zero_point / thrusters_4 / cloaking_3 for some; not granted. Components check the unique tech.
+Can normally appear in tech deck: NO for player without EE/Cosmogenesis
+Can be missed in one campaign: YES
+Event/flag dependency: Each researched FE tech stacks FE opinion penalty in vanilla. No crisis/AP flags set.
+Achievement risk: Outside Context uses country flag outsidecontext, not these techs
+Included in master file: YES
+
+Technology ID: tech_fe_lab_1
+Name: $building_fe_lab_1$
+Category: Fallen / Awakened Empire
+What it gives: FE-exclusive component or building Building unlock. Gestalt/individual restrictions still apply to some buildings (assembly/clinic/market/entertainment). Enigmatic Engineering is only for drawing, not using.
+Natural source: FE/AE debris, Enigmatic Engineering draw, or Cosmogenesis — player weight is effectively 0 without those
+DLC: Utopia / First Contact (DM cloak) / base FE
+Prerequisites: Vanilla lists shields_5 / zero_point / thrusters_4 / cloaking_3 for some; not granted. Components check the unique tech.
+Can normally appear in tech deck: NO for player without EE/Cosmogenesis
+Can be missed in one campaign: YES
+Event/flag dependency: Each researched FE tech stacks FE opinion penalty in vanilla. No crisis/AP flags set.
+Achievement risk: Outside Context uses country flag outsidecontext, not these techs
+Included in master file: YES
+
+Technology ID: tech_fe_lab_2
+Name: $building_fe_lab_2$
+Category: Fallen / Awakened Empire
+What it gives: FE-exclusive component or building Building unlock. Gestalt/individual restrictions still apply to some buildings (assembly/clinic/market/entertainment). Enigmatic Engineering is only for drawing, not using.
+Natural source: FE/AE debris, Enigmatic Engineering draw, or Cosmogenesis — player weight is effectively 0 without those
+DLC: Utopia / First Contact (DM cloak) / base FE
+Prerequisites: Vanilla lists shields_5 / zero_point / thrusters_4 / cloaking_3 for some; not granted. Components check the unique tech.
+Can normally appear in tech deck: NO for player without EE/Cosmogenesis
+Can be missed in one campaign: YES
+Event/flag dependency: Each researched FE tech stacks FE opinion penalty in vanilla. No crisis/AP flags set.
+Achievement risk: Outside Context uses country flag outsidecontext, not these techs
+Included in master file: YES
+
+Technology ID: tech_fe_mine_1
+Name: $building_fe_mine_1$
+Category: Fallen / Awakened Empire
+What it gives: FE-exclusive component or building Building unlock. Gestalt/individual restrictions still apply to some buildings (assembly/clinic/market/entertainment). Enigmatic Engineering is only for drawing, not using.
+Natural source: FE/AE debris, Enigmatic Engineering draw, or Cosmogenesis — player weight is effectively 0 without those
+DLC: Utopia / First Contact (DM cloak) / base FE
+Prerequisites: Vanilla lists shields_5 / zero_point / thrusters_4 / cloaking_3 for some; not granted. Components check the unique tech.
+Can normally appear in tech deck: NO for player without EE/Cosmogenesis
+Can be missed in one campaign: YES
+Event/flag dependency: Each researched FE tech stacks FE opinion penalty in vanilla. No crisis/AP flags set.
+Achievement risk: Outside Context uses country flag outsidecontext, not these techs
+Included in master file: YES
+
+Technology ID: tech_fe_mine_2
+Name: $building_fe_mine_2$
+Category: Fallen / Awakened Empire
+What it gives: FE-exclusive component or building Building unlock. Gestalt/individual restrictions still apply to some buildings (assembly/clinic/market/entertainment). Enigmatic Engineering is only for drawing, not using.
+Natural source: FE/AE debris, Enigmatic Engineering draw, or Cosmogenesis — player weight is effectively 0 without those
+DLC: Utopia / First Contact (DM cloak) / base FE
+Prerequisites: Vanilla lists shields_5 / zero_point / thrusters_4 / cloaking_3 for some; not granted. Components check the unique tech.
+Can normally appear in tech deck: NO for player without EE/Cosmogenesis
+Can be missed in one campaign: YES
+Event/flag dependency: Each researched FE tech stacks FE opinion penalty in vanilla. No crisis/AP flags set.
+Achievement risk: Outside Context uses country flag outsidecontext, not these techs
+Included in master file: YES
+
+Technology ID: tech_extradimensional_weapon_1
+Name: Extradimensional Weaponry
+Category: Crisis reverse-engineering
+What it gives: Matter Disintegrator. Deck weight 0 unless covenant_end_of_the_cycle; also Unbidden/Horror debris. Script does not set EotC.
+Natural source: Crisis debris / Cetana events — not granted by starting a crisis here
+DLC: Leviathans / Utopia / crisis debris
+Prerequisites: none granted
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES
+Event/flag dependency: No crisis start flags. EotC flag not set. Cosmogenesis path techs are in DANGEROUS only.
+Achievement risk: Crisis achievements use their own flags/kills
+Included in master file: YES
+
+Technology ID: tech_scourge_missile_1
+Name: Scourge Missiles
+Category: Crisis reverse-engineering
+What it gives: Prethoryn Scourge missiles. weight=0 reverse engineering.
+Natural source: Crisis debris / Cetana events — not granted by starting a crisis here
+DLC: Utopia crisis
+Prerequisites: none granted
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES
+Event/flag dependency: No crisis start flags. EotC flag not set. Cosmogenesis path techs are in DANGEROUS only.
+Achievement risk: Crisis achievements use their own flags/kills
+Included in master file: YES
+
+Technology ID: tech_swarm_strike_craft_1
+Name: Swarm Spawning Pools
+Category: Crisis reverse-engineering
+What it gives: Prethoryn swarm strike craft. weight=0 reverse engineering.
+Natural source: Crisis debris / Cetana events — not granted by starting a crisis here
+DLC: Utopia crisis
+Prerequisites: none granted
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES
+Event/flag dependency: No crisis start flags. EotC flag not set. Cosmogenesis path techs are in DANGEROUS only.
+Achievement risk: Crisis achievements use their own flags/kills
+Included in master file: YES
+
+Technology ID: tech_synth_queen_knowledge
+Name: Cetana's Thought
+Category: Crisis reverse-engineering
+What it gives: Cetana's Thought. potential requires country flag synth_queen_knowledge to APPEAR; researched tech still grants its modifier if given.
+Natural source: Crisis debris / Cetana events — not granted by starting a crisis here
+DLC: The Machine Age (Cetana)
+Prerequisites: none granted
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES
+Event/flag dependency: No crisis start flags. EotC flag not set. Cosmogenesis path techs are in DANGEROUS only.
+Achievement risk: Crisis achievements use their own flags/kills
+Included in master file: YES
+
+Technology ID: tech_nanite_repair_system_synth_queen
+Name: Cetana's Nanites
+Category: Crisis reverse-engineering
+What it gives: Cetana nanite repair component. weight=0. Distinct from Scavenger tech_nanite_repair_system.
+Natural source: Crisis debris / Cetana events — not granted by starting a crisis here
+DLC: The Machine Age (Cetana)
+Prerequisites: none granted
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES
+Event/flag dependency: No crisis start flags. EotC flag not set. Cosmogenesis path techs are in DANGEROUS only.
+Achievement risk: Crisis achievements use their own flags/kills
+Included in master file: YES
+
+Technology ID: tech_nanite_transmutation
+Name: Nanite Transmutation
+Category: L-Cluster / Nanites
+What it gives: Nanite transmutation (strategic resource processing). Appears only after nanite deposits in borders.
+Natural source: Distant Stars nanite deposits / L-Cluster aftermath — does not open L-Gates
+DLC: Distant Stars
+Prerequisites: none
+Can normally appear in tech deck: NO until nanites found
+Can be missed in one campaign: YES if L-Cluster never yields nanites
+Event/flag dependency: No l_cluster_opened flag
+Achievement risk: L-Gate achievements use global/country flags, not this tech
+Included in master file: YES
+
+Technology ID: tech_neuroregeneration
+Name: Neural Tissue Engineering
+Category: L-Cluster / unique system
+What it gives: +25% leader XP, +10 leader lifespan (weight=0 sealed-system reward)
+Natural source: Distant Stars sealed system / related events
+DLC: Distant Stars
+Prerequisites: none
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES
+Event/flag dependency: Does not activate L-Gates
+Achievement risk: Low — event flags not set
+Included in master file: YES
+
+Technology ID: tech_lgate_activation
+Name: L-Gate Activation
+Category: L-Cluster DANGEROUS
+What it gives: L-Gate Activation. Events (distant_stars_events_3) check has_technology = tech_lgate_activation to progress opening.
+Natural source: L-Gate insight special project
+DLC: Distant Stars
+Prerequisites: none
+Can normally appear in tech deck: NO (weight=0; potential while cluster closed)
+Can be missed in one campaign: YES
+Event/flag dependency: Researching this is the vanilla unlock used to open L-Gates. Do not run if you want a closed cluster.
+Achievement risk: HIGH — can skip/short-circuit L-Gate chain
+Included in master file: NO
+
+Technology ID: tech_repeatable_lcluster_clue
+Name: $clue$
+Category: L-Cluster DANGEROUS
+What it gives: Repeatable L-Cluster clue research. Grants clues toward opening.
+Natural source: L-Gate insight loop
+DLC: Distant Stars
+Prerequisites: none
+Can normally appear in tech deck: NO until L-Gate chain started
+Can be missed in one campaign: YES
+Event/flag dependency: Advances L-Gate clue count
+Achievement risk: HIGH — progresses L-Gate chain
+Included in master file: NO
+
+Technology ID: tech_psionic_barrier
+Name: Psionic Barrier
+Category: Psionic / Shroud event
+What it gives: Psionic barrier component. weight=0 shroud/event. No ethics change.
+Natural source: Shroud DLC events / psi tree (jump drive)
+DLC: Utopia / The Shroud / First Contact (psi cloak)
+Prerequisites: Vanilla lists psi theory / precognition; not granted except the unique techs themselves
+Can normally appear in tech deck: NO for most; psi jump CONDITIONAL for psionic empires
+Can be missed in one campaign: YES especially as Materialist
+Event/flag dependency: No ethics, AP, covenant, or EotC flags
+Achievement risk: Shroud/covenant achievements use other flags
+Included in master file: YES
+
+Technology ID: tech_psionic_shield
+Name: Psionic Shields
+Category: Psionic / Shroud event
+What it gives: Psionic shield component. weight=0.
+Natural source: Shroud DLC events / psi tree (jump drive)
+DLC: Utopia / The Shroud / First Contact (psi cloak)
+Prerequisites: Vanilla lists psi theory / precognition; not granted except the unique techs themselves
+Can normally appear in tech deck: NO for most; psi jump CONDITIONAL for psionic empires
+Can be missed in one campaign: YES especially as Materialist
+Event/flag dependency: No ethics, AP, covenant, or EotC flags
+Achievement risk: Shroud/covenant achievements use other flags
+Included in master file: YES
+
+Technology ID: tech_psionic_bombers
+Name: Psionic Bombers
+Category: Psionic / Shroud event
+What it gives: Shroud event strike craft. weight=0.
+Natural source: Shroud DLC events / psi tree (jump drive)
+DLC: Utopia / The Shroud / First Contact (psi cloak)
+Prerequisites: Vanilla lists psi theory / precognition; not granted except the unique techs themselves
+Can normally appear in tech deck: NO for most; psi jump CONDITIONAL for psionic empires
+Can be missed in one campaign: YES especially as Materialist
+Event/flag dependency: No ethics, AP, covenant, or EotC flags
+Achievement risk: Shroud/covenant achievements use other flags
+Included in master file: YES
+
+Technology ID: tech_psionic_lightning
+Name: Psionic Lightning
+Category: Psionic / Shroud event
+What it gives: Shroud event weapon. weight=0.
+Natural source: Shroud DLC events / psi tree (jump drive)
+DLC: Utopia / The Shroud / First Contact (psi cloak)
+Prerequisites: Vanilla lists psi theory / precognition; not granted except the unique techs themselves
+Can normally appear in tech deck: NO for most; psi jump CONDITIONAL for psionic empires
+Can be missed in one campaign: YES especially as Materialist
+Event/flag dependency: No ethics, AP, covenant, or EotC flags
+Achievement risk: Shroud/covenant achievements use other flags
+Included in master file: YES
+
+Technology ID: tech_psionic_disruptor
+Name: Psionic Disruptors
+Category: Psionic / Shroud event
+What it gives: Shroud event weapon. weight=0.
+Natural source: Shroud DLC events / psi tree (jump drive)
+DLC: Utopia / The Shroud / First Contact (psi cloak)
+Prerequisites: Vanilla lists psi theory / precognition; not granted except the unique techs themselves
+Can normally appear in tech deck: NO for most; psi jump CONDITIONAL for psionic empires
+Can be missed in one campaign: YES especially as Materialist
+Event/flag dependency: No ethics, AP, covenant, or EotC flags
+Achievement risk: Shroud/covenant achievements use other flags
+Included in master file: YES
+
+Technology ID: tech_zro_launcher
+Name: Zro Launchers
+Category: Psionic / Shroud event
+What it gives: Shroud event weapon. weight=0.
+Natural source: Shroud DLC events / psi tree (jump drive)
+DLC: Utopia / The Shroud / First Contact (psi cloak)
+Prerequisites: Vanilla lists psi theory / precognition; not granted except the unique techs themselves
+Can normally appear in tech deck: NO for most; psi jump CONDITIONAL for psionic empires
+Can be missed in one campaign: YES especially as Materialist
+Event/flag dependency: No ethics, AP, covenant, or EotC flags
+Achievement risk: Shroud/covenant achievements use other flags
+Included in master file: YES
+
+Technology ID: tech_materiality_engine
+Name: $building_materiality_engine$
+Category: Psionic / Shroud event
+What it gives: Materiality Engine unlock. weight=0 event. Building still needs to be constructed.
+Natural source: Shroud DLC events / psi tree (jump drive)
+DLC: Utopia / The Shroud / First Contact (psi cloak)
+Prerequisites: Vanilla lists psi theory / precognition; not granted except the unique techs themselves
+Can normally appear in tech deck: NO for most; psi jump CONDITIONAL for psionic empires
+Can be missed in one campaign: YES especially as Materialist
+Event/flag dependency: No ethics, AP, covenant, or EotC flags
+Achievement risk: Shroud/covenant achievements use other flags
+Included in master file: YES
+
+Technology ID: tech_aura_resonation
+Name: Aura Resonation
+Category: Psionic / Shroud event
+What it gives: Psionic Projector unlock. weight=0. Does not set covenant.
+Natural source: Shroud DLC events / psi tree (jump drive)
+DLC: Utopia / The Shroud / First Contact (psi cloak)
+Prerequisites: Vanilla lists psi theory / precognition; not granted except the unique techs themselves
+Can normally appear in tech deck: NO for most; psi jump CONDITIONAL for psionic empires
+Can be missed in one campaign: YES especially as Materialist
+Event/flag dependency: No ethics, AP, covenant, or EotC flags
+Achievement risk: Shroud/covenant achievements use other flags
+Included in master file: YES
+
+Technology ID: tech_cloaking_psi
+Name: Psi-Phase Field Generator
+Category: Psionic / Shroud event
+What it gives: Psi cloak. Natural prereq tech_psi_jump_drive_1 not required for the component ID.
+Natural source: Shroud DLC events / psi tree (jump drive)
+DLC: Utopia / The Shroud / First Contact (psi cloak)
+Prerequisites: Vanilla lists psi theory / precognition; not granted except the unique techs themselves
+Can normally appear in tech deck: NO for most; psi jump CONDITIONAL for psionic empires
+Can be missed in one campaign: YES especially as Materialist
+Event/flag dependency: No ethics, AP, covenant, or EotC flags
+Achievement risk: Shroud/covenant achievements use other flags
+Included in master file: YES
+
+Technology ID: tech_psi_jump_drive_1
+Name: Psi Jump Drive
+Category: Psionic / Shroud event
+What it gives: Psi Jump Drive. Can appear after precognition for psionic empires; practically unavailable to materialists. feature_flags jump_method. Does not set shroud covenant or End of the Cycle.
+Natural source: Shroud DLC events / psi tree (jump drive)
+DLC: Utopia / The Shroud / First Contact (psi cloak)
+Prerequisites: Vanilla lists psi theory / precognition; not granted except the unique techs themselves
+Can normally appear in tech deck: NO for most; psi jump CONDITIONAL for psionic empires
+Can be missed in one campaign: YES especially as Materialist
+Event/flag dependency: No ethics, AP, covenant, or EotC flags
+Achievement risk: Shroud/covenant achievements use other flags
+Included in master file: YES
+
+Technology ID: tech_mine_living_metal
+Name: Living Metal
+Category: Rare strategic resource
+What it gives: Living Metal mining. Weight 0 until a living metal deposit is in borders (or nomad harvest).
+Natural source: Must discover the resource first in a normal game
+DLC: base / Ancient Relics deposits
+Prerequisites: sensors/space construction listed in vanilla; not granted
+Can normally appear in tech deck: NO until deposit found
+Can be missed in one campaign: YES
+Event/flag dependency: Does not spawn deposits. Resourceful achievement needs monthly income, not these techs.
+Achievement risk: Resourceful is income-based
+Included in master file: YES
+
+Technology ID: tech_mine_zro
+Name: Zro Distillation
+Category: Rare strategic resource
+What it gives: Zro distillation. Rare; weight 0 without zro in borders / relations.
+Natural source: Must discover the resource first in a normal game
+DLC: Utopia / Shroud
+Prerequisites: sensors/space construction listed in vanilla; not granted
+Can normally appear in tech deck: NO until deposit found
+Can be missed in one campaign: YES
+Event/flag dependency: Does not spawn deposits. Resourceful achievement needs monthly income, not these techs.
+Achievement risk: Resourceful is income-based
+Included in master file: YES
+
+Technology ID: tech_mine_dark_matter
+Name: Dark Matter Drawing
+Category: Rare strategic resource
+What it gives: Dark Matter drawing. Weight 0 without dark matter deposits (often black holes).
+Natural source: Must discover the resource first in a normal game
+DLC: Leviathans / Utopia
+Prerequisites: sensors/space construction listed in vanilla; not granted
+Can normally appear in tech deck: NO until deposit found
+Can be missed in one campaign: YES
+Event/flag dependency: Does not spawn deposits. Resourceful achievement needs monthly income, not these techs.
+Achievement risk: Resourceful is income-based
+Included in master file: YES
+
+Technology ID: tech_astral_harvesting
+Name: Astral Harvesting
+Category: Rare strategic resource
+What it gives: Unlocks astral thread actions. Weight 0 until threads/rifts found or a relation has the tech.
+Natural source: Must discover the resource first in a normal game
+DLC: Astral Planes
+Prerequisites: sensors/space construction listed in vanilla; not granted
+Can normally appear in tech deck: NO until deposit found
+Can be missed in one campaign: YES
+Event/flag dependency: Does not spawn deposits. Resourceful achievement needs monthly income, not these techs.
+Achievement risk: Resourceful is income-based
+Included in master file: YES
+
+Technology ID: tech_curator_lab
+Name: Curator Exploration Lab
+Category: Unique event / origin / enclave
+What it gives: Curator Insights Lab. Deck factor=0 without curator scientist or curator_insight.
+Natural source: Anomaly, archaeology, enclave, origin, or unique leader — not guaranteed
+DLC: Leviathans
+Prerequisites: none granted
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES
+Event/flag dependency: starfire / identity fusion may need extra flags to fully function
+Achievement risk: Origin/event achievements use flags, not these techs
+Included in master file: YES
+
+Technology ID: tech_archeology_lab
+Name: Curator Archaeology Lab
+Category: Unique event / origin / enclave
+What it gives: Archaeology Lab (non-Ancient Relics). Curator-gated. potential has_ancrel=no.
+Natural source: Anomaly, archaeology, enclave, origin, or unique leader — not guaranteed
+DLC: Leviathans
+Prerequisites: none granted
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES
+Event/flag dependency: starfire / identity fusion may need extra flags to fully function
+Achievement risk: Origin/event achievements use flags, not these techs
+Included in master file: YES
+
+Technology ID: tech_orbital_trash_dispersal
+Name: Orbital Trash Dispersal
+Category: Unique event / origin / enclave
+What it gives: Trash Disperser. weight=0 Caravan Fleet 3 deal only.
+Natural source: Anomaly, archaeology, enclave, origin, or unique leader — not guaranteed
+DLC: MegaCorp
+Prerequisites: none granted
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES
+Event/flag dependency: starfire / identity fusion may need extra flags to fully function
+Achievement risk: Origin/event achievements use flags, not these techs
+Included in master file: YES
+
+Technology ID: tech_strike_craft_skrand
+Name: Skravird Strike Craft
+Category: Unique event / origin / enclave
+What it gives: Skrand strike craft. weight=0 Paragon legendary story.
+Natural source: Anomaly, archaeology, enclave, origin, or unique leader — not guaranteed
+DLC: Galactic Paragons
+Prerequisites: none granted
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES
+Event/flag dependency: starfire / identity fusion may need extra flags to fully function
+Achievement risk: Origin/event achievements use flags, not these techs
+Included in master file: YES
+
+Technology ID: tech_starfire_cannon
+Name: $starfire_cannon$
+Category: Unique event / origin / enclave
+What it gives: Starfire Cannon. potential origin_red_giant AND country flag starfire_cannon_unlocked. Tech can be researched via console, but the weapon decision still checks origin/flag.
+Natural source: Anomaly, archaeology, enclave, origin, or unique leader — not guaranteed
+DLC: The Shroud / Infernal origin
+Prerequisites: none granted
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES
+Event/flag dependency: starfire / identity fusion may need extra flags to fully function
+Achievement risk: Origin/event achievements use flags, not these techs
+Included in master file: YES
+
+Technology ID: null_void_beam
+Name: Null Void Beam
+Category: Unique event / origin / enclave
+What it gives: Null Void Beam. weight=0 colony event grant (colony_events_3).
+Natural source: Anomaly, archaeology, enclave, origin, or unique leader — not guaranteed
+DLC: base event
+Prerequisites: none granted
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES
+Event/flag dependency: starfire / identity fusion may need extra flags to fully function
+Achievement risk: Origin/event achievements use flags, not these techs
+Included in master file: YES
+
+Technology ID: tech_boarding_cables
+Name: $BOARDING_CABLES$
+Category: Unique event / origin / enclave
+What it gives: Boarding Cables aux. weight=0 Grand Archive origin/pirate event.
+Natural source: Anomaly, archaeology, enclave, origin, or unique leader — not guaranteed
+DLC: The Grand Archive
+Prerequisites: none granted
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES
+Event/flag dependency: starfire / identity fusion may need extra flags to fully function
+Achievement risk: Origin/event achievements use flags, not these techs
+Included in master file: YES
+
+Technology ID: tech_enhanced_cryosleep_sedatives
+Name: Enhanced Cryosleep Sedatives
+Category: Unique event / origin / enclave
+What it gives: Strange Worlds event tech. weight=0.
+Natural source: Anomaly, archaeology, enclave, origin, or unique leader — not guaranteed
+DLC: The Shroud / Strange Worlds
+Prerequisites: none granted
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES
+Event/flag dependency: starfire / identity fusion may need extra flags to fully function
+Achievement risk: Origin/event achievements use flags, not these techs
+Included in master file: YES
+
+Technology ID: tech_universal_marcophage
+Name: Universal Macrophage
+Category: Unique event / origin / enclave
+What it gives: Strange Worlds rare event tech. weight=0.
+Natural source: Anomaly, archaeology, enclave, origin, or unique leader — not guaranteed
+DLC: The Shroud / Strange Worlds
+Prerequisites: none granted
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES
+Event/flag dependency: starfire / identity fusion may need extra flags to fully function
+Achievement risk: Origin/event achievements use flags, not these techs
+Included in master file: YES
+
+Technology ID: tech_pyroclastic_resonation
+Name: Pyroclastic Resonation
+Category: Unique event / origin / enclave
+What it gives: Infernal Tornadoes anomaly. weight=0.
+Natural source: Anomaly, archaeology, enclave, origin, or unique leader — not guaranteed
+DLC: The Shroud / Extreme Frontiers
+Prerequisites: none granted
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES
+Event/flag dependency: starfire / identity fusion may need extra flags to fully function
+Achievement risk: Origin/event achievements use flags, not these techs
+Included in master file: YES
+
+Technology ID: tech_alloy_fossilization
+Name: Alloy Fossilization
+Category: Unique event / origin / enclave
+What it gives: Chthonian Preservation anomaly. weight=0.
+Natural source: Anomaly, archaeology, enclave, origin, or unique leader — not guaranteed
+DLC: The Shroud / Extreme Frontiers
+Prerequisites: none granted
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES
+Event/flag dependency: starfire / identity fusion may need extra flags to fully function
+Achievement risk: Origin/event achievements use flags, not these techs
+Included in master file: YES
+
+Technology ID: tech_orbital_maneuvers
+Name: Advanced Orbital Maneuvers
+Category: Unique event / origin / enclave
+What it gives: +10% ship speed. Orbital Resonance anomaly. weight=0.
+Natural source: Anomaly, archaeology, enclave, origin, or unique leader — not guaranteed
+DLC: The Shroud / Extreme Frontiers
+Prerequisites: none granted
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES
+Event/flag dependency: starfire / identity fusion may need extra flags to fully function
+Achievement risk: Origin/event achievements use flags, not these techs
+Included in master file: YES
+
+Technology ID: tech_cryovault
+Name: Frozen World Habitats
+Category: Unique event / origin / enclave
+What it gives: Absolute Zero archaeology. weight=0. potential is_nomadic=no.
+Natural source: Anomaly, archaeology, enclave, origin, or unique leader — not guaranteed
+DLC: The Shroud / Extreme Frontiers
+Prerequisites: none granted
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES
+Event/flag dependency: starfire / identity fusion may need extra flags to fully function
+Achievement risk: Origin/event achievements use flags, not these techs
+Included in master file: YES
+
+Technology ID: tech_living_test_subjects
+Name: Living Test Subjects
+Category: Unique event / origin / enclave
+What it gives: -5% society tech cost. Toxic Matrix site. weight=0.
+Natural source: Anomaly, archaeology, enclave, origin, or unique leader — not guaranteed
+DLC: The Shroud / Extreme Frontiers
+Prerequisites: none granted
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES
+Event/flag dependency: starfire / identity fusion may need extra flags to fully function
+Achievement risk: Origin/event achievements use flags, not these techs
+Included in master file: YES
+
+Technology ID: tech_georadiation_terraforming
+Name: Georadiation Terraforming
+Category: Unique event / origin / enclave
+What it gives: Georadiation terraforming chain. weight=0.
+Natural source: Anomaly, archaeology, enclave, origin, or unique leader — not guaranteed
+DLC: The Shroud / Extreme Frontiers
+Prerequisites: none granted
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES
+Event/flag dependency: starfire / identity fusion may need extra flags to fully function
+Achievement risk: Origin/event achievements use flags, not these techs
+Included in master file: YES
+
+Technology ID: tech_identity_copy
+Name: Identity Copies
+Category: Unique event / origin / enclave
+What it gives: Synthetic identity Copy policy. weight=0 Machine Age script. Policy may still want origin/situation context.
+Natural source: Anomaly, archaeology, enclave, origin, or unique leader — not guaranteed
+DLC: The Machine Age
+Prerequisites: none granted
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES
+Event/flag dependency: starfire / identity fusion may need extra flags to fully function
+Achievement risk: Origin/event achievements use flags, not these techs
+Included in master file: YES
+
+Technology ID: tech_identity_fusion
+Name: Identity Fusion
+Category: Unique event / origin / enclave
+What it gives: Identity Fusion. potential has_country_flag=advanced_identity_creation to appear; flag is NOT set here.
+Natural source: Anomaly, archaeology, enclave, origin, or unique leader — not guaranteed
+DLC: The Machine Age
+Prerequisites: none granted
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES
+Event/flag dependency: starfire / identity fusion may need extra flags to fully function
+Achievement risk: Origin/event achievements use flags, not these techs
+Included in master file: YES
+
+Technology ID: tech_identity_initialization
+Name: Identity Initialization
+Category: Unique event / origin / enclave
+What it gives: Identity Initialization. Same flag as fusion for natural draw. Flag not set.
+Natural source: Anomaly, archaeology, enclave, origin, or unique leader — not guaranteed
+DLC: The Machine Age
+Prerequisites: none granted
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES
+Event/flag dependency: starfire / identity fusion may need extra flags to fully function
+Achievement risk: Origin/event achievements use flags, not these techs
+Included in master file: YES
+
+Technology ID: tech_amoeba_strike_craft_1
+Name: Flagella Weaponization
+Category: Space fauna
+What it gives: Amoeba flagella strike craft. weight=0 first contact/debris.
+Natural source: Space fauna first contact / debris / Grand Archive DNA — fauna not destroyed by this script
+DLC: base / The Grand Archive
+Prerequisites: unique mutations list controlled_mutations_2; not granted
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES — fauna may never spawn or be contacted
+Event/flag dependency: No fauna-killed flags
+Achievement risk: Tiyanki/wraith/horror achievements are kill flags
+Included in master file: YES
+
+Technology ID: tech_regenerative_hull_tissue
+Name: Regenerative Hull Tissue
+Category: Space fauna
+What it gives: Regenerative hull. weight_modifier factor=0 reverse engineering only.
+Natural source: Space fauna first contact / debris / Grand Archive DNA — fauna not destroyed by this script
+DLC: base / The Grand Archive
+Prerequisites: unique mutations list controlled_mutations_2; not granted
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES — fauna may never spawn or be contacted
+Event/flag dependency: No fauna-killed flags
+Achievement risk: Tiyanki/wraith/horror achievements are kill flags
+Included in master file: YES
+
+Technology ID: tech_crystal_armor_1
+Name: Crystal-Infused Plating
+Category: Space fauna
+What it gives: Crystal-Infused Plating. weight=0; flag crystal_armor_1_weight can add draw.
+Natural source: Space fauna first contact / debris / Grand Archive DNA — fauna not destroyed by this script
+DLC: base / The Grand Archive
+Prerequisites: unique mutations list controlled_mutations_2; not granted
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES — fauna may never spawn or be contacted
+Event/flag dependency: No fauna-killed flags
+Achievement risk: Tiyanki/wraith/horror achievements are kill flags
+Included in master file: YES
+
+Technology ID: tech_crystal_armor_2
+Name: Crystal-Forged Plating
+Category: Space fauna
+What it gives: Crystal-Forged Plating. weight=0 Crystal Nidus / later contact.
+Natural source: Space fauna first contact / debris / Grand Archive DNA — fauna not destroyed by this script
+DLC: base / The Grand Archive
+Prerequisites: unique mutations list controlled_mutations_2; not granted
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES — fauna may never spawn or be contacted
+Event/flag dependency: No fauna-killed flags
+Achievement risk: Tiyanki/wraith/horror achievements are kill flags
+Included in master file: YES
+
+Technology ID: tech_mining_drone_weapon_1
+Name: Mining Drone Lasers
+Category: Space fauna
+What it gives: Mining drone laser. weight=0.
+Natural source: Space fauna first contact / debris / Grand Archive DNA — fauna not destroyed by this script
+DLC: base / The Grand Archive
+Prerequisites: unique mutations list controlled_mutations_2; not granted
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES — fauna may never spawn or be contacted
+Event/flag dependency: No fauna-killed flags
+Achievement risk: Tiyanki/wraith/horror achievements are kill flags
+Included in master file: YES
+
+Technology ID: tech_space_cloud_weapon_1
+Name: Cloud Lightning Conduits
+Category: Space fauna
+What it gives: Cloud lightning. weight=0.
+Natural source: Space fauna first contact / debris / Grand Archive DNA — fauna not destroyed by this script
+DLC: base / The Grand Archive
+Prerequisites: unique mutations list controlled_mutations_2; not granted
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES — fauna may never spawn or be contacted
+Event/flag dependency: No fauna-killed flags
+Achievement risk: Tiyanki/wraith/horror achievements are kill flags
+Included in master file: YES
+
+Technology ID: tech_space_whale_weapon_1
+Name: Frequency Tuning
+Category: Space fauna
+What it gives: Tiyanki energy siphon. weight=0 first contact.
+Natural source: Space fauna first contact / debris / Grand Archive DNA — fauna not destroyed by this script
+DLC: base / The Grand Archive
+Prerequisites: unique mutations list controlled_mutations_2; not granted
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES — fauna may never spawn or be contacted
+Event/flag dependency: No fauna-killed flags
+Achievement risk: Tiyanki/wraith/horror achievements are kill flags
+Included in master file: YES
+
+Technology ID: tech_voidworm_immunity
+Name: Voidworm Immunity
+Category: Space fauna
+What it gives: Voidworm vaccine / damage vs voidworms. weight=0 Grand Archive.
+Natural source: Space fauna first contact / debris / Grand Archive DNA — fauna not destroyed by this script
+DLC: base / The Grand Archive
+Prerequisites: unique mutations list controlled_mutations_2; not granted
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES — fauna may never spawn or be contacted
+Event/flag dependency: No fauna-killed flags
+Achievement risk: Tiyanki/wraith/horror achievements are kill flags
+Included in master file: YES
+
+Technology ID: tech_asteroidal_carapace
+Name: Asteroidal Carapace
+Category: Space fauna
+What it gives: Cutholoid first-contact carapace. weight=0.
+Natural source: Space fauna first contact / debris / Grand Archive DNA — fauna not destroyed by this script
+DLC: base / The Grand Archive
+Prerequisites: unique mutations list controlled_mutations_2; not granted
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES — fauna may never spawn or be contacted
+Event/flag dependency: No fauna-killed flags
+Achievement risk: Tiyanki/wraith/horror achievements are kill flags
+Included in master file: YES
+
+Technology ID: tech_unique_mutation_space_amoeba
+Name: $LEECHCRAFT$
+Category: Space fauna
+What it gives: Unique fauna mutation component. weight=0. Mutation SLOTS still need controlled_mutations tree to use vivarium mutations fully.
+Natural source: Space fauna first contact / debris / Grand Archive DNA — fauna not destroyed by this script
+DLC: base / The Grand Archive
+Prerequisites: unique mutations list controlled_mutations_2; not granted
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES — fauna may never spawn or be contacted
+Event/flag dependency: No fauna-killed flags
+Achievement risk: Tiyanki/wraith/horror achievements are kill flags
+Included in master file: YES
+
+Technology ID: tech_unique_mutation_tiyanki
+Name: $HERDSONG_CHORDS$
+Category: Space fauna
+What it gives: Unique Tiyanki mutation. weight=0.
+Natural source: Space fauna first contact / debris / Grand Archive DNA — fauna not destroyed by this script
+DLC: base / The Grand Archive
+Prerequisites: unique mutations list controlled_mutations_2; not granted
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES — fauna may never spawn or be contacted
+Event/flag dependency: No fauna-killed flags
+Achievement risk: Tiyanki/wraith/horror achievements are kill flags
+Included in master file: YES
+
+Technology ID: tech_unique_mutation_voidworm
+Name: $VIRULENT_CYSTS$
+Category: Space fauna
+What it gives: Unique Voidworm mutation. weight=0.
+Natural source: Space fauna first contact / debris / Grand Archive DNA — fauna not destroyed by this script
+DLC: base / The Grand Archive
+Prerequisites: unique mutations list controlled_mutations_2; not granted
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES — fauna may never spawn or be contacted
+Event/flag dependency: No fauna-killed flags
+Achievement risk: Tiyanki/wraith/horror achievements are kill flags
+Included in master file: YES
+
+Technology ID: tech_unique_mutation_cutholoid
+Name: $GASTRIC_FOUNTAIN$
+Category: Space fauna
+What it gives: Unique Cutholoid mutation. weight=0.
+Natural source: Space fauna first contact / debris / Grand Archive DNA — fauna not destroyed by this script
+DLC: base / The Grand Archive
+Prerequisites: unique mutations list controlled_mutations_2; not granted
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES — fauna may never spawn or be contacted
+Event/flag dependency: No fauna-killed flags
+Achievement risk: Tiyanki/wraith/horror achievements are kill flags
+Included in master file: YES
+
+Technology ID: tech_unique_mutation_crystalline_entity
+Name: $FISSILE_CORES$
+Category: Space fauna
+What it gives: Unique crystal mutation. weight=0.
+Natural source: Space fauna first contact / debris / Grand Archive DNA — fauna not destroyed by this script
+DLC: base / The Grand Archive
+Prerequisites: unique mutations list controlled_mutations_2; not granted
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES — fauna may never spawn or be contacted
+Event/flag dependency: No fauna-killed flags
+Achievement risk: Tiyanki/wraith/horror achievements are kill flags
+Included in master file: YES
+
+Technology ID: tech_unique_mutation_restorative_enzymes
+Name: $RESTORATIVE_ENZYMES$
+Category: Space fauna
+What it gives: Unique restorative enzymes mutation. weight=0.
+Natural source: Space fauna first contact / debris / Grand Archive DNA — fauna not destroyed by this script
+DLC: base / The Grand Archive
+Prerequisites: unique mutations list controlled_mutations_2; not granted
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES — fauna may never spawn or be contacted
+Event/flag dependency: No fauna-killed flags
+Achievement risk: Tiyanki/wraith/horror achievements are kill flags
+Included in master file: YES
+
+Technology ID: tech_unique_mutation_starborne_biology
+Name: $starborne_biology$
+Category: Space fauna
+What it gives: Unique starborne biology mutation. weight=0.
+Natural source: Space fauna first contact / debris / Grand Archive DNA — fauna not destroyed by this script
+DLC: base / The Grand Archive
+Prerequisites: unique mutations list controlled_mutations_2; not granted
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES — fauna may never spawn or be contacted
+Event/flag dependency: No fauna-killed flags
+Achievement risk: Tiyanki/wraith/horror achievements are kill flags
+Included in master file: YES
+
+Technology ID: tech_thrusters_bio_integration
+Name: Thruster Bio-integration
+Category: Space fauna
+What it gives: Fauna core thruster integration. weight=0. Listed prereq controlled_mutations not granted.
+Natural source: Space fauna first contact / debris / Grand Archive DNA — fauna not destroyed by this script
+DLC: base / The Grand Archive
+Prerequisites: unique mutations list controlled_mutations_2; not granted
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES — fauna may never spawn or be contacted
+Event/flag dependency: No fauna-killed flags
+Achievement risk: Tiyanki/wraith/horror achievements are kill flags
+Included in master file: YES
+
+Technology ID: tech_hyper_drive_bio_integration
+Name: Hyperdrive Bio-integration
+Category: Space fauna
+What it gives: Fauna hyperdrive integration. weight=0.
+Natural source: Space fauna first contact / debris / Grand Archive DNA — fauna not destroyed by this script
+DLC: base / The Grand Archive
+Prerequisites: unique mutations list controlled_mutations_2; not granted
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES — fauna may never spawn or be contacted
+Event/flag dependency: No fauna-killed flags
+Achievement risk: Tiyanki/wraith/horror achievements are kill flags
+Included in master file: YES
+
+Technology ID: tech_sensors_bio_integration
+Name: Sensor Bio-integration
+Category: Space fauna
+What it gives: Fauna sensor integration. weight=0.
+Natural source: Space fauna first contact / debris / Grand Archive DNA — fauna not destroyed by this script
+DLC: base / The Grand Archive
+Prerequisites: unique mutations list controlled_mutations_2; not granted
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES — fauna may never spawn or be contacted
+Event/flag dependency: No fauna-killed flags
+Achievement risk: Tiyanki/wraith/horror achievements are kill flags
+Included in master file: YES
+
+Technology ID: tech_combat_computers_bio_integration
+Name: Combat Computer Bio-integration
+Category: Space fauna
+What it gives: Fauna combat computer integration. weight=0.
+Natural source: Space fauna first contact / debris / Grand Archive DNA — fauna not destroyed by this script
+DLC: base / The Grand Archive
+Prerequisites: unique mutations list controlled_mutations_2; not granted
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES — fauna may never spawn or be contacted
+Event/flag dependency: No fauna-killed flags
+Achievement risk: Tiyanki/wraith/horror achievements are kill flags
+Included in master file: YES
+
+Technology ID: tech_rift_sphere
+Name: Rift Sphere
+Category: Astral Planes
+What it gives: Rift Sphere. weight=0. feature_flags unlock_astral_rift_exploration — lets you explore rifts when found; does not complete rifts or set rift outcome flags.
+Natural source: First Astral Rift contact
+DLC: Astral Planes
+Prerequisites: none
+Can normally appear in tech deck: NO
+Can be missed in one campaign: YES
+Event/flag dependency: Unlocks exploration capability only
+Achievement risk: Rift achievements use event flags
+Included in master file: YES
+
+Technology ID: tech_akx_worm_1
+Name: Entropic Recursion
+Category: DANGEROUS unique
+What it gives: Horizon Signal events branch on has_technology = tech_akx_worm_*. Pre-granting can skip or break the chain (What Was Will Be uses worm_awaited flag).
+Natural source: Event / crisis / shroud / L-Gate
+DLC: varies
+Prerequisites: none granted
+Can normally appear in tech deck: NO / path-locked
+Can be missed in one campaign: YES
+Event/flag dependency: Horizon Signal events branch on has_technology = tech_akx_worm_*. Pre-granting can skip or break the chain (What Was Will Be uses worm_awaited flag).
+Achievement risk: HIGH — chain/path/covenant
+Included in master file: NO
+
+Technology ID: tech_akx_worm_2
+Name: Doctrine: Strange Loop
+Category: DANGEROUS unique
+What it gives: Horizon Signal society worm tech. Same event checks.
+Natural source: Event / crisis / shroud / L-Gate
+DLC: varies
+Prerequisites: none granted
+Can normally appear in tech deck: NO / path-locked
+Can be missed in one campaign: YES
+Event/flag dependency: Horizon Signal society worm tech. Same event checks.
+Achievement risk: HIGH — chain/path/covenant
+Included in master file: NO
+
+Technology ID: tech_akx_worm_3
+Name: Omega Theory
+Category: DANGEROUS unique
+What it gives: Horizon Signal end-stage worm tech. Same event checks.
+Natural source: Event / crisis / shroud / L-Gate
+DLC: varies
+Prerequisites: none granted
+Can normally appear in tech deck: NO / path-locked
+Can be missed in one campaign: YES
+Event/flag dependency: Horizon Signal end-stage worm tech. Same event checks.
+Achievement risk: HIGH — chain/path/covenant
+Included in master file: NO
+
+Technology ID: tech_covenant_composer
+Name: $COMPOSER_MARK$
+Category: DANGEROUS unique
+What it gives: Covenant reward tech. Mutually exclusive covenant outcomes; do not grant all as if all covenants were signed.
+Natural source: Event / crisis / shroud / L-Gate
+DLC: varies
+Prerequisites: none granted
+Can normally appear in tech deck: NO / path-locked
+Can be missed in one campaign: YES
+Event/flag dependency: Covenant reward tech. Mutually exclusive covenant outcomes; do not grant all as if all covenants were signed.
+Achievement risk: HIGH — chain/path/covenant
+Included in master file: NO
+
+Technology ID: tech_covenant_eater
+Name: $EATER_MARK$
+Category: DANGEROUS unique
+What it gives: Covenant reward tech.
+Natural source: Event / crisis / shroud / L-Gate
+DLC: varies
+Prerequisites: none granted
+Can normally appear in tech deck: NO / path-locked
+Can be missed in one campaign: YES
+Event/flag dependency: Covenant reward tech.
+Achievement risk: HIGH — chain/path/covenant
+Included in master file: NO
+
+Technology ID: tech_covenant_instrument
+Name: $INSTRUMENT_MARK$
+Category: DANGEROUS unique
+What it gives: Covenant reward tech.
+Natural source: Event / crisis / shroud / L-Gate
+DLC: varies
+Prerequisites: none granted
+Can normally appear in tech deck: NO / path-locked
+Can be missed in one campaign: YES
+Event/flag dependency: Covenant reward tech.
+Achievement risk: HIGH — chain/path/covenant
+Included in master file: NO
+
+Technology ID: tech_covenant_cradle
+Name: $CRADLE_MARK$
+Category: DANGEROUS unique
+What it gives: Covenant reward tech.
+Natural source: Event / crisis / shroud / L-Gate
+DLC: varies
+Prerequisites: none granted
+Can normally appear in tech deck: NO / path-locked
+Can be missed in one campaign: YES
+Event/flag dependency: Covenant reward tech.
+Achievement risk: HIGH — chain/path/covenant
+Included in master file: NO
+
+Technology ID: tech_covenant_whisperers
+Name: $WHISPERERS_MARK$
+Category: DANGEROUS unique
+What it gives: Covenant reward tech.
+Natural source: Event / crisis / shroud / L-Gate
+DLC: varies
+Prerequisites: none granted
+Can normally appear in tech deck: NO / path-locked
+Can be missed in one campaign: YES
+Event/flag dependency: Covenant reward tech.
+Achievement risk: HIGH — chain/path/covenant
+Included in master file: NO
+
+Technology ID: tech_psionic_aura
+Name: $PSIONIC_AURA$
+Category: DANGEROUS unique
+What it gives: feature_flags unlock_psionic_aura — changes Shroud aura availability without being psionic.
+Natural source: Event / crisis / shroud / L-Gate
+DLC: varies
+Prerequisites: none granted
+Can normally appear in tech deck: NO / path-locked
+Can be missed in one campaign: YES
+Event/flag dependency: feature_flags unlock_psionic_aura — changes Shroud aura availability without being psionic.
+Achievement risk: HIGH — chain/path/covenant
+Included in master file: NO
+
+Technology ID: tech_aura_intensification
+Name: $PSIONIC_AURA$ Intensification
+Category: DANGEROUS unique
+What it gives: feature_flags allow aura intensity spread/growth.
+Natural source: Event / crisis / shroud / L-Gate
+DLC: varies
+Prerequisites: none granted
+Can normally appear in tech deck: NO / path-locked
+Can be missed in one campaign: YES
+Event/flag dependency: feature_flags allow aura intensity spread/growth.
+Achievement risk: HIGH — chain/path/covenant
+Included in master file: NO
+
+Technology ID: tech_psionic_suppression
+Name: Psionic Suppression
+Category: DANGEROUS unique
+What it gives: potential has_encountered_psionic_auras; anti-aura toolkit.
+Natural source: Event / crisis / shroud / L-Gate
+DLC: varies
+Prerequisites: none granted
+Can normally appear in tech deck: NO / path-locked
+Can be missed in one campaign: YES
+Event/flag dependency: potential has_encountered_psionic_auras; anti-aura toolkit.
+Achievement risk: HIGH — chain/path/covenant
+Included in master file: NO
+
+Technology ID: tech_cosmogenesis_crisis_1
+Name: Exponential Learning Theory
+Category: DANGEROUS unique
+What it gives: Cosmogenesis crisis path level. Changes ascension/crisis progression.
+Natural source: Event / crisis / shroud / L-Gate
+DLC: varies
+Prerequisites: none granted
+Can normally appear in tech deck: NO / path-locked
+Can be missed in one campaign: YES
+Event/flag dependency: Cosmogenesis crisis path level. Changes ascension/crisis progression.
+Achievement risk: HIGH — chain/path/covenant
+Included in master file: NO
+
+Technology ID: tech_cosmogenesis_crisis_2
+Name: Gravitic Brush
+Category: DANGEROUS unique
+What it gives: Cosmogenesis path.
+Natural source: Event / crisis / shroud / L-Gate
+DLC: varies
+Prerequisites: none granted
+Can normally appear in tech deck: NO / path-locked
+Can be missed in one campaign: YES
+Event/flag dependency: Cosmogenesis path.
+Achievement risk: HIGH — chain/path/covenant
+Included in master file: NO
+
+Technology ID: tech_cosmogenesis_crisis_3
+Name: Theoretical Infinity Thesis
+Category: DANGEROUS unique
+What it gives: Cosmogenesis path.
+Natural source: Event / crisis / shroud / L-Gate
+DLC: varies
+Prerequisites: none granted
+Can normally appear in tech deck: NO / path-locked
+Can be missed in one campaign: YES
+Event/flag dependency: Cosmogenesis path.
+Achievement risk: HIGH — chain/path/covenant
+Included in master file: NO
+
+Technology ID: tech_cosmogenesis_crisis_4
+Name: The Rules of Reality
+Category: DANGEROUS unique
+What it gives: Cosmogenesis path.
+Natural source: Event / crisis / shroud / L-Gate
+DLC: varies
+Prerequisites: none granted
+Can normally appear in tech deck: NO / path-locked
+Can be missed in one campaign: YES
+Event/flag dependency: Cosmogenesis path.
+Achievement risk: HIGH — chain/path/covenant
+Included in master file: NO
+
+Technology ID: tech_cosmogenesis_crisis_5
+Name: Nascent Universes
+Category: DANGEROUS unique
+What it gives: Cosmogenesis path.
+Natural source: Event / crisis / shroud / L-Gate
+DLC: varies
+Prerequisites: none granted
+Can normally appear in tech deck: NO / path-locked
+Can be missed in one campaign: YES
+Event/flag dependency: Cosmogenesis path.
+Achievement risk: HIGH — chain/path/covenant
+Included in master file: NO
+
+Technology ID: tech_cosmogenesis_escort
+Name: Riddle Escort
+Category: DANGEROUS unique
+What it gives: Cosmogenesis FE-style ship.
+Natural source: Event / crisis / shroud / L-Gate
+DLC: varies
+Prerequisites: none granted
+Can normally appear in tech deck: NO / path-locked
+Can be missed in one campaign: YES
+Event/flag dependency: Cosmogenesis FE-style ship.
+Achievement risk: HIGH — chain/path/covenant
+Included in master file: NO
+
+Technology ID: tech_cosmogenesis_battlecruiser
+Name: Enigma Battlecruiser
+Category: DANGEROUS unique
+What it gives: Cosmogenesis FE-style ship.
+Natural source: Event / crisis / shroud / L-Gate
+DLC: varies
+Prerequisites: none granted
+Can normally appear in tech deck: NO / path-locked
+Can be missed in one campaign: YES
+Event/flag dependency: Cosmogenesis FE-style ship.
+Achievement risk: HIGH — chain/path/covenant
+Included in master file: NO
+
+Technology ID: tech_cosmogenesis_weaver
+Name: Quandary Weaver
+Category: DANGEROUS unique
+What it gives: Cosmogenesis bioship.
+Natural source: Event / crisis / shroud / L-Gate
+DLC: varies
+Prerequisites: none granted
+Can normally appear in tech deck: NO / path-locked
+Can be missed in one campaign: YES
+Event/flag dependency: Cosmogenesis bioship.
+Achievement risk: HIGH — chain/path/covenant
+Included in master file: NO
+
+Technology ID: tech_cosmogenesis_mauler
+Name: Cipher Mauler
+Category: DANGEROUS unique
+What it gives: Cosmogenesis bioship.
+Natural source: Event / crisis / shroud / L-Gate
+DLC: varies
+Prerequisites: none granted
+Can normally appear in tech deck: NO / path-locked
+Can be missed in one campaign: YES
+Event/flag dependency: Cosmogenesis bioship.
+Achievement risk: HIGH — chain/path/covenant
+Included in master file: NO
+
+Technology ID: tech_cosmogenesis_harbinger
+Name: Maze Harbinger
+Category: DANGEROUS unique
+What it gives: Cosmogenesis bioship.
+Natural source: Event / crisis / shroud / L-Gate
+DLC: varies
+Prerequisites: none granted
+Can normally appear in tech deck: NO / path-locked
+Can be missed in one campaign: YES
+Event/flag dependency: Cosmogenesis bioship.
+Achievement risk: HIGH — chain/path/covenant
+Included in master file: NO
+
+Technology ID: tech_cosmogenesis_stinger
+Name: Cryptic Stinger
+Category: DANGEROUS unique
+What it gives: Cosmogenesis bioship.
+Natural source: Event / crisis / shroud / L-Gate
+DLC: varies
+Prerequisites: none granted
+Can normally appear in tech deck: NO / path-locked
+Can be missed in one campaign: YES
+Event/flag dependency: Cosmogenesis bioship.
+Achievement risk: HIGH — chain/path/covenant
+Included in master file: NO
+
+Technology ID: tech_cosmogenesis_world
+Name: Scalable Reservoir Computing
+Category: DANGEROUS unique
+What it gives: Cosmogenesis world / lathe-related.
+Natural source: Event / crisis / shroud / L-Gate
+DLC: varies
+Prerequisites: none granted
+Can normally appear in tech deck: NO / path-locked
+Can be missed in one campaign: YES
+Event/flag dependency: Cosmogenesis world / lathe-related.
+Achievement risk: HIGH — chain/path/covenant
+Included in master file: NO
+
+Technology ID: tech_cosmogenesis_thesis
+Name: Applied Infinity Thesis
+Category: DANGEROUS unique
+What it gives: Applied Infinity Thesis — Keepers of Knowledge interaction.
+Natural source: Event / crisis / shroud / L-Gate
+DLC: varies
+Prerequisites: none granted
+Can normally appear in tech deck: NO / path-locked
+Can be missed in one campaign: YES
+Event/flag dependency: Applied Infinity Thesis — Keepers of Knowledge interaction.
+Achievement risk: HIGH — chain/path/covenant
+Included in master file: NO
+

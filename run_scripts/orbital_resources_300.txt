@@ -1,0 +1,5 @@
+effect while = { count = 30 add_deposit = d_energy_10 }
+effect while = { count = 30 add_deposit = d_minerals_10 }
+effect while = { count = 12 add_deposit = d_alloys_25 }
+effect while = { count = 30 add_deposit = d_food_10 }
+effect while = { count = 150 add_deposit = d_consumer_goods_obsessional_directive }

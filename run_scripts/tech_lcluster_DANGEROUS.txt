@@ -1,0 +1,2 @@
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_lgate_activation message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_repeatable_lcluster_clue message = no } } }

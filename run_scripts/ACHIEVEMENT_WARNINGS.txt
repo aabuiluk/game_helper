@@ -1,0 +1,15 @@
+ACHIEVEMENT WARNINGS — Stellaris 4.x vanilla common/achievements.txt
+Triggers verified in the local install. Console/run typically makes the save ineligible for Steam achievements; that is separate from the scripted trigger.
+
+Technology | Achievement | Risk | What to do
+---------- | ----------- | ---- | ----------
+All 13 Insight techs | Insightful (id 159) | HIGH | Trigger is only `num_insight_techs >= 12` (First Contact). It does NOT check observation source. Giving 13 via console would satisfy the count IF achievements were still eligible. Steam: using console usually disables achievements on that save. If you want Insightful from Pre-FTL observation on a clean Ironman path: get it first, then run tech_insights_AFTER_achievement.txt. Do NOT run tech_insights.txt before that.
+tech_dragon_armor / leviathan techs | Whence It Came / Wraith / Tiyanki / Dreadnought / etc. | LOW for the tech, HIGH if you kill | Achievements check flags (horror_killed, killed_wraith, tiyanki_killed, restored_dreadnought). This pack does not set those flags. Guardians stay alive. You can still earn kill/restore achievements later.
+tech_secrets_* | precursor story achievements (e.g. Humility Before the Fall = completed_inetian_traders_precursor) | LOW | Those achievements check precursor completion flags / relics, not Secrets techs. Inetian/AdAkkaria have no secret-tech IDs.
+Archaeotechs | Archaeologist (id 99) | LOW | Trigger is has_country_flag = archaeologist_achievement (sites), not researching archaeotechs.
+tech_akx_worm_* | What Was, Will Be (worm_awaited) | HIGH | Horizon Signal events test has_technology = tech_akx_worm_*. Pre-granting can skip chain steps. Only in DANGEROUS file.
+tech_lgate_activation / clue repeatable | L-Gate / Distant Stars chain achievements | HIGH | Opening progression uses these techs. Only in DANGEROUS.
+tech_covenant_* | Shroud covenant achievements | HIGH | Mutually exclusive covenant rewards. Only in DANGEROUS.
+tech_cosmogenesis_* | Cosmogenesis / crisis path | HIGH | These ARE the path. Only in DANGEROUS.
+tech_mine_living_metal / zro / dark_matter | Resourceful | NONE from tech alone | Resourceful checks monthly income of those resources, not the techs.
+Any research_technology via console | Steam achievements in general | HIGH | Using the console/run command is treated as a cheat by Steam for that save. This is not unique to Insightful.
