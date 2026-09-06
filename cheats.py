@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass, replace
 
-from run_scripts import RUN_SCRIPTS, run_command
+from run_scripts import POP_357_EVENT_TRAITS, RUN_SCRIPTS, run_command
 
 
 @dataclass(frozen=True)
@@ -72,17 +72,12 @@ def _harvest_variants() -> tuple[Cheat, ...]:
     return tuple(items)
 
 
-_POP_CMD = (
-    "effect every_owned_pop_group = {{ limit = {{ id = POP_GROUP_ID }} {action} = {{ {slot} }} }}"
-)
-
-
 def _pop_add(trait: str) -> str:
-    return _POP_CMD.format(action="add_trait", slot=f"trait = {trait}")
+    return f"add_trait_species 357 {trait}"
 
 
 def _pop_remove(trait: str) -> str:
-    return _POP_CMD.format(action="remove_trait", slot=f"trait = {trait}")
+    return f"remove_trait_species 357 {trait}"
 
 
 def _pop_trait_variants() -> tuple[Cheat, ...]:  # noqa: PLR0912
@@ -91,6 +86,10 @@ def _pop_trait_variants() -> tuple[Cheat, ...]:  # noqa: PLR0912
     return (
         # ══ ГОТОВІ RUN-ФАЙЛИ ═════════════════════════════════════════════════
         _v(run_command("pop_traits_353.txt"),      "★ Топ-5 трейтів (ID 353)",  "run pop_traits_353.txt — Psionic, Erudite, Robust, Fertile, Cybernetic одним файлом."),
+        *(
+            _v(run_command(item.filename), f"★ {item.title}", f"run {item.filename} — {item.creates}.")
+            for item in POP_357_EVENT_TRAITS
+        ),
         # ══ ОСНОВНІ БІОЛОГІЧНІ (04_species_traits) ══════════════════════════
         _v(_pop_add("trait_adaptive"),             "Adaptive",                  "cost=2. +20% Habitability на всіх планетах."),
         _v(_pop_add("trait_agrarian"),             "Agrarian",                  "cost=2. +15% Food від Farmers."),
@@ -582,9 +581,8 @@ SPECIAL_WINDOW_CHEATS: tuple[Cheat, ...] = (
         _pop_add("trait_intelligent"),
         "5. Трейти попів",
         (
-            "debugtooltip → навести на планету або поп-групу → взяти ID. "
-            "Замінити POP_GROUP_ID і назву трейту. "
-            "Клік копіює шаблон з trait_intelligent; стрілка — всі трейти."
+            "add_trait_species 357 <трейт>. debugtooltip на расу в меню видів, щоб перевірити ID. "
+            "Клік копіює Intelligent для 357; стрілка — усі трейти й run-файли."
         ),
         "Світи 78",
         _pop_trait_variants(),

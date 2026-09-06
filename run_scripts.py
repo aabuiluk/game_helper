@@ -21,6 +21,90 @@ class RunScript:
     creates: str
 
 
+@dataclass(frozen=True)
+class PopTraitScript:
+    filename: str
+    title: str
+    trait_id: str
+    creates: str
+
+
+# Унікальні івентові перки населення для раси/поп-групи 357 (по одному файлу).
+POP_357_EVENT_TRAITS: tuple[PopTraitScript, ...] = (
+    PopTraitScript(
+        "pop_357_brainslug.txt",
+        "357 Brain Slug Host",
+        "trait_brainslug",
+        "Abandoned Settlements. +10% дослідники/бюрократи, −25% ріст",
+    ),
+    PopTraitScript(
+        "pop_357_bioadaptability.txt",
+        "357 Bioadaptability",
+        "trait_bioadaptability",
+        "Speed Demon (зелений). −5% amenities, +5% ріст, +30% мін. inhabitability",
+    ),
+    PopTraitScript(
+        "pop_357_limited_regeneration.txt",
+        "357 Limited Regeneration",
+        "trait_limited_regeneration",
+        "Speed Demon (синій). −5% amenities, +5% ріст, +15% army, +10% lifespan",
+    ),
+    PopTraitScript(
+        "pop_357_social_pheromones.txt",
+        "357 Social Pheromones",
+        "trait_social_pheromones",
+        "Speed Demon (червоний). −5% amenities, +5% ріст, −5% житло",
+    ),
+    PopTraitScript(
+        "pop_357_nivlac.txt",
+        "357 Nivlac",
+        "trait_nivlac",
+        "Impossible Organism. +50% inhabitability, +15% ріст",
+    ),
+    PopTraitScript(
+        "pop_357_enigmatic_intelligence.txt",
+        "357 Uplifted (Enigmatic Cache)",
+        "trait_enigmatic_intelligence",
+        "Enigmatic Cache повний успіх. +10% дослідники, +10% XP лідерів",
+    ),
+    PopTraitScript(
+        "pop_357_plasmic.txt",
+        "357 Plasmic",
+        "trait_plasmic",
+        "Plasmic Core. +15% inhabitability, +15% ріст, −10% житло",
+    ),
+    PopTraitScript(
+        "pop_357_psionic_ephapse.txt",
+        "357 Psionic Ephapse",
+        "trait_psionic_ephapse",
+        "Emergent Abilities. +5% щастя/jobs; якщо вже псіонік — ще research/unity",
+    ),
+    PopTraitScript(
+        "pop_357_slimeborn.txt",
+        "357 Slimespawn",
+        "trait_slimeborn",
+        "Toxic Pools. +10% ріст, −10% upkeep",
+    ),
+    PopTraitScript(
+        "pop_357_numistic.txt",
+        "357 Numistic Administration",
+        "trait_nuumismatic_administration",
+        "Numistic Order. +25% трейдери, +33% trade від living standards",
+    ),
+    PopTraitScript(
+        "pop_357_bloomed.txt",
+        "357 Bloomed",
+        "trait_plantoid_bloomed",
+        "Gaia Seeders. Бонуси jobs/росту/amenities/житла на Gaia",
+    ),
+)
+
+
+def pop_357_effect_line(trait_id: str) -> str:
+    # Консольна команда, не effect: чіпає лише вид 357 і реально ставить трейт.
+    return f"add_trait_species 357 {trait_id}"
+
+
 def stellaris_documents_dir() -> Path:
     return Path.home() / SAVE_RELATIVE.parent
 
@@ -522,6 +606,16 @@ RUN_SCRIPTS: tuple[RunScript, ...] = (
         "Попи",
         "Будь-де (застосовується до pop group 353)",
         "Psionic, Erudite, Robust, Fertile, Cybernetic для поп-групи 353",
+    ),
+    *(
+        RunScript(
+            item.filename,
+            item.title,
+            "Попи",
+            "Нічого (вид 357). debugtooltip на расу в меню видів",
+            item.creates,
+        )
+        for item in POP_357_EVENT_TRAITS
     ),
 )
 

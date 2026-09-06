@@ -429,7 +429,7 @@ class CheatOverlay(QWidget):
                 hint=(
                     "1 Гея  2 Еку  3 Специфічні технології  4 Run · Орбітальні депозити "
                     "(300 / science 500 / спец mining / спец research)  "
-                    "5 Трейти попів (debugtooltip → ID групи → замінити POP_GROUP_ID). "
+                    "5 Трейти попів (add_trait_species 357 …; debugtooltip на расу). "
                     "Комбо зверху — як у базовому віджеті."
                 ),
                 place_on_screen=False,

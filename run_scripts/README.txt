@@ -59,6 +59,8 @@ orbital_special_research_1000.txt | стратегічні research ×1000 | н�
 habitat_system_setup.txt | депозити для district cap | зірка
 habitat_spawn_*.txt | Central / Major / Minor Orbital | нежиле тіло
 habitat_*.txt | забудова хабітата | колонізований хабітат
+pop_traits_353.txt | Psionic/Erudite/Robust/Fertile/Cybernetic | нічого (pop group 353)
+pop_357_*.txt | один унікальний івентовий перк на файл | нічого (раса або pop group 357)
 
 Мегасооруження | Можна в universal | Чому | Вимоги | Конфлікти
 Усі пункти меню Мегасистеми спавнять НЕДОБУДОВАНИЙ майданчик (_0 / перша стадія), не готову споруду.
@@ -131,6 +133,24 @@ Astral threads: 33×3 + 1 = 100. Artifacts так само. ×10 файли по
 
 ignore_cap = yes лише на хабітаті, щоб забудувати після orbital-бонусів.
 Fortress-district для хабітата у ванілі 4.x немає — фортеця через будівлі.
+
+Унікальні івентові перки (раса 357)
+-----------------------------------
+Кожен файл додає ОДИН перк. Запускай лише потрібні.
+Команда: add_trait_species 357 <trait>  (лише вид 357, не поп-групи).
+Перегенерувати: python3 write_pop_357.py
+
+pop_357_brainslug.txt | Brain Slug Host
+pop_357_bioadaptability.txt | Speed Demon зелений
+pop_357_limited_regeneration.txt | Speed Demon синій
+pop_357_social_pheromones.txt | Speed Demon червоний
+pop_357_nivlac.txt | Nivlac
+pop_357_enigmatic_intelligence.txt | Uplifted (Enigmatic Cache)
+pop_357_plasmic.txt | Plasmic
+pop_357_psionic_ephapse.txt | Psionic Ephapse
+pop_357_slimeborn.txt | Slimespawn
+pop_357_numistic.txt | Numistic Administration
+pop_357_bloomed.txt | Bloomed (Gaia Seeders)
 
 DLC (мінімум)
 -------------
