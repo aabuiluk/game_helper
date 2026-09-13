@@ -433,29 +433,37 @@ def main() -> None:
         "megasystem_all_compatible.txt",
         "\n".join(
             [
-                spawn_mega("think_tank_0", 32, 0),
-                spawn_mega("spy_orb_0", 40, 40),
-                spawn_mega("strategic_coordination_center_0", 48, 80),
-                spawn_mega("mega_art_installation_0", 56, 120),
-                spawn_mega("interstellar_assembly_0", 64, 160),
-                spawn_mega("mega_shipyard_0", 72, 200),
-                spawn_mega("gateway_0", 84, 250),
+                spawn_mega("think_tank_ruined", 32, 0),
+                spawn_mega("spy_orb_ruined", 40, 40),
+                spawn_mega("strategic_coordination_center_ruined", 48, 80),
+                spawn_mega("mega_art_installation_ruined", 56, 120),
+                spawn_mega("interstellar_assembly_ruined", 64, 160),
+                spawn_mega("mega_shipyard_ruined", 72, 200),
+                spawn_mega("gateway_ruined", 84, 250),
             ]
         )
         + "\n",
     )
 
-    write("system_dyson.txt", star_system_spawn("dyson_sphere_0", "sc_g") + "\n")
+    write("system_dyson.txt", star_system_spawn("dyson_sphere_ruined", "sc_g") + "\n")
+    # У ванілі немає dyson_swarm_ruined — лишаємо першу стадію.
     write("system_dyson_swarm.txt", star_system_spawn("dyson_swarm_1") + "\n")
     write(
         "system_ringworld.txt",
         "effect solar_system = { set_star_class = sc_g "
-        "spawn_megastructure = { type = ring_world_1 planet = prev owner = space_owner orbit_distance = 45 orbit_angle = 0 } }\n",
+        "spawn_megastructure = { type = ring_world_ruined planet = prev owner = space_owner "
+        "orbit_distance = 45 orbit_angle = 0 } }\n",
     )
-    write("system_matter_decompressor.txt", star_system_spawn("matter_decompressor_0", "sc_black_hole") + "\n")
-    write("system_quantum_catapult.txt", star_system_spawn("quantum_catapult_0", "sc_pulsar") + "\n")
-    write("system_stellar_cannon.txt", star_system_spawn("dyson_gun_0") + "\n")
-    write("system_arc_furnace.txt", spawn_on_body("orbital_arc_furnace_1") + "\n")
+    write(
+        "system_matter_decompressor.txt",
+        star_system_spawn("matter_decompressor_ruined", "sc_black_hole") + "\n",
+    )
+    write(
+        "system_quantum_catapult.txt",
+        star_system_spawn("quantum_catapult_ruined", "sc_pulsar") + "\n",
+    )
+    write("system_stellar_cannon.txt", star_system_spawn("dyson_gun_ruined") + "\n")
+    write("system_arc_furnace.txt", spawn_on_body("orbital_arc_furnace_destroyed") + "\n")
 
     # --- Ecumenopolis planets ---
     amenities = [

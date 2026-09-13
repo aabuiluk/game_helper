@@ -10,6 +10,8 @@ from stellaris_saves import SAVE_RELATIVE
 
 
 SCRIPTS_DIR = Path(__file__).resolve().parent / "run_scripts"
+SPECIES_ID_PATH = Path(__file__).resolve().parent / ".species_id"
+DEFAULT_SPECIES_ID = "357"
 
 
 @dataclass(frozen=True)
@@ -29,80 +31,112 @@ class PopTraitScript:
     creates: str
 
 
-# Унікальні івентові перки населення для раси/поп-групи 357 (по одному файлу).
+# Унікальні івентові перки населення (по одному файлу). ID виду — у вмісті файлу / .species_id.
 POP_357_EVENT_TRAITS: tuple[PopTraitScript, ...] = (
     PopTraitScript(
         "pop_357_brainslug.txt",
-        "357 Brain Slug Host",
+        "Brain Slug Host",
         "trait_brainslug",
         "Abandoned Settlements. +10% дослідники/бюрократи, −25% ріст",
     ),
     PopTraitScript(
         "pop_357_bioadaptability.txt",
-        "357 Bioadaptability",
+        "Bioadaptability",
         "trait_bioadaptability",
         "Speed Demon (зелений). −5% amenities, +5% ріст, +30% мін. inhabitability",
     ),
     PopTraitScript(
         "pop_357_limited_regeneration.txt",
-        "357 Limited Regeneration",
+        "Limited Regeneration",
         "trait_limited_regeneration",
         "Speed Demon (синій). −5% amenities, +5% ріст, +15% army, +10% lifespan",
     ),
     PopTraitScript(
         "pop_357_social_pheromones.txt",
-        "357 Social Pheromones",
+        "Social Pheromones",
         "trait_social_pheromones",
         "Speed Demon (червоний). −5% amenities, +5% ріст, −5% житло",
     ),
     PopTraitScript(
         "pop_357_nivlac.txt",
-        "357 Nivlac",
+        "Nivlac",
         "trait_nivlac",
         "Impossible Organism. +50% inhabitability, +15% ріст",
     ),
     PopTraitScript(
         "pop_357_enigmatic_intelligence.txt",
-        "357 Uplifted (Enigmatic Cache)",
+        "Uplifted (Enigmatic Cache)",
         "trait_enigmatic_intelligence",
         "Enigmatic Cache повний успіх. +10% дослідники, +10% XP лідерів",
     ),
     PopTraitScript(
         "pop_357_plasmic.txt",
-        "357 Plasmic",
+        "Plasmic",
         "trait_plasmic",
         "Plasmic Core. +15% inhabitability, +15% ріст, −10% житло",
     ),
     PopTraitScript(
         "pop_357_psionic_ephapse.txt",
-        "357 Psionic Ephapse",
+        "Psionic Ephapse",
         "trait_psionic_ephapse",
         "Emergent Abilities. +5% щастя/jobs; якщо вже псіонік — ще research/unity",
     ),
     PopTraitScript(
         "pop_357_slimeborn.txt",
-        "357 Slimespawn",
+        "Slimespawn",
         "trait_slimeborn",
         "Toxic Pools. +10% ріст, −10% upkeep",
     ),
     PopTraitScript(
         "pop_357_numistic.txt",
-        "357 Numistic Administration",
+        "Numistic Administration",
         "trait_nuumismatic_administration",
         "Numistic Order. +25% трейдери, +33% trade від living standards",
     ),
     PopTraitScript(
         "pop_357_bloomed.txt",
-        "357 Bloomed",
+        "Bloomed",
         "trait_plantoid_bloomed",
         "Gaia Seeders. Бонуси jobs/росту/amenities/житла на Gaia",
     ),
 )
 
 
-def pop_357_effect_line(trait_id: str) -> str:
-    # Консольна команда, не effect: чіпає лише вид 357 і реально ставить трейт.
-    return f"add_trait_species 357 {trait_id}"
+def get_species_id() -> str:
+    if SPECIES_ID_PATH.is_file():
+        text = SPECIES_ID_PATH.read_text(encoding="utf-8").strip()
+        if text.isdigit():
+            return text
+    sample = SCRIPTS_DIR / "pop_357_brainslug.txt"
+    if sample.is_file():
+        parts = sample.read_text(encoding="utf-8").strip().split()
+        if len(parts) >= 3 and parts[0] == "add_trait_species" and parts[1].isdigit():
+            return parts[1]
+    return DEFAULT_SPECIES_ID
+
+
+def set_species_id(species_id: str) -> None:
+    SPECIES_ID_PATH.write_text(f"{species_id}\n", encoding="utf-8")
+
+
+def pop_357_effect_line(trait_id: str, species_id: str | None = None) -> str:
+    # Консольна команда, не effect: чіпає лише обраний вид і реально ставить трейт.
+    sid = species_id if species_id is not None else get_species_id()
+    return f"add_trait_species {sid} {trait_id}"
+
+
+def rewrite_pop_trait_files(species_id: str) -> int:
+    """Перезаписати pop_357_*.txt під новий species id і зберегти його."""
+    if not species_id.isdigit():
+        raise ValueError(f"ID виду має бути числом, отримано: {species_id!r}")
+    SCRIPTS_DIR.mkdir(parents=True, exist_ok=True)
+    set_species_id(species_id)
+    count = 0
+    for item in POP_357_EVENT_TRAITS:
+        path = SCRIPTS_DIR / item.filename
+        path.write_text(pop_357_effect_line(item.trait_id, species_id) + "\n", encoding="utf-8")
+        count += 1
+    return count
 
 
 def stellaris_documents_dir() -> Path:
@@ -115,7 +149,7 @@ RUN_SCRIPTS: tuple[RunScript, ...] = (
         "Суперсистема",
         "Суперсистема",
         "Центральна зірка (НЕ столиця). Скрипт ЗНЕСЕ систему й поставить усе заново",
-        "Зносить планети/станції/мега/базу. 20 еку + 20 гая 78 без власника, 20 астероїдів, хабітати 78, майданчики megasystem_all_compatible",
+        "Зносить планети/станції/мега/базу. 20 еку + 20 гая 78 без власника, 20 астероїдів, хабітати 78, поламані меги (можна відновити)",
     ),
     RunScript(
         "eventsystem.txt",
@@ -125,60 +159,67 @@ RUN_SCRIPTS: tuple[RunScript, ...] = (
         "16 незаселених світів 78 під colony events, археологія не пройдена, rift не завершений, ruined меги. Цитадель id 0",
     ),
     RunScript(
+        "outer_orbit_8.txt",
+        "Зовнішня орбіта ×8",
+        "Суперсистема",
+        "Зірка системи",
+        "Орбіта 250 біля пунктирної. 4 еку + 4 гая розміру 78 через один (45°). Нічого не зносить",
+    ),
+    RunScript(
         "megasystem_all_compatible.txt",
         "Усі сумісні мегасооруження",
         "Мегасистеми",
         "Центральна зірка в системі, якою ти володієш",
-        "Майданчики Nexus, Sentry, SCC, Mega Art, Assembly, Shipyard, Gateway (_0). Далі добудовуєш у грі",
+        "Поламані Nexus, Sentry, SCC, Mega Art, Assembly, Shipyard, Gateway — відновлюєш у грі",
     ),
     RunScript(
         "system_dyson.txt",
         "Сфера Дайсона",
         "Мегасистеми",
         "Звичайна зірка (G/K/F/A/B/M), не чорна діра",
-        "sc_g + майданчик Dyson Sphere (dyson_sphere_0). Внутрішні планети гра може зжерти",
+        "sc_g + поламана Dyson Sphere (dyson_sphere_ruined). Відновлюєш у грі",
     ),
     RunScript(
         "system_dyson_swarm.txt",
         "Dyson Swarm",
         "Мегасистеми",
         "Звичайна зірка",
-        "Перша стадія Dyson Swarm (dyson_swarm_1). Не сумісний зі сферою Дайсона",
+        "Перша стадія Dyson Swarm (у ванілі немає ruined). Не сумісний зі сферою Дайсона",
     ),
     RunScript(
         "system_ringworld.txt",
         "Ring World",
         "Мегасистеми",
         "Звичайна зірка",
-        "Майданчик ring_world_1 (не 4 готові секції). Внутрішні планети/астероїди можуть зникнути",
+        "Поламаний сегмент ring_world_ruined. Відновлюєш у грі",
     ),
     RunScript(
         "system_matter_decompressor.txt",
         "Matter Decompressor",
         "Мегасистеми",
         "Зірка / чорна діра",
-        "Ставить sc_black_hole і майданчик Matter Decompressor (_0)",
+        "Ставить sc_black_hole і поламаний Matter Decompressor (ruined)",
     ),
     RunScript(
         "system_quantum_catapult.txt",
         "Quantum Catapult",
         "Мегасистеми",
         "Зірка (краще пульсар)",
-        "Ставить sc_pulsar і майданчик Quantum Catapult (_0)",
+        "Ставить sc_pulsar і поламаний Quantum Catapult (ruined)",
     ),
     RunScript(
         "system_stellar_cannon.txt",
         "Stellar Cannon",
         "Мегасистеми",
         "Звичайна зірка",
-        "Майданчик Stellar Cannon (dyson_gun_0). Конфліктує з Dyson Sphere / Swarm / Catapult",
+        "Поламаний Stellar Cannon (dyson_gun_ruined). Конфліктує з Dyson / Swarm / Catapult",
     ),
     RunScript(
         "system_arc_furnace.txt",
         "Arc Furnace",
         "Мегасистеми",
         "Розплавлена планета (pc_molten)",
-        "Перша стадія Arc Furnace (_1) на вибраній molten-планеті",
+        "Поламаний Arc Furnace (orbital_arc_furnace_destroyed) на molten",
     ),
     RunScript(
         "ecu78_capital_planet.txt",
@@ -584,7 +625,7 @@ RUN_SCRIPTS: tuple[RunScript, ...] = (
         "Усі специфічні технології",
         "Унікальні технології",
         "Нічого (команда на гравця)",
-        "Insights + precursor/archaeotech/guardians/fauna/FE/crisis/L-Cluster/astral/event. Без вознесіння, Cosmogenesis, covenant, L-Gate open",
+        "Insights + precursor/archaeotech/guardians/fauna/FE/crisis/L-Cluster/astral/event + covenants + L-Gate open. Без вознесіння, Cosmogenesis",
     ),
     RunScript(
         "tech_all_unique.txt",
@@ -612,7 +653,7 @@ RUN_SCRIPTS: tuple[RunScript, ...] = (
             item.filename,
             item.title,
             "Попи",
-            "Нічого (вид 357). debugtooltip на расу в меню видів",
+            "Нічого (вид з ID у файлі / .species_id). debugtooltip на расу в меню видів",
             item.creates,
         )
         for item in POP_357_EVENT_TRAITS

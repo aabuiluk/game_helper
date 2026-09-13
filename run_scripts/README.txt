@@ -32,16 +32,17 @@ add_pops 0 N бере вид з індексом 0 (зазвичай твій г
 Таблиця файлів
 --------------
 Файл | Що створює | Що виділити
-supersystem.txt | 20 планет 78 + 20 астероїдів + цитадель + недобудовані мега | зірка (НЕ столиця)
+supersystem.txt | 20 планет 78 + 20 астероїдів + цитадель + поламані мега (repair) | зірка (НЕ столиця)
 eventsystem.txt | сусідня система: 16 незаселених 78 + археологія + rift + ruined меги | зірка суперсистеми
-megasystem_all_compatible.txt | Майданчики Nexus/Sentry/SCC/Art/Assembly/Shipyard/Gateway (_0) | центральна зірка
-system_dyson.txt | майданчик Dyson Sphere (dyson_sphere_0), зірка → sc_g | зірка
-system_dyson_swarm.txt | перша стадія Dyson Swarm (dyson_swarm_1) | зірка
-system_ringworld.txt | майданчик Ring World (ring_world_1), зірка → sc_g | зірка
-system_matter_decompressor.txt | зірка → чорна діра + майданчик MD (_0) | зірка
-system_quantum_catapult.txt | зірка → пульсар + майданчик Catapult (_0) | зірка
-system_stellar_cannon.txt | майданчик Stellar Cannon (dyson_gun_0) | зірка
-system_arc_furnace.txt | перша стадія Arc Furnace (_1) | molten-планета
+outer_orbit_8.txt | орбіта 250: 4 еку + 4 гая розміру 78 через один (крок 45°) | зірка
+megasystem_all_compatible.txt | поламані Nexus/Sentry/SCC/Art/Assembly/Shipyard/Gateway (repair) | центральна зірка
+system_dyson.txt | поламана Dyson Sphere (ruined), зірка → sc_g | зірка
+system_dyson_swarm.txt | перша стадія Dyson Swarm (у ванілі немає ruined) | зірка
+system_ringworld.txt | поламаний Ring World сегмент (ruined), зірка → sc_g | зірка
+system_matter_decompressor.txt | зірка → чорна діра + поламаний MD (ruined) | зірка
+system_quantum_catapult.txt | зірка → пульсар + поламаний Catapult (ruined) | зірка
+system_stellar_cannon.txt | поламаний Stellar Cannon (dyson_gun_ruined) | зірка
+system_arc_furnace.txt | поламаний Arc Furnace (destroyed) | molten-планета
 ecu78_*_planet.txt | Ecumenopolis 78 + спавн Orbital Ring | колонія
 ecu78_*_ring.txt | модулі/будівлі кільця | саме Orbital Ring
 ring_*.txt | забудова секції Ring World | колонізована секція
@@ -63,26 +64,26 @@ pop_traits_353.txt | Psionic/Erudite/Robust/Fertile/Cybernetic | нічого (p
 pop_357_*.txt | один унікальний івентовий перк на файл | нічого (раса або pop group 357)
 
 Мегасооруження | Можна в universal | Чому | Вимоги | Конфлікти
-Усі пункти меню Мегасистеми спавнять НЕДОБУДОВАНИЙ майданчик (_0 / перша стадія), не готову споруду.
-Science Nexus (think_tank_0) | так | орбітальний майданчик | система твоя | немає з іншими станціями
-Sentry Array (spy_orb_0) | так | орбітальний майданчик | система твоя | немає
-SCC (strategic_coordination_center_0) | так | орбітальний майданчик | система твоя | немає
-Mega Art (mega_art_installation_0) | так | орбітальний майданчик | система твоя | немає
-Interstellar Assembly (interstellar_assembly_0) | так | орбітальний майданчик | система твоя | немає
-Mega Shipyard (mega_shipyard_0) | так | орбітальний майданчик | система твоя | немає
-Gateway (gateway_0) | так | майданчик брами | система твоя | 1 брама на систему
+Пакет megasystem / supersystem спавнить ПОЛАМАНІ (*_ruined) — відновлюєш у грі. Не _0 майданчики.
+Science Nexus (think_tank_ruined) | так | руїни → restore | система твоя | немає з іншими станціями
+Sentry Array (spy_orb_ruined) | так | руїни → restore | система твоя | немає
+SCC (strategic_coordination_center_ruined) | так | руїни → restore | система твоя | немає
+Mega Art (mega_art_installation_ruined) | так | руїни → restore | система твоя | немає
+Interstellar Assembly (interstellar_assembly_ruined) | так | руїни → restore | система твоя | немає
+Mega Shipyard (mega_shipyard_ruined) | так | руїни → restore | система твоя | немає
+Gateway (gateway_ruined) | так | руїни → restore | система твоя | 1 брама на систему
 Hyper Relay | — | немає стадії _0, лише готовий hyper_relay; у пакет не входить | — | —
-Dyson Sphere (dyson_sphere_0) | ні | майданчик навколо зірки | звичайна зірка | Swarm, Cannon, Catapult, Ring World, MD
-Dyson Swarm (dyson_swarm_1) | ні | перша стадія навколо зірки | звичайна зірка | Sphere / Cannon / Catapult
-Ring World (ring_world_1) | ні | один майданчик, не 4 секції | звичайна зірка | Dyson, внутрішні планети
-Matter Decompressor (matter_decompressor_0) | ні | майданчик на чорній дірі | sc_black_hole | не Dyson/Ring на тій зірці
-Quantum Catapult (quantum_catapult_0) | ні | майданчик навколо зірки | пульсар/нейтрон/магнетар | Dyson/Swarm/Cannon
-Stellar Cannon (dyson_gun_0) | ні | майданчик навколо зірки | звичайна зірка | Dyson/Swarm/Catapult
-Arc Furnace (orbital_arc_furnace_1) | ні (інший scope) | перша стадія на molten | pc_molten | немає зі станціями; не зірка
+Dyson Sphere (dyson_sphere_ruined) | ні | руїни навколо зірки | звичайна зірка | Swarm, Cannon, Catapult, Ring World, MD
+Dyson Swarm (dyson_swarm_1) | ні | перша стадія (немає ruined у ванілі) | звичайна зірка | Sphere / Cannon / Catapult
+Ring World (ring_world_ruined) | ні | поламаний сегмент | звичайна зірка | Dyson, внутрішні планети
+Matter Decompressor (matter_decompressor_ruined) | ні | руїни на чорній дірі | sc_black_hole | не Dyson/Ring на тій зірці
+Quantum Catapult (quantum_catapult_ruined) | ні | руїни навколо зірки | пульсар/нейтрон/магнетар | Dyson/Swarm/Cannon
+Stellar Cannon (dyson_gun_ruined) | ні | руїни навколо зірки | звичайна зірка | Dyson/Swarm/Catapult
+Arc Furnace (orbital_arc_furnace_destroyed) | ні (інший scope) | руїни на molten | pc_molten | немає зі станціями; не зірка
 Habitat / Orbital Ring | ні | тримаються за планету | планета | окремі файли
 Aetherophasic Engine / Horizon Needle / Behemoth | ні | криза / кінець гри | — | навмисно не спавнимо
 Grand Archive / Deep Space Citadel | ні | підтверджений лише site-ID (_0), не «готовий» | — | не вигадуємо complete-ID
-think_tank_4 (Groik Nexus) | ні | іменований/особливий варіант, не стандартна добудова | — | використовуємо think_tank_0
+think_tank_4 (Groik Nexus) | ні | іменований/особливий варіант | — | у пакеті think_tank_ruined
 
 Екуменополіс 78
 ---------------
@@ -134,11 +135,12 @@ Astral threads: 33×3 + 1 = 100. Artifacts так само. ×10 файли по
 ignore_cap = yes лише на хабітаті, щоб забудувати після orbital-бонусів.
 Fortress-district для хабітата у ванілі 4.x немає — фортеця через будівлі.
 
-Унікальні івентові перки (раса 357)
+Унікальні івентові перки (ID виду змінюється в додатку)
 -----------------------------------
 Кожен файл додає ОДИН перк. Запускай лише потрібні.
-Команда: add_trait_species 357 <trait>  (лише вид 357, не поп-групи).
-Перегенерувати: python3 write_pop_357.py
+Команда: add_trait_species <id> <trait>  (лише обраний вид, не поп-групи).
+ID виду: вікно «Світи 78» → поле зверху → Застосувати.
+Перегенерувати: python3 write_pop_357.py [id]
 
 pop_357_brainslug.txt | Brain Slug Host
 pop_357_bioadaptability.txt | Speed Demon зелений
@@ -196,10 +198,9 @@ CG, наука, торгівля, єдність). Gaia — сільські р�
   Після survey скрипт ставить mining/research станції.
 Цитадель: 3 hangar + 3 gun, defense_grid/uplink/jammer/command_center,
   3 ion cannon + large/small platforms. Hyper Relay біля зірки (немає стадії _0).
-Недобудовані мега (майданчики _0 / перша стадія): Nexus, Sentry, SCC, Mega Art,
-  Assembly, Shipyard, Gateway + Arc Furnace _1 на окремій molten.
-  Dyson / Swarm / Ring / MD / Catapult / Cannon — окремі файли меню, бо
-  не можуть стояти разом на одній зірці.
+Поламані мега (*_ruined / destroyed, відновлюєш у грі): Nexus, Sentry, SCC, Mega Art,
+  Assembly, Shipyard, Gateway + окремі Dyson / Ring / MD / Catapult / Cannon / Arc Furnace.
+  Dyson Swarm — лише _1 (у ванілі немає ruined).
 Техи: точково ecu/gaia/кільце/цитадель + T5 зброя/щити/реактори/strikecraft-3
   + dark matter FE-компоненти для ion cannon + 13 Pre-FTL insight + mega techs.
   Без research_all.

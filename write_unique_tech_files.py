@@ -901,7 +901,21 @@ def main() -> None:
     ):
         master.extend(group)
     write_run("tech_all_unique.txt", master, flags=True)
-    write_run("tech_all_specific.txt", list(insights) + master, flags=True)
+    # Covenant rewards + L-Gate open — user asked these in the specific pack.
+    specific_extra = [
+        "tech_lgate_activation",
+        "tech_repeatable_lcluster_clue",
+        "tech_covenant_composer",
+        "tech_covenant_eater",
+        "tech_covenant_instrument",
+        "tech_covenant_cradle",
+        "tech_covenant_whisperers",
+    ]
+    write_run(
+        "tech_all_specific.txt",
+        list(insights) + master + specific_extra,
+        flags=True,
+    )
 
     write_reports(reports, insight_details)
     print(f"Wrote unique-tech run files to {OUT}")
