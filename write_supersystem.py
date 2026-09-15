@@ -22,15 +22,15 @@ PACK_CONSOLE_LINE = 1400
 PLANET_SIZE = 78
 HABITAT_SIZE = 78
 
-# Same unfinished sites as megasystem_all_compatible.txt, inner ring only.
-UNFINISHED_MEGAS = (
-    ("think_tank_0", 32, 0),
-    ("spy_orb_0", 40, 40),
-    ("strategic_coordination_center_0", 48, 80),
-    ("mega_art_installation_0", 56, 120),
-    ("interstellar_assembly_0", 64, 160),
-    ("mega_shipyard_0", 72, 200),
-    ("gateway_0", 84, 250),
+# Поламані меги — виглядають як руїни, можна відновити в грі (не _0 майданчики).
+RUINED_MEGAS = (
+    ("think_tank_ruined", 32, 0),
+    ("spy_orb_ruined", 40, 40),
+    ("strategic_coordination_center_ruined", 48, 80),
+    ("mega_art_installation_ruined", 56, 120),
+    ("interstellar_assembly_ruined", 64, 160),
+    ("mega_shipyard_ruined", 72, 200),
+    ("gateway_ruined", 84, 250),
 )
 
 # One of each vanilla planetary-extraction deposit (district caps / rare features).
@@ -241,7 +241,7 @@ def wipe_effects() -> list[str]:
 
 
 def spawn_mega_line(type_id: str, distance: int, angle: int) -> str:
-    """Construction site for later repair. Owner is the human player, not the system."""
+    """Ruined megastructure for in-game repair. Owner is the human player."""
     return with_player_system(
         "spawn_megastructure = { "
         f"type = {type_id} planet = prev owner = {RUNNER} "
@@ -416,7 +416,7 @@ def build_lines() -> list[str]:
         lines.append(spawn_habitat_on_asteroid(flag, hab_flag))
         lines.append(rename_flag_effect(hab_flag, hab_name))
 
-    for type_id, distance, angle in UNFINISHED_MEGAS:
+    for type_id, distance, angle in RUINED_MEGAS:
         lines.append(spawn_mega_line(type_id, distance, angle))
     return lines
 

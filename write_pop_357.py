@@ -1,17 +1,17 @@
 #!/usr/bin/env python3
-"""Generate per-trait run files for species / pop group 357."""
+"""Generate per-trait run files for the configured species id (default 357)."""
 
 from __future__ import annotations
 
-from run_scripts import POP_357_EVENT_TRAITS, SCRIPTS_DIR, pop_357_effect_line
+import sys
+
+from run_scripts import DEFAULT_SPECIES_ID, get_species_id, rewrite_pop_trait_files
 
 
 def main() -> None:
-    SCRIPTS_DIR.mkdir(parents=True, exist_ok=True)
-    for item in POP_357_EVENT_TRAITS:
-        path = SCRIPTS_DIR / item.filename
-        path.write_text(pop_357_effect_line(item.trait_id) + "\n", encoding="utf-8")
-        print(path.name)
+    species_id = sys.argv[1] if len(sys.argv) > 1 else get_species_id() or DEFAULT_SPECIES_ID
+    count = rewrite_pop_trait_files(species_id)
+    print(f"species {species_id}: wrote {count} files")
 
 
 if __name__ == "__main__":

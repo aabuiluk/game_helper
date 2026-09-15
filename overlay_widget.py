@@ -21,9 +21,15 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
-from cheats import HARVEST_RESOURCES, SPECIAL_WINDOW_CHEATS, Cheat, HarvestResource, filter_cheats
+from cheats import (
+    HARVEST_RESOURCES,
+    Cheat,
+    HarvestResource,
+    build_special_window_cheats,
+    filter_cheats,
+)
 from overlay_pin import pin_overlay
-from run_scripts import install_run_scripts, run_command
+from run_scripts import get_species_id, install_run_scripts, rewrite_pop_trait_files, run_command
 
 OVERLAY_STYLE = """
 QWidget#CheatOverlayWindow {
@@ -329,6 +335,37 @@ class CheatOverlay(QWidget):
         body.addWidget(harvest)
         self._sync_harvest_amounts()
 
+        self.species_id_edit: QLineEdit | None = None
+        if self._cheat_source is not None:
+            species_box = QFrame()
+            species_box.setObjectName("HarvestBox")
+            species_layout = QVBoxLayout(species_box)
+            species_layout.setContentsMargins(0, 0, 0, 0)
+            species_layout.setSpacing(4)
+            species_title = QLabel("5. Трейти попів — ID виду (debugtooltip на расу)")
+            species_title.setObjectName("HarvestTitle")
+            species_title.setWordWrap(True)
+            species_layout.addWidget(species_title)
+            species_row = QHBoxLayout()
+            species_row.setSpacing(6)
+            self.species_id_edit = QLineEdit(get_species_id())
+            self.species_id_edit.setPlaceholderText("напр. 357")
+            self.species_id_edit.setFixedWidth(100)
+            self.species_id_edit.returnPressed.connect(self._apply_species_id)
+            species_row.addWidget(self.species_id_edit)
+            apply_species = QPushButton("Застосувати")
+            apply_species.clicked.connect(self._apply_species_id)
+            species_row.addWidget(apply_species)
+            species_row.addStretch(1)
+            species_layout.addLayout(species_row)
+            self.species_hint = QLabel(
+                "Встав ID виду → Застосувати: перепише pop_357_*.txt і оновить команди."
+            )
+            self.species_hint.setObjectName("HintLabel")
+            self.species_hint.setWordWrap(True)
+            species_layout.addWidget(self.species_hint)
+            body.addWidget(species_box)
+
         self.list_widget = QListWidget()
         self.list_widget.setWordWrap(True)
         self.list_widget.setSpacing(2)
@@ -425,11 +462,11 @@ class CheatOverlay(QWidget):
         if self._special is None:
             self._special = CheatOverlay(
                 title="Світи 78",
-                cheats=SPECIAL_WINDOW_CHEATS,
+                cheats=build_special_window_cheats(),
                 hint=(
                     "1 Гея  2 Еку  3 Специфічні технології  4 Run · Орбітальні депозити "
                     "(300 / science 500 / спец mining / спец research)  "
-                    "5 Трейти попів (add_trait_species 357 …; debugtooltip на расу). "
+                    "5 Трейти попів — поле ID виду зверху перезаписує run-файли. "
                     "Комбо зверху — як у базовому віджеті."
                 ),
                 place_on_screen=False,
@@ -571,6 +608,28 @@ class CheatOverlay(QWidget):
         if clipboard is not None:
             clipboard.setText(command)
         self.copied_label.setText(f"Скопійовано: {command}")
+
+    def _apply_species_id(self) -> None:
+        if self.species_id_edit is None:
+            return
+        species_id = self.species_id_edit.text().strip()
+        if not species_id.isdigit():
+            QMessageBox.warning(self, "ID виду", "Вкажи числовий ID виду (debugtooltip на расу).")
+            return
+        try:
+            count = rewrite_pop_trait_files(species_id)
+            dest, installed = install_run_scripts()
+        except Exception as error:
+            QMessageBox.warning(self, "ID виду", str(error))
+            return
+        self._cheat_source = build_special_window_cheats(species_id)
+        self._rebuild_list(self.search.text())
+        self.copied_label.setText(
+            f"Вид {species_id}: {count} pop-файлів → Stellaris ({installed})"
+        )
+        self.species_hint.setText(
+            f"Активний вид {species_id}. Команди й run-файли оновлено → {dest}"
+        )
 
     def _fill_harvest_resources(self) -> None:
         last_category = ""

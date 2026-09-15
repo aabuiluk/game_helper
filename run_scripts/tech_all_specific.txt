@@ -143,3 +143,10 @@ effect { random_playable_country = { limit = { is_ai = no } give_technology = { 
 effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_sensors_bio_integration message = no } } }
 effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_combat_computers_bio_integration message = no } } }
 effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_rift_sphere message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_lgate_activation message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_repeatable_lcluster_clue message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_covenant_composer message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_covenant_eater message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_covenant_instrument message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_covenant_cradle message = no } } }
+effect { random_playable_country = { limit = { is_ai = no } give_technology = { tech = tech_covenant_whisperers message = no } } }
