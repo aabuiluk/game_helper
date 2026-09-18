@@ -1,1 +1,1 @@
-add_trait_species 357 trait_enigmatic_intelligence
+add_trait_species 3036676097 trait_enigmatic_intelligence

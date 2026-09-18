@@ -1,5 +1,6 @@
 # Local species id for pop trait run files
 .species_id
+.DS_Store
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
