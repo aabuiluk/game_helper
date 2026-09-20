@@ -19,7 +19,9 @@ RUNNER_SPECIES = "event_target:runner_species"
 MAX_CONSOLE_LINE = 1600
 PACK_CONSOLE_LINE = 1400
 
-PLANET_SIZE = 78
+# Visual/base size 30; extra deposits add 50 planet_max_districts → 80 slots.
+PLANET_SIZE = 30
+EXTRA_DISTRICT_SLOTS = 50
 HABITAT_SIZE = 78
 
 # Поламані меги — виглядають як руїни, можна відновити в грі (не _0 майданчики).
@@ -328,21 +330,34 @@ def gaia_modifier_set(index: int) -> tuple[str, ...]:
     return tuple(USEFUL_MODIFIERS[(index + offset) % len(USEFUL_MODIFIERS)] for offset in offsets)
 
 
+def extra_max_district_deposits() -> list[str]:
+    """+50 planet_max_districts_add (size 30 + 50 = 80 total slots)."""
+    if EXTRA_DISTRICT_SLOTS != 50:
+        raise ValueError("extra_max_district_deposits is tuned for +50")
+    return [
+        "while = { count = 5 add_deposit = d_underground_generator }",
+        "while = { count = 5 add_deposit = d_underground_mine }",
+        "while = { count = 6 add_deposit = d_underground_farm }",
+        "add_deposit = d_numas_breath",
+    ]
+
+
 def ecu_effects() -> list[str]:
-    """78 housing + 78 of each urban type share one cap. Size 78 is only 78 total."""
+    """Size 30 + 50 extra slots. Arcology types share one cap of 80."""
     return [
         "clear_blockers = yes",
-        "while = { count = 39 add_deposit = d_lithoid_crater }",
+        *extra_max_district_deposits(),
     ]
 
 
 def gaia_effects(index: int) -> list[str]:
     parts = ["clear_blockers = yes"]
+    parts.extend(extra_max_district_deposits())
     parts.extend(f"add_modifier = {{ modifier = {mod} }}" for mod in gaia_modifier_set(index))
     parts.extend(f"add_deposit = {dep}" for dep in EXTRACTION_DEPOSITS)
     parts.extend(f"add_deposit = {dep}" for dep in EVENT_DISTRICT_DEPOSITS)
-    # Pad rural caps to ~78 of each type after the unique/event stack.
-    parts.append("while = { count = 13 add_deposit = d_geothermal_vent }")
+    # Pad rural type caps to ~80 after the unique/event stack.
+    parts.append("while = { count = 14 add_deposit = d_geothermal_vent }")
     parts.append("while = { count = 8 add_deposit = d_ancient_mining_site }")
     parts.append("while = { count = 4 add_deposit = d_harvester_fields }")
     return parts

@@ -420,7 +420,7 @@ class CheatOverlay(QWidget):
         install_action = run_menu.addAction("Встановити файли у Stellaris")
         install_action.triggered.connect(self._install_run_scripts)
         if self._cheat_source is None:
-            worlds = self.menu_bar.addMenu("Світи 78")
+            worlds = self.menu_bar.addMenu("Світи 30")
             open_action = worlds.addAction("Відкрити окреме вікно")
             open_action.triggered.connect(self._open_special)
         else:
@@ -461,7 +461,7 @@ class CheatOverlay(QWidget):
             return
         if self._special is None:
             self._special = CheatOverlay(
-                title="Світи 78",
+                title="Світи 30",
                 cheats=build_special_window_cheats(),
                 hint=(
                     "1 Гея  2 Еку  3 Специфічні технології  4 Run · Орбітальні депозити "

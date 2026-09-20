@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Outer ring: 8 size-78 worlds equally spaced (ecu / gaia alternating).
+"""Outer ring: 8 size-30 worlds equally spaced (ecu / gaia alternating).
 
 Select the system's star, then: run outer_orbit_8.txt
 Does not wipe existing bodies. One ring just inside a typical outer dotted bound.
@@ -9,6 +9,7 @@ from __future__ import annotations
 
 from write_supersystem import (
     OUT,
+    PLANET_SIZE,
     ecu_effects,
     gaia_effects,
     rename_flag_effect,
@@ -19,7 +20,6 @@ from write_supersystem import (
 
 OUTER_ORBIT = 250
 PLANET_COUNT = 8
-PLANET_SIZE = 78
 
 
 def build_lines() -> list[str]:

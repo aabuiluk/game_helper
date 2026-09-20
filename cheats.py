@@ -529,15 +529,15 @@ def build_special_window_cheats(species_id: str | None = None) -> tuple[Cheat, .
     return (
     Cheat(
         run_command("gaia78_capital_planet.txt"),
-        "1. Гея 78",
-        "Вибери колонізовану планету. Gaia 78, по 3 кожної фічі generator/mining/farming з меню. Без underground/спецдепозитів і без примусових районів. Без попів.",
-        "Світи 78",
+        "1. Гея 30",
+        "Вибери колонізовану планету. Gaia розмір 30 + 50 слотів (80 районів), по 3 кожної фічі generator/mining/farming з меню. Без примусових районів. Без попів.",
+        "Світи 30",
     ),
     Cheat(
         run_command("ecu78_capital_planet.txt"),
-        "2. Екуменополіс 78",
-        "Вибери колонізовану планету. pc_city, розмір 78. По 70 housing/urban_1/2/3 (ignore_cap). Без попів.",
-        "Світи 78",
+        "2. Екуменополіс 30",
+        "Вибери колонізовану планету. pc_city, розмір 30 + 50 слотів (80 районів). По 70 housing/urban_1/2/3 (ignore_cap). Без попів.",
+        "Світи 30",
     ),
     Cheat(
         run_command("tech_all_specific.txt"),
@@ -612,7 +612,7 @@ def build_special_window_cheats(species_id: str | None = None) -> tuple[Cheat, .
             f"Клік копіює Intelligent для {sid}; стрілка — усі трейти й run-файли. "
             "ID виду можна змінити у полі зверху."
         ),
-        "Світи 78",
+        "Світи 30",
         _pop_trait_variants(sid),
     ),
 )

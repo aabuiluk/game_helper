@@ -15,7 +15,9 @@ from pathlib import Path
 from write_supersystem import (
     MAX_CONSOLE_LINE,
     OUT,
+    PLANET_SIZE,
     RUNNER,
+    extra_max_district_deposits,
     player_scope,
 )
 
@@ -210,11 +212,14 @@ def spawn_planet(
     extra: str,
 ) -> str:
     more = f" {extra}" if extra else ""
+    size = PLANET_SIZE if class_id == "pc_gaia" else 78
+    if class_id == "pc_gaia":
+        more = f" {' '.join(extra_max_district_deposits())}{more}"
     return wrap_last(
         f"spawn_planet = {{ class = {class_id} location = star orbit_location = yes "
         f"orbit_distance_offset = {distance} orbit_angle_offset = {angle} "
-        f"size = 78 has_ring = no "
-        f"init_effect = {{ set_planet_flag = {flag} set_planet_size = 78 "
+        f"size = {size} has_ring = no "
+        f"init_effect = {{ set_planet_flag = {flag} set_planet_size = {size} "
         f"prevent_anomaly = yes{more} }} }}"
     )
 

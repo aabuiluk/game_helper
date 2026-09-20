@@ -5,6 +5,8 @@ from __future__ import annotations
 
 from pathlib import Path
 
+from write_supersystem import PLANET_SIZE, extra_max_district_deposits
+
 OUT = Path(__file__).resolve().parent / "run_scripts"
 
 
@@ -168,9 +170,11 @@ def ecu_planet(
         "solar_system = { spawn_megastructure = { "
         "type = orbital_ring_restored planet = prev owner = space_owner } }"
     )
+    extra_slots = extra_max_district_deposits()
     return (
         "planet_class pc_city\n"
-        "planet_size 78\n"
+        f"planet_size {PLANET_SIZE}\n"
+        "effect { " + " ".join(extra_slots) + " }\n"
         "effect { " + " ".join(parts) + " }\n"
         f"add_pops 0 {pops}\n"
     )
@@ -178,7 +182,7 @@ def ecu_planet(
 
 PACK_CONSOLE_LINE = 1400
 
-# Rural + slot + output bonuses that actually help a Gaia 78.
+# Rural + slot + output bonuses that actually help a Gaia 30 (80 districts).
 GAIA_MODIFIERS = (
     "gaia_world",
     "lush_planet",
@@ -320,13 +324,9 @@ GAIA_FEATURE_DEPOSITS = (
 )
 GAIA_DEPOSITS = tuple((deposit_id, 3) for deposit_id in GAIA_FEATURE_DEPOSITS)
 
+# Extra +50 slots come from extra_max_district_deposits(), not here.
 # No lithoid_crater: potential is origin_lithoid and aborts the rest of the effect.
 ECU_DEPOSITS = (
-    ("d_underground_generator", 1),
-    ("d_underground_mine", 1),
-    ("d_underground_farm", 1),
-    ("d_numas_breath", 1),
-    ("d_underground_contact_zone", 1),
     ("d_betharian_deposit", 1),
     ("d_alien_pets_deposit", 1),
 )
@@ -352,37 +352,39 @@ def _bare_world(
     modifiers: tuple[str, ...],
     deposits: tuple[tuple[str, int], ...],
 ) -> str:
-    """Size 78 base, no buildings, no pops. Then pad slots and add 70 of each district."""
+    """Size 30 + 50 extra slots (80 total). No buildings, no pops. Then add 70 of each district."""
     extra = ECU_STRIP if class_id == "pc_city" else ()
     setup = [
         "clear_blockers = yes",
         *[f"while = {{ count = 120 remove_district = {old} }}" for old in OLD_DISTRICTS],
         *[f"while = {{ count = 120 remove_district = {dist} }}" for dist in extra],
+        *extra_max_district_deposits(),
     ]
     modifier_parts = [f"add_modifier = {{ modifier = {mod} }}" for mod in modifiers]
     lines = [
         f"planet_class {class_id}",
-        "planet_size 78",
+        f"planet_size {PLANET_SIZE}",
         *_pack_effect(setup + modifier_parts),
         *_pack_effect(_deposit_counts(deposits)),
     ]
     for district in districts:
         lines.append(f"effect {{ {_while_district(district, DISTRICT_COUNT)} }}")
-    lines.append("planet_size 78")
+    lines.append(f"planet_size {PLANET_SIZE}")
     return "\n".join(lines) + "\n"
 
 
 def gaia_planet() -> str:
-    """Gaia 78: overlay feature deposits ×3 each. No forced districts, no special deposits."""
+    """Gaia 30 + 50 extra slots (80 total). Overlay feature deposits ×3 each. No forced districts."""
     setup = [
         "clear_blockers = yes",
         *[f"while = {{ count = 120 remove_district = {old} }}" for old in OLD_DISTRICTS],
         *[f"while = {{ count = 120 remove_district = {dist} }}" for dist in ECU_STRIP],
+        *extra_max_district_deposits(),
     ]
     modifier_parts = [f"add_modifier = {{ modifier = {mod} }}" for mod in GAIA_MODIFIERS]
     lines = [
         "planet_class pc_gaia",
-        "planet_size 78",
+        f"planet_size {PLANET_SIZE}",
         *_pack_effect(setup + modifier_parts),
         *[f"effect {{ {part} }}" for part in _deposit_counts(GAIA_DEPOSITS)],
     ]
@@ -483,7 +485,7 @@ def main() -> None:
             [
                 ("district_arcology_housing", 22),
                 ("district_arcology_leisure", 6),
-                ("district_arcology_arms_industry", 50),
+                ("district_arcology_arms_industry", 52),
             ],
             [("district_arcology_arms_industry", "zone_foundry_arcology")],
             [("district_arcology_arms_industry", "zone_foundry_arcology", "building_foundry_3", 6)],
@@ -498,7 +500,7 @@ def main() -> None:
             [
                 ("district_arcology_housing", 22),
                 ("district_arcology_leisure", 6),
-                ("district_arcology_civilian_industry", 50),
+                ("district_arcology_civilian_industry", 52),
             ],
             [("district_arcology_civilian_industry", "zone_factory_arcology")],
             [("district_arcology_civilian_industry", "zone_factory_arcology", "building_factory_3", 6)],
@@ -513,7 +515,7 @@ def main() -> None:
             [
                 ("district_arcology_housing", 20),
                 ("district_arcology_leisure", 10),
-                ("district_arcology_administrative", 48),
+                ("district_arcology_administrative", 50),
             ],
             [("district_arcology_administrative", "zone_unity_arcology")],
             [("district_arcology_administrative", "zone_unity_arcology", "building_bureaucratic_3", 6)],
@@ -528,7 +530,7 @@ def main() -> None:
             [
                 ("district_arcology_housing", 18),
                 ("district_arcology_leisure", 6),
-                ("district_arcology_research", 28),
+                ("district_arcology_research", 30),
                 ("district_arcology_research_physics", 9),
                 ("district_arcology_research_society", 8),
                 ("district_arcology_research_engineering", 9),
@@ -546,7 +548,7 @@ def main() -> None:
             [
                 ("district_arcology_housing", 20),
                 ("district_arcology_leisure", 6),
-                ("district_arcology_trade", 52),
+                ("district_arcology_trade", 54),
             ],
             [("district_arcology_trade", "zone_trade_arcology")],
             [("district_arcology_trade", "zone_trade_arcology", "building_commercial_megaplex", 4)],
@@ -561,7 +563,7 @@ def main() -> None:
             [
                 ("district_arcology_housing", 18),
                 ("district_arcology_leisure", 4),
-                ("district_arcology_fortress", 56),
+                ("district_arcology_fortress", 58),
             ],
             [("district_arcology_fortress", "zone_fortress_arcology")],
             [],
@@ -943,8 +945,9 @@ add_pops 0 N бере вид з індексом 0 (зазвичай твій г
 Таблиця файлів
 --------------
 Файл | Що створює | Що виділити
-supersystem.txt | 20 планет 78 + 20 астероїдів + цитадель + недобудовані мега | зірка (НЕ столиця)
-eventsystem.txt | сусідня система: 16 незаселених 78 + археологія + rift + ruined меги | зірка суперсистеми
+supersystem.txt | 20 еку/гая size 30 + 50 слотів (80 районів) + 20 астероїдів + цитадель + недобудовані мега | зірка (НЕ столиця)
+eventsystem.txt | сусідня система: 16 незаселених (гая size 30 + 50 слотів, інші 78) + археологія + rift + ruined меги | зірка суперсистеми
+outer_orbit_8.txt | орбіта 250: 4 еку + 4 гая size 30 + 50 слотів (80 районів) через один (крок 45°) | зірка
 megasystem_all_compatible.txt | Майданчики Nexus/Sentry/SCC/Art/Assembly/Shipyard/Gateway (_0) | центральна зірка
 system_dyson.txt | майданчик Dyson Sphere (dyson_sphere_0), зірка → sc_g | зірка
 system_dyson_swarm.txt | перша стадія Dyson Swarm (dyson_swarm_1) | зірка
@@ -953,7 +956,7 @@ system_matter_decompressor.txt | зірка → чорна діра + майда
 system_quantum_catapult.txt | зірка → пульсар + майданчик Catapult (_0) | зірка
 system_stellar_cannon.txt | майданчик Stellar Cannon (dyson_gun_0) | зірка
 system_arc_furnace.txt | перша стадія Arc Furnace (_1) | molten-планета
-ecu78_*_planet.txt | Ecumenopolis 78 + спавн Orbital Ring | колонія
+ecu78_*_planet.txt | Ecumenopolis size 30 + 50 слотів (80 районів) + спавн Orbital Ring | колонія
 ecu78_*_ring.txt | модулі/будівлі кільця | саме Orbital Ring
 ring_*.txt | забудова секції Ring World | колонізована секція
 orbital_resources_300.txt | energy/minerals/alloys/food/consumer goods ×300 | неживе тіло
@@ -993,20 +996,22 @@ Aetherophasic Engine / Horizon Needle / Behemoth | ні | криза / кіне�
 Grand Archive / Deep Space Citadel | ні | підтверджений лише site-ID (_0), не «готовий» | — | не вигадуємо complete-ID
 think_tank_4 (Groik Nexus) | ні | іменований/особливий варіант, не стандартна добудова | — | використовуємо think_tank_0
 
-Екуменополіс 78
+Екуменополіс 30 (80 районів)
 ---------------
 Послідовність для кожної спеціалізації:
 1. Виділи колонію. run ecu78_<spec>_planet.txt
 2. Клацни нове Orbital Ring. run ecu78_<spec>_ring.txt
 
-Райони (сума 78):
+planet_size 30 + underground/numas депозити (+50 planet_max_districts) = 80 слотів.
+
+Райони (сума 80):
 capital: 20 housing + 8 leisure + 12 foundry + 10 factory + 12 research + 10 admin + 6 trade
-alloys: 22 housing + 6 leisure + 50 foundry
-CG: 22 housing + 6 leisure + 50 factory
-unity: 20 housing + 10 leisure + 48 admin
-research: 18 housing + 6 leisure + 28 research + 9 physics + 8 society + 9 engineering
-trade: 20 housing + 6 leisure + 52 trade
-fortress: 18 housing + 4 leisure + 56 fortress
+alloys: 22 housing + 6 leisure + 52 foundry
+CG: 22 housing + 6 leisure + 52 factory
+unity: 20 housing + 10 leisure + 50 admin
+research: 18 housing + 6 leisure + 30 research + 9 physics + 8 society + 9 engineering
+trade: 20 housing + 6 leisure + 54 trade
+fortress: 18 housing + 4 leisure + 58 fortress
 
 Попи (4.x workforce, не «старі» pops):
 capital 34000, alloys/CG 38000, unity/trade 36000, research/fortress 40000.
@@ -1073,8 +1078,8 @@ system_matter_decompressor / quantum_catapult: змінюють клас зір�
 CG, наука, торгівля, єдність). Gaia — сільські райони (енергія, мінерали,
 їжа) плюс наука і фортеця. По 2 планети кожної спеціалізації.
 
-10 ecu size 78: Foundry / Factory / Research / Trade / Unity ×2
-10 Gaia size 78: Energy / Mining / Food / Research / Fortress ×2
+10 ecu size 30 + 50 слотів (80 районів): Foundry / Factory / Research / Trade / Unity ×2
+10 Gaia size 30 + 50 слотів (80 районів): Energy / Mining / Food / Research / Fortress ×2
   На кожній Gaia: uncapped flags + lush/ultra_rich/magnetic/beauty/titanic/
   geothermal/microflora/hallucinogen_good + депозити generator/mining/farming.
 Над кожною планетою: Orbital Ring tier 3 (habitation/gun/hangar/anchorage).
@@ -1100,7 +1105,7 @@ CG, наука, торгівля, єдність). Gaia — сільські р�
 Івент-система (eventsystem.txt)
 ------------------------------
 Виділи зірку суперсистеми. Скрипт ставить НОВУ систему поряд (гіперлінія).
-16 незаселених світів size 78. Не колонізує. Цитадель на id 0.
+16 незаселених світів (гая size 30 + 50 слотів, решта size 78). Не колонізує. Цитадель на id 0.
 
 Планети під конкретні colony chains (ланцюг стартує ПІСЛЯ твоєї колонізації):
   Gaia — Subterranean; Continental — Titanic Life (рік 1), Doorway, Labyrinth,

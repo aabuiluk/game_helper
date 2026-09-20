@@ -138,7 +138,7 @@ class MainWindow(QMainWindow):
         self._scan_worker: SaveScanWorker | None = None
         self._pending_select: Path | None = None
         self._rescan_requested = False
-        self.overlay = CheatOverlay(extra_button="Світи 78")
+        self.overlay = CheatOverlay(extra_button="Світи 30")
         self.overlay.closed.connect(self._on_overlay_closed)
 
         central = QWidget()
