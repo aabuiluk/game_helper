@@ -1,0 +1,1 @@
+effect { while = { count = 80 limit = { free_district_slots > 0 num_free_districts = { type = district_generator value > 0 } } add_district = district_generator } add_zone = { district = district_generator zone = zone_energy zone_slot = 1 replace = yes } }

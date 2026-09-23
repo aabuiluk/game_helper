@@ -1,0 +1,1 @@
+effect { while = { count = 80 limit = { free_district_slots > 0 } add_district = district_city } }

@@ -1,0 +1,1 @@
+effect { while = { count = 80 limit = { free_district_slots > 0 num_free_districts = { type = district_mining value > 0 } } add_district = district_mining } add_zone = { district = district_mining zone = zone_rare_crystals zone_slot = 1 replace = yes } }

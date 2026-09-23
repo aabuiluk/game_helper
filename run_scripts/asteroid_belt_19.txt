@@ -1,0 +1,57 @@
+effect solar_system = { spawn_planet = { class = pc_asteroid location = star orbit_location = yes orbit_distance_offset = 250 orbit_angle_offset = 0 size = 5 has_ring = no init_effect = { set_planet_flag = ss_belt_1 set_planet_size = 5 prevent_anomaly = yes } } }
+effect solar_system = { random_system_planet = { limit = { has_planet_flag = ss_belt_1 } set_name = Energy } }
+effect solar_system = { random_system_planet = { limit = { has_planet_flag = ss_belt_1 } while = { count = 50 add_deposit = d_energy_10 } } }
+effect solar_system = { spawn_planet = { class = pc_asteroid location = star orbit_location = yes orbit_distance_offset = 250 orbit_angle_offset = 18.94736842 size = 5 has_ring = no init_effect = { set_planet_flag = ss_belt_2 set_planet_size = 5 prevent_anomaly = yes } } }
+effect solar_system = { random_system_planet = { limit = { has_planet_flag = ss_belt_2 } set_name = Minerals } }
+effect solar_system = { random_system_planet = { limit = { has_planet_flag = ss_belt_2 } while = { count = 50 add_deposit = d_minerals_10 } } }
+effect solar_system = { spawn_planet = { class = pc_asteroid location = star orbit_location = yes orbit_distance_offset = 250 orbit_angle_offset = 37.89473684 size = 5 has_ring = no init_effect = { set_planet_flag = ss_belt_3 set_planet_size = 5 prevent_anomaly = yes } } }
+effect solar_system = { random_system_planet = { limit = { has_planet_flag = ss_belt_3 } set_name = Food } }
+effect solar_system = { random_system_planet = { limit = { has_planet_flag = ss_belt_3 } while = { count = 50 add_deposit = d_food_10 } } }
+effect solar_system = { spawn_planet = { class = pc_asteroid location = star orbit_location = yes orbit_distance_offset = 250 orbit_angle_offset = 56.84210526 size = 5 has_ring = no init_effect = { set_planet_flag = ss_belt_4 set_planet_size = 5 prevent_anomaly = yes } } }
+effect solar_system = { random_system_planet = { limit = { has_planet_flag = ss_belt_4 } set_name = Alloys } }
+effect solar_system = { random_system_planet = { limit = { has_planet_flag = ss_belt_4 } while = { count = 20 add_deposit = d_alloys_25 } } }
+effect solar_system = { spawn_planet = { class = pc_asteroid location = star orbit_location = yes orbit_distance_offset = 250 orbit_angle_offset = 75.78947368 size = 5 has_ring = no init_effect = { set_planet_flag = ss_belt_5 set_planet_size = 5 prevent_anomaly = yes } } }
+effect solar_system = { random_system_planet = { limit = { has_planet_flag = ss_belt_5 } set_name = Goods } }
+effect solar_system = { random_system_planet = { limit = { has_planet_flag = ss_belt_5 } while = { count = 250 add_deposit = d_consumer_goods_obsessional_directive } } }
+effect solar_system = { spawn_planet = { class = pc_asteroid location = star orbit_location = yes orbit_distance_offset = 250 orbit_angle_offset = 94.73684211 size = 5 has_ring = no init_effect = { set_planet_flag = ss_belt_6 set_planet_size = 5 prevent_anomaly = yes } } }
+effect solar_system = { random_system_planet = { limit = { has_planet_flag = ss_belt_6 } set_name = Trade } }
+effect solar_system = { random_system_planet = { limit = { has_planet_flag = ss_belt_6 } while = { count = 50 add_deposit = d_trade_value_10 } } }
+effect solar_system = { spawn_planet = { class = pc_asteroid location = star orbit_location = yes orbit_distance_offset = 250 orbit_angle_offset = 113.68421053 size = 5 has_ring = no init_effect = { set_planet_flag = ss_belt_7 set_planet_size = 5 prevent_anomaly = yes } } }
+effect solar_system = { random_system_planet = { limit = { has_planet_flag = ss_belt_7 } set_name = Gases } }
+effect solar_system = { random_system_planet = { limit = { has_planet_flag = ss_belt_7 } while = { count = 100 add_deposit = d_exotic_gases_5 } } }
+effect solar_system = { spawn_planet = { class = pc_asteroid location = star orbit_location = yes orbit_distance_offset = 250 orbit_angle_offset = 132.63157895 size = 5 has_ring = no init_effect = { set_planet_flag = ss_belt_8 set_planet_size = 5 prevent_anomaly = yes } } }
+effect solar_system = { random_system_planet = { limit = { has_planet_flag = ss_belt_8 } set_name = Crystals } }
+effect solar_system = { random_system_planet = { limit = { has_planet_flag = ss_belt_8 } while = { count = 100 add_deposit = d_rare_crystals_5 } } }
+effect solar_system = { spawn_planet = { class = pc_asteroid location = star orbit_location = yes orbit_distance_offset = 250 orbit_angle_offset = 151.57894737 size = 5 has_ring = no init_effect = { set_planet_flag = ss_belt_9 set_planet_size = 5 prevent_anomaly = yes } } }
+effect solar_system = { random_system_planet = { limit = { has_planet_flag = ss_belt_9 } set_name = Motes } }
+effect solar_system = { random_system_planet = { limit = { has_planet_flag = ss_belt_9 } while = { count = 100 add_deposit = d_volatile_motes_5 } } }
+effect solar_system = { spawn_planet = { class = pc_asteroid location = star orbit_location = yes orbit_distance_offset = 250 orbit_angle_offset = 170.52631579 size = 5 has_ring = no init_effect = { set_planet_flag = ss_belt_10 set_planet_size = 5 prevent_anomaly = yes } } }
+effect solar_system = { random_system_planet = { limit = { has_planet_flag = ss_belt_10 } set_name = Living_Metal } }
+effect solar_system = { random_system_planet = { limit = { has_planet_flag = ss_belt_10 } while = { count = 500 add_deposit = d_living_metal_deposit } } }
+effect solar_system = { spawn_planet = { class = pc_asteroid location = star orbit_location = yes orbit_distance_offset = 250 orbit_angle_offset = 189.47368421 size = 5 has_ring = no init_effect = { set_planet_flag = ss_belt_11 set_planet_size = 5 prevent_anomaly = yes } } }
+effect solar_system = { random_system_planet = { limit = { has_planet_flag = ss_belt_11 } set_name = Artifacts } }
+effect solar_system = { random_system_planet = { limit = { has_planet_flag = ss_belt_11 } while = { count = 166 add_deposit = d_artifacts_mining_3 } add_deposit = d_artifacts_mining_1 add_deposit = d_artifacts_mining_1 } }
+effect solar_system = { spawn_planet = { class = pc_asteroid location = star orbit_location = yes orbit_distance_offset = 250 orbit_angle_offset = 208.42105263 size = 5 has_ring = no init_effect = { set_planet_flag = ss_belt_12 set_planet_size = 5 prevent_anomaly = yes } } }
+effect solar_system = { random_system_planet = { limit = { has_planet_flag = ss_belt_12 } set_name = Nanites } }
+effect solar_system = { random_system_planet = { limit = { has_planet_flag = ss_belt_12 } while = { count = 19 add_deposit = d_nanite_harvester_deposit_large } while = { count = 8 add_deposit = d_nanite_harvester_deposit_regular } while = { count = 8 add_deposit = d_nanite_harvester_deposit } } }
+effect solar_system = { spawn_planet = { class = pc_asteroid location = star orbit_location = yes orbit_distance_offset = 250 orbit_angle_offset = 227.36842105 size = 5 has_ring = no init_effect = { set_planet_flag = ss_belt_13 set_planet_size = 5 prevent_anomaly = yes } } }
+effect solar_system = { random_system_planet = { limit = { has_planet_flag = ss_belt_13 } set_name = Physics } }
+effect solar_system = { random_system_planet = { limit = { has_planet_flag = ss_belt_13 } while = { count = 50 add_deposit = d_physics_10 } } }
+effect solar_system = { spawn_planet = { class = pc_asteroid location = star orbit_location = yes orbit_distance_offset = 250 orbit_angle_offset = 246.31578947 size = 5 has_ring = no init_effect = { set_planet_flag = ss_belt_14 set_planet_size = 5 prevent_anomaly = yes } } }
+effect solar_system = { random_system_planet = { limit = { has_planet_flag = ss_belt_14 } set_name = Society } }
+effect solar_system = { random_system_planet = { limit = { has_planet_flag = ss_belt_14 } while = { count = 33 add_deposit = d_society_15 } add_deposit = d_society_5 } }
+effect solar_system = { spawn_planet = { class = pc_asteroid location = star orbit_location = yes orbit_distance_offset = 250 orbit_angle_offset = 265.26315789 size = 5 has_ring = no init_effect = { set_planet_flag = ss_belt_15 set_planet_size = 5 prevent_anomaly = yes } } }
+effect solar_system = { random_system_planet = { limit = { has_planet_flag = ss_belt_15 } set_name = Engineering } }
+effect solar_system = { random_system_planet = { limit = { has_planet_flag = ss_belt_15 } while = { count = 50 add_deposit = d_engineering_10 } } }
+effect solar_system = { spawn_planet = { class = pc_asteroid location = star orbit_location = yes orbit_distance_offset = 250 orbit_angle_offset = 284.21052632 size = 5 has_ring = no init_effect = { set_planet_flag = ss_belt_16 set_planet_size = 5 prevent_anomaly = yes } } }
+effect solar_system = { random_system_planet = { limit = { has_planet_flag = ss_belt_16 } set_name = Unity } }
+effect solar_system = { random_system_planet = { limit = { has_planet_flag = ss_belt_16 } while = { count = 167 add_deposit = d_vast_unity_deposit } } }
+effect solar_system = { spawn_planet = { class = pc_asteroid location = star orbit_location = yes orbit_distance_offset = 250 orbit_angle_offset = 303.15789474 size = 5 has_ring = no init_effect = { set_planet_flag = ss_belt_17 set_planet_size = 5 prevent_anomaly = yes } } }
+effect solar_system = { random_system_planet = { limit = { has_planet_flag = ss_belt_17 } set_name = Dark_Matter } }
+effect solar_system = { random_system_planet = { limit = { has_planet_flag = ss_belt_17 } while = { count = 50 add_deposit = d_dark_matter_deposit_10 } } }
+effect solar_system = { spawn_planet = { class = pc_asteroid location = star orbit_location = yes orbit_distance_offset = 250 orbit_angle_offset = 322.10526316 size = 5 has_ring = no init_effect = { set_planet_flag = ss_belt_18 set_planet_size = 5 prevent_anomaly = yes } } }
+effect solar_system = { random_system_planet = { limit = { has_planet_flag = ss_belt_18 } set_name = Zro } }
+effect solar_system = { random_system_planet = { limit = { has_planet_flag = ss_belt_18 } while = { count = 100 add_deposit = d_zro_deposit_5 } } }
+effect solar_system = { spawn_planet = { class = pc_asteroid location = star orbit_location = yes orbit_distance_offset = 250 orbit_angle_offset = 341.05263158 size = 5 has_ring = no init_effect = { set_planet_flag = ss_belt_19 set_planet_size = 5 prevent_anomaly = yes } } }
+effect solar_system = { random_system_planet = { limit = { has_planet_flag = ss_belt_19 } set_name = Astral } }
+effect solar_system = { random_system_planet = { limit = { has_planet_flag = ss_belt_19 } while = { count = 166 add_deposit = d_astral_threads_deposit_3 } add_deposit = d_astral_threads_deposit_1 add_deposit = d_astral_threads_deposit_1 } }

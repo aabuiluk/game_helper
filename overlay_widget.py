@@ -23,6 +23,7 @@ from PySide6.QtWidgets import (
 
 from cheats import (
     HARVEST_RESOURCES,
+    ORBITAL_1000,
     Cheat,
     HarvestResource,
     build_special_window_cheats,
@@ -442,6 +443,11 @@ class CheatOverlay(QWidget):
         ):
             action = orbit.addAction(title)
             action.setToolTip(command)
+            action.triggered.connect(lambda _checked=False, cmd=command: self._copy_command(cmd))
+        orbit.addSeparator()
+        for title, command, description in ORBITAL_1000:
+            action = orbit.addAction(title)
+            action.setToolTip(description)
             action.triggered.connect(lambda _checked=False, cmd=command: self._copy_command(cmd))
         orbit.addSeparator()
         last_category = ""
