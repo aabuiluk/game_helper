@@ -1,0 +1,1 @@
+effect while = { count = 100 add_deposit = d_food_10 }

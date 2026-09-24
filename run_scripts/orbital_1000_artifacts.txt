@@ -1,0 +1,2 @@
+effect while = { count = 333 add_deposit = d_artifacts_mining_3 }
+effect add_deposit = d_artifacts_mining_1

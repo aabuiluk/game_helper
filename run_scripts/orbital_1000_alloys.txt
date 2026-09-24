@@ -1,0 +1,1 @@
+effect while = { count = 40 add_deposit = d_alloys_25 }

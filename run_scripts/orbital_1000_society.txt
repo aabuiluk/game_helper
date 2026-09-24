@@ -1,0 +1,2 @@
+effect while = { count = 66 add_deposit = d_society_15 }
+effect while = { count = 2 add_deposit = d_society_5 }

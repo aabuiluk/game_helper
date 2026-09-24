@@ -1,0 +1,1 @@
+effect while = { count = 500 add_deposit = d_consumer_goods_obsessional_directive }

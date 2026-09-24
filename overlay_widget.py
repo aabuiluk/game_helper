@@ -445,9 +445,10 @@ class CheatOverlay(QWidget):
             action.setToolTip(command)
             action.triggered.connect(lambda _checked=False, cmd=command: self._copy_command(cmd))
         orbit.addSeparator()
-        for title, command, description in ORBITAL_1000:
+        for title, filename, _description in ORBITAL_1000:
+            command = run_command(filename)
             action = orbit.addAction(title)
-            action.setToolTip(description)
+            action.setToolTip(command)
             action.triggered.connect(lambda _checked=False, cmd=command: self._copy_command(cmd))
         orbit.addSeparator()
         last_category = ""

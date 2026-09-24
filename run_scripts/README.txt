@@ -61,6 +61,7 @@ orbital_special_mining_100.txt | стратегічні mining ×100 | нежи�
 orbital_special_mining_1000.txt | стратегічні mining ×1000 | неживе тіло
 orbital_special_research_100.txt | стратегічні research ×100 | неживе тіло
 orbital_special_research_1000.txt | стратегічні research ×1000 | неживе тіло
+orbital_1000_*.txt | один файл на ресурс, близько 1000 (єдність 999) | неживе тіло
 habitat_system_setup.txt | депозити для district cap | зірка
 habitat_spawn_*.txt | Central / Major / Minor Orbital | нежиле тіло
 habitat_*.txt | забудова хабітата | колонізований хабітат

@@ -1,0 +1,1 @@
+effect while = { count = 200 add_deposit = d_rare_crystals_5 }

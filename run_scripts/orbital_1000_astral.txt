@@ -1,0 +1,2 @@
+effect while = { count = 333 add_deposit = d_astral_threads_deposit_3 }
+effect add_deposit = d_astral_threads_deposit_1

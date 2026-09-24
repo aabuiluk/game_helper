@@ -62,81 +62,35 @@ HARVEST_RESOURCES: tuple[HarvestResource, ...] = (
 )
 
 
-def _effect_while(count: int, deposit: str) -> str:
-    return f"effect while = {{ count = {count} add_deposit = {deposit} }}"
-
-
-def _effect_block(*parts: str) -> str:
-    return "effect { " + " ".join(parts) + " }"
-
-
-# One selected body, one resource. Unity deposits are +3, so that code is 999.
+# title, filename, what the file adds. Unity deposits are +3, so that file is 999.
 ORBITAL_1000: tuple[tuple[str, str, str], ...] = (
-    ("Енергія 1000", _effect_while(100, "d_energy_10"), "Mining station. 100 × 10."),
-    ("Мінерали 1000", _effect_while(100, "d_minerals_10"), "Mining station. 100 × 10."),
-    ("Їжа 1000", _effect_while(100, "d_food_10"), "Mining station. 100 × 10."),
-    ("Сплави 1000", _effect_while(40, "d_alloys_25"), "Mining station. 40 × 25."),
-    (
-        "Товари 1000",
-        _effect_while(500, "d_consumer_goods_obsessional_directive"),
-        "Mining station. 500 × 2.",
-    ),
-    ("Торгівля 1000", _effect_while(100, "d_trade_value_10"), "Mining station. 100 × 10."),
-    ("Гази 1000", _effect_while(200, "d_exotic_gases_5"), "Mining station. 200 × 5."),
-    ("Кристали 1000", _effect_while(200, "d_rare_crystals_5"), "Mining station. 200 × 5."),
-    ("Частинки 1000", _effect_while(200, "d_volatile_motes_5"), "Mining station. 200 × 5."),
-    (
-        "Живий метал 1000",
-        _effect_while(1000, "d_living_metal_deposit"),
-        "Mining station. 1000 × 1.",
-    ),
-    (
-        "Артефакти 1000",
-        _effect_block(
-            "while = { count = 333 add_deposit = d_artifacts_mining_3 }",
-            "add_deposit = d_artifacts_mining_1",
-        ),
-        "Mining station. 333 × 3 + 1.",
-    ),
-    (
-        "Наніти 1000",
-        _effect_while(625, "d_nanite_harvester_deposit_regular"),
-        "Mining station. 625 × 1.6.",
-    ),
-    ("Фізика 1000", _effect_while(100, "d_physics_10"), "Research station. 100 × 10."),
-    (
-        "Суспільство 1000",
-        _effect_block(
-            "while = { count = 66 add_deposit = d_society_15 }",
-            "while = { count = 2 add_deposit = d_society_5 }",
-        ),
-        "Research station. 66 × 15 + 2 × 5.",
-    ),
-    ("Інженерія 1000", _effect_while(100, "d_engineering_10"), "Research station. 100 × 10."),
-    (
-        "Єдність 999",
-        _effect_while(333, "d_vast_unity_deposit"),
-        "Research station. Депозит лише +3, тому 333 × 3 = 999.",
-    ),
-    (
-        "Темна матерія 1000",
-        _effect_while(100, "d_dark_matter_deposit_10"),
-        "Research station. 100 × 10.",
-    ),
-    ("Зро 1000", _effect_while(200, "d_zro_deposit_5"), "Research station. 200 × 5."),
-    (
-        "Астральні нитки 1000",
-        _effect_block(
-            "while = { count = 333 add_deposit = d_astral_threads_deposit_3 }",
-            "add_deposit = d_astral_threads_deposit_1",
-        ),
-        "Research station. 333 × 3 + 1.",
-    ),
+    ("Енергія 1000", "orbital_1000_energy.txt", "Mining station. 100 × d_energy_10."),
+    ("Мінерали 1000", "orbital_1000_minerals.txt", "Mining station. 100 × d_minerals_10."),
+    ("Їжа 1000", "orbital_1000_food.txt", "Mining station. 100 × d_food_10."),
+    ("Сплави 1000", "orbital_1000_alloys.txt", "Mining station. 40 × d_alloys_25."),
+    ("Товари 1000", "orbital_1000_goods.txt", "Mining station. 500 × d_consumer_goods_obsessional_directive."),
+    ("Торгівля 1000", "orbital_1000_trade.txt", "Mining station. 100 × d_trade_value_10."),
+    ("Гази 1000", "orbital_1000_gases.txt", "Mining station. 200 × d_exotic_gases_5."),
+    ("Кристали 1000", "orbital_1000_crystals.txt", "Mining station. 200 × d_rare_crystals_5."),
+    ("Частинки 1000", "orbital_1000_motes.txt", "Mining station. 200 × d_volatile_motes_5."),
+    ("Живий метал 1000", "orbital_1000_living_metal.txt", "Mining station. 1000 × d_living_metal_deposit."),
+    ("Артефакти 1000", "orbital_1000_artifacts.txt", "Mining station. 333 × 3 + 1."),
+    ("Наніти 1000", "orbital_1000_nanites.txt", "Mining station. 625 × 1.6."),
+    ("Фізика 1000", "orbital_1000_physics.txt", "Research station. 100 × d_physics_10."),
+    ("Суспільство 1000", "orbital_1000_society.txt", "Research station. 66 × 15 + 2 × 5."),
+    ("Інженерія 1000", "orbital_1000_engineering.txt", "Research station. 100 × d_engineering_10."),
+    ("Єдність 999", "orbital_1000_unity.txt", "Research station. Депозит лише +3, тому 333 × 3 = 999."),
+    ("Темна матерія 1000", "orbital_1000_dark_matter.txt", "Research station. 100 × d_dark_matter_deposit_10."),
+    ("Зро 1000", "orbital_1000_zro.txt", "Research station. 200 × d_zro_deposit_5."),
+    ("Астральні нитки 1000", "orbital_1000_astral.txt", "Research station. 333 × 3 + 1."),
 )
 
 
 def orbital_1000_variants() -> tuple[Cheat, ...]:
-    return tuple(_v(command, title, description) for title, command, description in ORBITAL_1000)
+    return tuple(
+        _v(run_command(filename), title, description)
+        for title, filename, description in ORBITAL_1000
+    )
 
 
 def _harvest_variants() -> tuple[Cheat, ...]:

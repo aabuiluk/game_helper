@@ -1,0 +1,1 @@
+effect while = { count = 1000 add_deposit = d_living_metal_deposit }
